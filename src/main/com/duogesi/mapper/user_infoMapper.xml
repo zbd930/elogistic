@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace命名空间，唯一标识。一般指定为自定义的接口文件，下面相当于这个接口的实现类 -->
+<mapper namespace="com.duogesi.mapper.user_infoMapper">
+
+    <resultMap id="company" type="com.duogesi.entities.user_info">
+        <id column="id" property="id"></id>
+        <result property="username" column="username"></result>
+        <result property="password" column="password"></result>
+        <result property="type" column="type"></result>
+        <result property="Post_like" column="Post_like"></result>
+    </resultMap>
+    <select id="get_like" resultMap="company">
+        select post_like
+        from user_info
+        where id=#{user_id}
+    </select>
+
+    <update id="update_like">
+        update fba.user_info set post_like=#{post_like} where id=#{id}
+    </update>
+</mapper>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace命名空间，唯一标识。一般指定为自定义的接口文件，下面相当于这个接口的实现类 -->
+<mapper namespace="com.duogesi.mapper.addressMapper">
+     <!--引入自定义缓存类实现cache接口 -->
+    <!--<cache type="com.duogesi.cache.RedisCache"/>-->
+    <!-- 定义结果集，column表示sql查询列,property表示映射到实体的属性 -->
+    <resultMap type="com.duogesi.entities.address" id="my" >
+        <id column="id" property="id"/>
+        <result column="openid" property="openid"/>
+        <result column="phone" property="phone"/>
+        <result column="address" property="address"/>
+        <result column="name" property="name"/>
+        <result column="email" property="email"/>
+    </resultMap>
+    <!-- resultMap指定使用上面定义的结果集,查询使用关联查询，查询列要和上面的column对应 -->
+
+             <insert id="addaddress" parameterType="com.duogesi.entities.address" >
+                   insert into subscriber_address value (#{id},#{openid},#{phone},#{address},#{name},#{email})
+            </insert>
+          <select id="get_address"  resultMap="my">
+                   select * from subscriber_address
+                   where openid=#{opnid}
+            </select>
+            <delete id="delete_address">
+                delete
+                from subscriber_address
+                where id=#{id}
+            </delete>
+</mapper>

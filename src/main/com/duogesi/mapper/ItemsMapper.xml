@@ -41,6 +41,7 @@
             <id property="supplier_id" column="supplier_id"></id>
             <result property="user_id" column="user_id"></result>
             <result property="contact_address" column="contact_address"></result>
+            <result property="contact_phone" column="contact_phone"></result>
         </collection>
     </resultMap>
     <resultMap type="com.duogesi.entities.items" id="orders" >
@@ -111,7 +112,7 @@
     <!--(UNIX_TIMESTAMP(s.eta) - UNIX_TIMESTAMP(s.etd))/(60*60*24) as shichang-->
             <!--获取符合方式所有订单-->
              <select id="get_items" parameterType="com.duogesi.entities.items" resultMap="result">
-                   select s.user_id,s.`desc`,s.eta,s.etd,s.id,s.`method`,s.mudigang,s.qiyungang,s.status,d.weight,d.volume,d.ship_id,d.cut_time,d.cut_end,c.contact_address
+                   select s.user_id,s.`desc`,s.eta,s.etd,s.id,s.`method`,s.mudigang,s.qiyungang,s.status,d.weight,d.volume,d.ship_id,d.cut_time,d.cut_end,c.contact_address,c.contact_phone
                     from fba.ship_schdule as s,fba.schdule_details as d,supplier_address as c
                     where qiyungang=#{qiyungang}  and method=#{method} and status=0 and s.user_id=c.user_id and s.id=d.ship_id and d.volume>0 and d.weight>0 order by s.etd ;
             </select>

@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="fba@localhost" uuid="0db1b263-7de9-4706-833c-ef1162e286f4">
-      <driver-ref>mysql</driver-ref>
+    <data-source source="LOCAL" name="fba@yikuajing.cn" uuid="b1edc238-547b-497d-9da5-fdc39cc1517c">
+      <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://yikuajing.cn:3306/fba</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="fba@localhost" uuid="30e2b750-330a-41d8-926a-9198bc12fe4d">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/fba</jdbc-url>
-      <driver-properties>
-        <property name="autoReconnect" value="true" />
-        <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="tinyInt1isBit" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="characterSetResults" value="utf8" />
-        <property name="yearIsDateType" value="false" />
-      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="fba@yikuajing.cn [2]" uuid="08ccc806-380d-4a11-b067-15419c1cfe95">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://yikuajing.cn:3306/fba</jdbc-url>
     </data-source>
   </component>
 </project>

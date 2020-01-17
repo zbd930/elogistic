@@ -6,7 +6,7 @@ public class comments {
     private int user_id;
     private int address_id;
     private int star;
-    private address address;
+    private com.duogesi.entities.address address;
 
     public int getStar() {
         return star;
@@ -16,11 +16,11 @@ public class comments {
         this.star = star;
     }
 
-    public address getAddress() {
+    public com.duogesi.entities.address getAddress() {
         return address;
     }
 
-    public void setAddress(address address) {
+    public void setAddress(com.duogesi.entities.address address) {
         this.address = address;
     }
 

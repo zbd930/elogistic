@@ -18,7 +18,14 @@
             <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"></bean>
         </property>
         <property name="valueSerializer">
-            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"></bean>
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+<!--            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"></bean>-->
+        </property>
+        <property name="hashKeySerializer">
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
+        </property>
+        <property name="hashValueSerializer">
+            <bean class="org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer"/>
         </property>
     </bean>
 

@@ -33,9 +33,9 @@ public void after() throws Exception {
 public void testGet() throws Exception {
     Httputils httputils=new Httputils();
     HashMap map=new HashMap();
-    map.put("qiyungang","深圳");
-    map.put("mudigang","FTW1");
-    httputils.doPost("http://localhost:8080/items/get_items.do", map,"UTF-8");
+//    map.put("qiyungang","深圳");
+//    map.put("mudigang","FTW1");
+    httputils.doPost("http://localhost:8091/elogistic/items/redis_get.do",map,"UTF-8");
 } 
 
 

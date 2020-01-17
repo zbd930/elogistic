@@ -1,7 +1,6 @@
 package com.duogesi.service;
 
 import com.duogesi.entities.address;
-import com.duogesi.mapper.addressMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +9,7 @@ import java.util.List;
 @Service
 public class addressservice {
     @Autowired
-    private addressMapper addressMapper;
+    private com.duogesi.mapper.addressMapper addressMapper;
 
 
     public boolean add(address address) {

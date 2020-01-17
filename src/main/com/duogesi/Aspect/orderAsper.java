@@ -1,15 +1,17 @@
 package com.duogesi.Aspect;
 
 
+import com.duogesi.Mail.Mymail;
 import com.duogesi.entities.details;
 import com.duogesi.entities.order;
 import com.duogesi.entities.order_details;
+import com.duogesi.entities.supplier_company;
 import com.duogesi.mapper.ItemsMapper;
 import com.duogesi.mapper.OrderMapper;
+import com.duogesi.mapper.user_infoMapper;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.*;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.aspectj.lang.annotation.Aspect;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -24,6 +26,26 @@ public class orderAsper {
     private ItemsMapper itemsMapper;
 
     private OrderMapper orderMapper;
+
+    private user_infoMapper user_infoMapper;
+
+    private Mymail mymail;
+
+    public Mymail getMymail() {
+        return mymail;
+    }
+
+    public void setMymail(Mymail mymail) {
+        this.mymail = mymail;
+    }
+
+    public com.duogesi.mapper.user_infoMapper getUser_infoMapper() {
+        return user_infoMapper;
+    }
+
+    public void setUser_infoMapper(com.duogesi.mapper.user_infoMapper user_infoMapper) {
+        this.user_infoMapper = user_infoMapper;
+    }
 
     public ItemsMapper getItemsMapper() {
         return itemsMapper;
@@ -92,7 +114,7 @@ public class orderAsper {
         int result = 0;
         String methodName = point.getSignature().getName();
         List<Object> args = Arrays.asList(point.getArgs());
-        order order= (order) args.get(0);
+        order order= (com.duogesi.entities.order) args.get(0);
         order_details order_details=(order_details) args.get(2);
         try {
             //前置通知
@@ -110,7 +132,20 @@ public class orderAsper {
             System.out.println("this method "+methodName+" end.ex message<"+e+">");
             throw new RuntimeException(e);
         }
-        //后置通知
+        //            获取参数
+        details details=itemsMapper.get_para(order.getItem_id());
+        if(details.getWeight()<=0 && details.getVolume()<=0) {
+            //后置通知
+            int ship_id = order.getItem_id();
+            //获取供应商邮箱
+            List<supplier_company> supplier_company = user_infoMapper.get_supplier_info(ship_id);
+            String email = supplier_company.get(0).getContact_mail();
+            try {
+                mymail.send(email, "您发布的拼柜任务已收收到货，请登录查看", "【任务更新】");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
         System.out.println("The method "+ methodName+" end.");
         return result;
     }

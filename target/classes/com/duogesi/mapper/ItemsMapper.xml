@@ -17,71 +17,35 @@
         <result property="status" column="status"></result>
         <result column="desc" property="desc"/>
         <result column="shichang" property="shichang"/>
+        <result column="country" property="country"/>
         <result column="user_id" property="user_id"/>
-        <result column="ups" property="ups"/>
         <association property="details" javaType="com.duogesi.entities.details">
             <id property="id" column="id"></id>
             <result property="ship_id" column="ship_id"></result>
+            <result property="ctn" column="ctn"></result>
             <result property="weight" column="weight"></result>
             <result property="volume" column="volume"></result>
             <result property="cut_time" column="cut_time"></result>
             <result property="cut_end" column="cut_end"></result>
             <result property="price" column="price"></result>
+            <result property="ups" column="ups"></result>
+            <result property="compensate" column="compensate"></result>
+            <result property="dead_date" column="dead_date"></result>
+            <result property="money" column="money"></result>
+            <result property="kill_start" column="kill_start"></result>
+            <result property="kill_end" column="kill_end"></result>
+            <result property="discount" column="discount"></result>
         </association>
-        <collection property="orders" ofType="com.duogesi.entities.order" column="id">
-            <id column="id" property="id"/>
-            <result column="openid" property="openid"/>
-            <result column="numbers" property="numbers"></result>
-            <result column="item_id" property="item_id"/>
-            <result column="dest" property="dest"/>
-            <result column="address_id" property="address_id"/>
-            <result column="status" property="status"/>
-        </collection>
         <collection property="supplier_companies" ofType="com.duogesi.entities.supplier_company" column="user_id">
             <id property="supplier_id" column="supplier_id"></id>
             <result property="user_id" column="user_id"></result>
             <result property="contact_address" column="contact_address"></result>
+            <result property="contact_phone" column="contact_phone"></result>
+            <result property="company_name" column="company_name"></result>
+            <result property="peichang" column="peichang"></result>
         </collection>
-    </resultMap>
-    <resultMap type="com.duogesi.entities.items" id="orders" >
-        <id column="id" property="id"/>
-        <result column="qiyungang" property="qiyungang"/>
-        <result column="mudigang" property="mudigang"/>
-        <result column="etd" property="etd"/>
-        <result column="method" property="method"/>
-        <result column="eta" property="eta"/>
-        <result property="status" column="status"></result>
-        <result column="desc" property="desc"/>
-        <result column="shichang" property="shichang"/>
-        <result column="user_id" property="user_id"/>
-        <association property="details" javaType="com.duogesi.entities.details">
-            <id property="id" column="id"></id>
-            <result property="ship_id" column="ship_id"></result>
-            <result property="weight" column="weight"></result>
-            <result property="volume" column="volume"></result>
-            <result property="cut_time" column="cut_time"></result>
-            <result property="cut_end" column="cut_end"></result>
-            <result property="price" column="price"></result>
-        </association>
-        <association property="amount" javaType="com.duogesi.entities.amount">
-            <id column="id" property="id"/>
-            <result column="order_id" property="order_id"/>
-            <result column="paid" property="paid"/>
-            <result column="total" property="address_id"/>
-            <result column="item_id" property="item_id"/>
-            <result column="openid" property="openid"/>
-        </association>
-        <association property="order_details" javaType="com.duogesi.entities.order_details">
-            <id column="id" property="id"/>
-            <result column="ctn" property="ctn"/>
-            <result column="volume" property="volume"/>
-            <result column="weight" property="weight"/>
-            <result column="beizhu" property="beizhu"/>
-            <result column="ups" property="ups"/>
-        </association>
         <collection property="orders" ofType="com.duogesi.entities.order" column="id">
             <id column="id" property="id"/>
-            <result column="ctn" property="ctn"></result>
             <result column="openid" property="openid"/>
             <result column="numbers" property="numbers"></result>
             <result column="item_id" property="item_id"/>
@@ -90,20 +54,10 @@
             <result column="status" property="status"/>
         </collection>
     </resultMap>
-    <!--<association property="supplier_company" javaType="com.duogesi.entities.supplier_company">-->
-        <!--<id property="id" column="id"></id>-->
-        <!--<result property="user_id" column="user_id"></result>-->
-        <!--<result property="contact_name" column="contact_name"></result>-->
-        <!--<result property="contact_phone" column="contact_phone"></result>-->
-        <!--<result property="contact_mail" column="contact_mail"></result>-->
-        <!--<result property="contact_address" column="contact_address"></result>-->
-        <!--<result property="company_name" column="company_name"></result>-->
-    <!--</association>-->
-    
     <!-- resultMap指定使用上面定义的结果集,查询使用关联查询，查询列要和上面的column对应 -->
     <!--<!- 查询订单&ndash;&gt;-->
-        <select id="get_orders" resultMap="orders">
-                 select s.method,s.etd,s.`desc`,s.eta,s.mudigang,o.dest,f.volume,f.weight,o.status,a.openid,s.qiyungang,d.cut_time,d.cut_end,f.ups,c.contact_address,o.numbers,o.id,s.user_id,o.address_id
+            <select id="get_orders" resultMap="result">
+                 select s.method,s.etd,s.`desc`,s.eta,s.mudigang,o.dest,f.volume,f.weight,f.ctn,a.openid,s.qiyungang,d.cut_time,d.cut_end,o.status,f.ups,c.contact_address,c.contact_phone,o.numbers,o.id,s.user_id,o.address_id
                   from fba.ship_schdule as s,fba.schdule_details as d,fba.orders as o,fba.subscriber_address as a,fba.supplier_address as c,fba.orders_details as f
                   where s.id=d.ship_id and s.id=o.item_id and a.id=o.address_id and s.user_id=c.user_id and a.openid=#{openid} and f.order_id=o.id order by o.id ;
             </select>
@@ -111,10 +65,39 @@
     <!--(UNIX_TIMESTAMP(s.eta) - UNIX_TIMESTAMP(s.etd))/(60*60*24) as shichang-->
             <!--获取符合方式所有订单-->
              <select id="get_items" parameterType="com.duogesi.entities.items" resultMap="result">
-                   select s.user_id,s.`desc`,s.eta,s.etd,s.id,s.`method`,s.mudigang,s.qiyungang,s.status,d.weight,d.volume,d.ship_id,d.cut_time,d.cut_end,c.contact_address
+                   select s.user_id,s.`desc`,s.eta,s.etd,s.id,s.`method`,s.mudigang,s.qiyungang,s.status,d.weight,d.volume,d.ship_id,d.cut_time,d.cut_end,c.contact_address,c.contact_phone,d.money,d.dead_date,d.compensate,c.peichang,c.company_name,s.country
                     from fba.ship_schdule as s,fba.schdule_details as d,supplier_address as c
-                    where qiyungang=#{qiyungang}  and method=#{method} and status=0 and s.user_id=c.user_id and s.id=d.ship_id and d.volume>0 and d.weight>0 order by s.etd ;
+                    where s.qiyungang=#{qiyungang}  and s.method=#{method} and s.country='American'
+                    and s.status=0 and s.user_id=c.user_id and s.id=d.ship_id and d.volume>0 and d.weight>0  and s.number not like 'SP%'order by s.top desc, s.etd asc ;
             </select>
+    <!--获取符合方式所有订单加拿大线-->
+    <select id="get_items_Canada" parameterType="com.duogesi.entities.items" resultMap="result">
+        select s.user_id,s.`desc`,s.eta,s.etd,s.id,s.`method`,s.mudigang,s.qiyungang,s.status,d.weight,d.volume,d.ship_id,d.cut_time,d.cut_end,c.contact_address,c.contact_phone,d.money,d.dead_date,d.compensate,c.peichang,c.company_name,s.country
+        from fba.ship_schdule as s,fba.schdule_details as d,supplier_address as c
+        where s.qiyungang=#{qiyungang}  and s.method=#{method} and s.country='Canada'
+        and s.status=0 and s.user_id=c.user_id and s.id=d.ship_id and d.volume>0 and d.weight>0  and s.number not like 'SP%'order by s.top desc, s.etd asc ;
+    </select>
+    <!--获取符合方式所有订单欧洲线-->
+    <select id="get_items_Europe" parameterType="com.duogesi.entities.items" resultMap="result">
+        select s.user_id,s.`desc`,s.eta,s.etd,s.id,s.`method`,s.mudigang,s.qiyungang,s.status,d.weight,d.volume,d.ship_id,d.cut_time,d.cut_end,c.contact_address,c.contact_phone,d.money,d.dead_date,d.compensate,c.peichang,c.company_name,s.country
+        from fba.ship_schdule as s,fba.schdule_details as d,supplier_address as c
+        where s.qiyungang=#{qiyungang}  and s.method=#{method} and s.country='Europe'
+        and s.status=0 and s.user_id=c.user_id and s.id=d.ship_id and d.volume>0 and d.weight>0  and s.number not like 'SP%'order by s.top desc, s.etd asc ;
+    </select>
+    <!--获取符合方式所有订单日本线-->
+    <select id="get_items_Japan" parameterType="com.duogesi.entities.items" resultMap="result">
+        select s.user_id,s.`desc`,s.eta,s.etd,s.id,s.`method`,s.mudigang,s.qiyungang,s.status,d.weight,d.volume,d.ship_id,d.cut_time,d.cut_end,c.contact_address,c.contact_phone,d.money,d.dead_date,d.compensate,c.peichang,c.company_name,s.country
+        from fba.ship_schdule as s,fba.schdule_details as d,supplier_address as c
+        where s.qiyungang=#{qiyungang}  and s.method=#{method} and s.country='Japan'
+        and s.status=0 and s.user_id=c.user_id and s.id=d.ship_id and d.volume>0 and d.weight>0  and s.number not like 'SP%'order by s.top desc, s.etd asc ;
+    </select>
+
+<!--            限时秒杀-->
+       <select id="ger_miaosha" resultMap="result">
+        select s.user_id,s.`desc`,s.eta,s.etd,s.id,s.`method`,s.mudigang,s.qiyungang,s.status,d.weight,d.volume,d.ship_id,d.cut_time,d.cut_end,c.contact_address,c.contact_phone,d.money,d.dead_date,d.compensate,c.peichang,c.company_name,d.kill_start,d.kill_end,d.discount
+       from fba.ship_schdule as s,fba.schdule_details as d,supplier_address as c
+        where s.status=0 and s.user_id=c.user_id and s.id=d.ship_id and d.volume>0 and d.weight>0 and s.number like 'SP%' and d.kill_end>=#{date} and #{date}>=d.kill_start order by s.top desc, s.etd asc ;
+        </select>
 
             <select id="get_para" resultType="com.duogesi.entities.details">
                 select schdule_details.weight,schdule_details.volume from schdule_details where ship_id=#{id}
@@ -122,7 +105,21 @@
 
             <update id="update_items" parameterType="com.duogesi.entities.details">
                 update schdule_details set
-               weight=weight-#{weight},volume=volume-#{volume} where ship_id=#{id}
+               weight=weight-#{weight},volume=volume-#{volume}
+               where ship_id=#{id}
+               and fba.schdule_details.weight>=#{weight} and fba.schdule_details.volume>=#{volume}
             </update>
+            <update id="update_items1" parameterType="com.duogesi.entities.details">
+                update schdule_details set
+               weight=weight-#{weight},volume=volume-#{volume}
+                where ship_id=#{id}
+            </update>
+
+        <update id="return_items" >
+             update schdule_details set
+               weight=weight+#{weight},volume=volume+#{volume}
+                where ship_id=#{id}
+        </update>
+
 
 </mapper>

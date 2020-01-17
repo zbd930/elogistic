@@ -13,19 +13,63 @@ public class items implements Serializable {
     private String qiyungang;
     private String mudigang;
     private String method;
+    private String country;
     private Date etd;
     private Date eta;
     private String desc;
     private details details;
     private int status;
+    private String statu;
     private int user_id;
+    private float discount;
     private List<order> orders;
     private List<supplier_company> supplier_companies;
     private price_include myprices;
+    private addition addition;
     private float price;
     private int like;
     private amount amount;
     private order_details order_details;
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public float getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(float discount) {
+        this.discount = discount;
+    }
+
+    public String getStatu() {
+        return statu;
+    }
+
+    public void setStatu(String statu) {
+        this.statu = statu;
+    }
+
+    public List<supplier_company> getSupplier_companies() {
+        return supplier_companies;
+    }
+
+    public void setSupplier_companies(List<supplier_company> supplier_companies) {
+        this.supplier_companies = supplier_companies;
+    }
+
+    public com.duogesi.entities.addition getAddition() {
+        return addition;
+    }
+
+    public void setAddition(com.duogesi.entities.addition addition) {
+        this.addition = addition;
+    }
 
     public int getId() {
         return id;
@@ -115,13 +159,6 @@ public class items implements Serializable {
         this.orders = orders;
     }
 
-    public List<supplier_company> getSupplier_companies() {
-        return supplier_companies;
-    }
-
-    public void setSupplier_companies(List<supplier_company> supplier_companies) {
-        this.supplier_companies = supplier_companies;
-    }
 
     public price_include getMyprices() {
         return myprices;

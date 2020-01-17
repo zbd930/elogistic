@@ -1,6 +1,5 @@
 package com.duogesi.service;
 
-import com.duogesi.entities.user_info;
 import com.duogesi.mapper.user_infoMapper;
 import com.duogesi.redisUtils.RedisKeyUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +18,7 @@ public class dianzanservice {
     }
 
     public Boolean add(String topicid,String appid){
-            if (redisKeyUtil.judge(topicid, appid) == 0) {
-                redisKeyUtil.dianZan(topicid, appid, true);
-            } else {
-                redisKeyUtil.dianZan(topicid, appid, false);
-            }
+          redisKeyUtil.dianZan(topicid, appid, true);
             return true;
     }
 
@@ -32,4 +27,5 @@ public class dianzanservice {
             return true;
 
     }
+
 }

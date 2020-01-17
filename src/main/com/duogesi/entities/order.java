@@ -13,20 +13,20 @@ public class order implements Serializable {
     private int id;
     private int address_id;
     private int status;
-    private items items;
+    private String statu;
+    private com.duogesi.entities.items items;
     private Date picking;
     private String dest;
-    private String chaigui;
     private String songhuo;
     private Boolean tihuo;
     private order_details order_details;
 
-    public String getChaigui() {
-        return chaigui;
+    public String getStatu() {
+        return statu;
     }
 
-    public void setChaigui(String chaigui) {
-        this.chaigui = chaigui;
+    public void setStatu(String statu) {
+        this.statu = statu;
     }
 
     public String getSonghuo() {

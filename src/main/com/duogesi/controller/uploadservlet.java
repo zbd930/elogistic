@@ -1,10 +1,9 @@
 package com.duogesi.controller;
 
-import com.duogesi.entities.pic;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,8 +18,9 @@ import java.io.IOException;
 public class uploadservlet {
     
 
-    @RequestMapping(value = "upload.do", method = {RequestMethod.POST, RequestMethod.GET})
-    public ModelAndView uploadPicture(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    @RequestMapping(value = "upload.do", method = {RequestMethod.POST, RequestMethod.GET},produces="text/html;charset=UTF-8")
+    @ResponseBody
+    public String uploadPicture(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         MultipartHttpServletRequest req = (MultipartHttpServletRequest) request;
 
@@ -34,7 +34,7 @@ public class uploadservlet {
 //        Calendar cal = Calendar.getInstance();
 //        String nowTime = sdf.format(cal);
         //获取订单号
-        String order=request.getParameter("id");
+        String order=request.getParameter("number");
         //裁剪用户id
         String originalFirstName = multipartFile.getOriginalFilename();
         String picFirstName = originalFirstName.substring(0, originalFirstName.indexOf("."));
@@ -45,11 +45,13 @@ public class uploadservlet {
 
         //拼接：名字+时间戳+后缀
         String picName = order+".jpg";
-        copy(multipartFile, realPath, picName);
-        return null;
+        if(copy(multipartFile, realPath, picName)){
+            return "上传成功";
+        }else return "上传失败";
     }
-    @RequestMapping(value = "upload1.do", method = {RequestMethod.POST, RequestMethod.GET})
-    public ModelAndView uploadPicture1(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    @RequestMapping(value = "upload1.do", method = {RequestMethod.POST, RequestMethod.GET},produces="text/html;charset=UTF-8")
+    @ResponseBody
+    public String uploadPicture1(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         MultipartHttpServletRequest req = (MultipartHttpServletRequest) request;
 
@@ -63,7 +65,7 @@ public class uploadservlet {
 //        Calendar cal = Calendar.getInstance();
 //        String nowTime = sdf.format(cal);
         //获取订单号
-        String order=request.getParameter("id");
+        String order=request.getParameter("number");
         //裁剪用户id
         String originalFirstName = multipartFile.getOriginalFilename();
         String picFirstName = originalFirstName.substring(0, originalFirstName.indexOf("."));
@@ -74,11 +76,13 @@ public class uploadservlet {
 
         //拼接：名字+时间戳+后缀
         String picName = order+".jpg";
-        copy(multipartFile, realPath, picName);
-        return null;
+        if(copy(multipartFile, realPath, picName)){
+            return "上传成功";
+        }else return "上传失败";
     }
-    @RequestMapping(value = "upload2.do", method = {RequestMethod.POST, RequestMethod.GET})
-    public ModelAndView uploadPicture2(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    @RequestMapping(value = "upload2.do", method = {RequestMethod.POST, RequestMethod.GET},produces="text/html;charset=UTF-8")
+    @ResponseBody
+    public String uploadPicture2(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         MultipartHttpServletRequest req = (MultipartHttpServletRequest) request;
 
@@ -92,7 +96,7 @@ public class uploadservlet {
 //        Calendar cal = Calendar.getInstance();
 //        String nowTime = sdf.format(cal);
         //获取订单号
-        String order=request.getParameter("id");
+        String order=request.getParameter("number");
         //裁剪用户id
         String originalFirstName = multipartFile.getOriginalFilename();
         String picFirstName = originalFirstName.substring(0, originalFirstName.indexOf("."));
@@ -103,12 +107,14 @@ public class uploadservlet {
 
         //拼接：名字+时间戳+后缀
         String picName = order+".jpg";
-        copy(multipartFile, realPath, picName);
-        return null;
+        if(copy(multipartFile, realPath, picName)){
+            return "上传成功";
+        }else return "上传失败";
     }
 
-    @RequestMapping(value = "upload3.do", method = {RequestMethod.POST, RequestMethod.GET})
-    public ModelAndView uploadPicture3(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    @RequestMapping(value = "upload3.do", method = {RequestMethod.POST, RequestMethod.GET},produces="text/html;charset=UTF-8")
+    @ResponseBody
+    public String uploadPicture3(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         MultipartHttpServletRequest req = (MultipartHttpServletRequest) request;
 
@@ -122,7 +128,7 @@ public class uploadservlet {
 //        Calendar cal = Calendar.getInstance();
 //        String nowTime = sdf.format(cal);
         //获取订单号
-        String order=request.getParameter("id");
+        String order=request.getParameter("number");
         //裁剪用户id
         String originalFirstName = multipartFile.getOriginalFilename();
         String picFirstName = originalFirstName.substring(0, originalFirstName.indexOf("."));
@@ -133,8 +139,9 @@ public class uploadservlet {
 
         //拼接：名字+时间戳+后缀
         String picName = order+".jpg";
-        copy(multipartFile, realPath, picName);
-        return null;
+        if(copy(multipartFile, realPath, picName)){
+            return "上传成功";
+        }else return "上传失败";
     }
     private Boolean copy(MultipartFile multipartFile, String realPath, String picName) {
         try {
@@ -145,6 +152,9 @@ public class uploadservlet {
                 System.out.println("创建文件目录成功：" + realPath);
             }
             File file = new File(realPath, picName);
+            if (file.exists()){
+                return false;
+            }
             multipartFile.transferTo(file);
             System.out.println("添加图片成功！");
             return true;

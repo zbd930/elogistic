@@ -14,8 +14,8 @@ public class amount {
     private BigDecimal additional;
     private int item_id;
     private String openid;
-    private order order;
-    private items items;
+    private com.duogesi.entities.order order;
+    private com.duogesi.entities.items items;
 
     public int getId() {
         return id;

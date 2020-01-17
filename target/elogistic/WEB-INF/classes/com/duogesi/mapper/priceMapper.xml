@@ -46,19 +46,19 @@
             <select id="get_price0" resultMap="price">
                 select *
                 from price_include
-                where user_id=#{user_id} and #{date}>valid_date_start and  valid_date_end>=#{date} and way=0 and area=#{area}
+                where user_id=#{user_id} and #{date}>=valid_date_start and  valid_date_end>=#{date} and way=0 and area=#{area}
             </select>
             <!--美森价格-->
             <select id="get_price2" resultMap="price">
                 select *
                 from price_include
-                where user_id=#{user_id} and #{date}>valid_date_start and  valid_date_end>=#{date} and way=2 and area=#{area}
+                where user_id=#{user_id} and #{date}>=valid_date_start and  valid_date_end>=#{date} and way=2 and area=#{area}
             </select>
             <!--直飞价格-->
             <select id="get_price3" resultMap="price">
                         select *
                         from price_include
-                        where user_id=#{user_id} and #{date}>valid_date_start and  valid_date_end>=#{date} and way=3 and area=#{area}
+                        where user_id=#{user_id} and #{date}>=valid_date_start and  valid_date_end>=#{date} and way=3 and area=#{area}
                     </select>
             <!--敏感货空运价格-->
             <select id="get_price4" resultMap="price">

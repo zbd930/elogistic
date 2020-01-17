@@ -7,8 +7,35 @@ public class order_details {
     private float volume;
     private String beizhu;
     private String ups;
-    private order order;
+    private com.duogesi.entities.order order;
     private int order_id;
+    private Boolean change;
+    private String chaigui;
+    private String category;
+
+    public Boolean getChange() {
+        return change;
+    }
+
+    public void setChange(Boolean change) {
+        this.change = change;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getChaigui() {
+        return chaigui;
+    }
+
+    public void setChaigui(String chaigui) {
+        this.chaigui = chaigui;
+    }
 
     public int getOrder_id() {
         return order_id;

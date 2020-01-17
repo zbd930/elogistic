@@ -34,8 +34,9 @@
         <property name="minPoolSize" value="${c3p0.pool.size.min}" />
         <property name="initialPoolSize" value="${c3p0.pool.size.ini}" />
         <property name="acquireIncrement" value="${c3p0.pool.size.increment}" />
+        <property name="testConnectionOnCheckout" value="false" />
         <property name="testConnectionOnCheckin" value="true" />
-        <property name="idleConnectionTestPeriod" value="86400" />
+        <property name="idleConnectionTestPeriod" value="10800" />
     </bean>
 
 
@@ -89,6 +90,8 @@
     <bean id="theLogger" class="com.duogesi.Aspect.orderAsper">
         <property name="ItemsMapper" ref="itemsMapper"></property>
         <property name="OrderMapper" ref="orderMapper"></property>
+        <property name="user_infoMapper" ref="user_infoMapper"></property>
+        <property name="Mymail" ref="mymail"></property>
     </bean>
     <aop:config>
         <!--
@@ -98,7 +101,7 @@
         * com.service.*.*(..)：匹配com.service包下所有类的所有方法。
         * com.service..*.*(..)：匹配com.service包及其子包下所有类的所有方法
          -->
-        <!--execution(public * com.duogesi.service.orderservice.*(..))-->
+        <!--execution(public * com.orderservice.*(..))-->
         <!-- 定义切入点 -->
         <aop:pointcut expression="execution(public * com.duogesi.service.orderservice.add(com.duogesi.entities.order,String, com.duogesi.entities.order_details ))) "
                       id="pointcut"/>

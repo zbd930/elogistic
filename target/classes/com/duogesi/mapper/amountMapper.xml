@@ -49,7 +49,7 @@
 
     <!--获取本月的金额-->
     <select id="get_amount" resultMap="amount">
-        select  sum(a.paid) as paid , sum(a.total) as total
+        select  sum(a.paid) as paid , sum(a.total) as total,sum(a.tax) as tax,sum(a.inspect) as inspect,sum(a.customer) as customer,sum(a.additional) as additional
         from fba.amount as a,fba.ship_schdule as s
         where a.item_id=s.id and s.etd>#{start_data} and #{end_data}>=s.etd  and a.openid=#{openid}
     </select>

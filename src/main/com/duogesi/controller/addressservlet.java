@@ -3,14 +3,11 @@ package com.duogesi.controller;
 import com.duogesi.Mail.Mymail;
 import com.duogesi.Mail.RedisUtil;
 import com.duogesi.entities.address;
-import com.duogesi.service.addressservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpSession;
 import java.security.SecureRandom;
 import java.util.HashMap;
@@ -23,7 +20,7 @@ import java.util.Random;
 public class addressservlet {
 
     @Autowired
-    private addressservice addressservice;
+    private com.duogesi.service.addressservice addressservice;
     @Autowired
     private HttpSession session;
     @Autowired
@@ -54,32 +51,44 @@ public class addressservlet {
 
     @RequestMapping(value = "add.do",produces="text/html;charset=UTF-8")
     @ResponseBody
-    public String add(address address,String code){
+    public String add(address address, String code){
         Map map=redisUtil.hmget(address.getOpenid());
-        String email =(String)map.get(0);
-        String code1=(String)map.get(1);
-        if (email.equals(address.getEmail())) {
-            System.out.println(code1);
-            if (code.equals(code1)) {
-                if (addressservice.add(address)) {
-                } else return "Fail";
-                return "Success";
-            } else return "验证码错误或过期";
-        }else return "邮箱错误";
+        String email = new String();
+        String code1= new String();
+        try {
+            email=(String)map.get("email");
+            code1=(String)map.get("code");
+            if (email.equals(address.getEmail())) {
+                System.out.println(code1);
+                if (code.equals(code1)) {
+                    if (addressservice.add(address)) {
+                    } else return "Fail";
+                    return "Success";
+                } else return "验证码错误或过期";
+            }else return "邮箱错误";
+        }catch (NullPointerException e){
+            e.printStackTrace();
+        }  return "验证码错误或过期";
     }
 
     @RequestMapping("get.do")
     @ResponseBody
     public List<address> get(String openid){
-       return addressservice.get(openid);
+        return addressservice.get(openid);
     }
 
     @RequestMapping(value = "delete.do",produces="text/html;charset=UTF-8")
     @ResponseBody
     public String delete(int id){
-       if (addressservice.delete_address(id)==1){
-           return "Success";
-       }else return "Fail";
+        int result=0;
+        try {
+            result=addressservice.delete_address(id);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        if (result==1){
+            return "Success";
+        }else return "Fail";
 
     }
 
@@ -87,16 +96,15 @@ public class addressservlet {
     @RequestMapping(value = "valid_email.do",produces="text/html;charset=UTF-8")
     @ResponseBody
     public String valid(String openid,String email) {
-        System.out.println(email);
         Mymail mymail = new Mymail();
         StringBuilder s = new StringBuilder();
         String code = getNonce_str();
-        s.append("您的验证码为" + code + "<br>请在收到邮件的10分钟内操作;");
+        s.append("您的验证码为" + code + "<br>请在收到邮件的5分钟内操作;");
         Map map = new HashMap();
         map.put("email", email);
         map.put("code", code);
         if (!redisUtil.hasKey(openid)) {
-            redisUtil.hmset(openid, map, 600000);
+            redisUtil.hmset(openid, map, 60);
             try {
                 mymail.send(email, String.valueOf(s), "【邮箱验证】");
             } catch (Exception e) {
@@ -104,6 +112,6 @@ public class addressservlet {
                 return "send fail";
             }
             return "success";
-        } return "10分钟后再试";
+        } return "1分钟后再试";
     }
 }

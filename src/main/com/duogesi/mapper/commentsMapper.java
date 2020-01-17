@@ -1,6 +1,5 @@
 package com.duogesi.mapper;
 
-import com.duogesi.entities.address;
 import com.duogesi.entities.comments;
 import org.springframework.stereotype.Component;
 

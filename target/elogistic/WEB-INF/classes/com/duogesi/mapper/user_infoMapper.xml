@@ -12,6 +12,16 @@
         <result property="type" column="type"></result>
         <result property="Post_like" column="Post_like"></result>
     </resultMap>
+    <resultMap id="supplier" type="com.duogesi.entities.supplier_company">
+        <id column="supplier_id" property="supplier_id"></id>
+        <result property="user_id" column="user_id"></result>
+        <result property="contact_name" column="contact_name"></result>
+        <result property="contact_phone" column="contact_phone"></result>
+        <result property="contact_mail" column="contact_mail"></result>
+        <result property="contact_address" column="contact_address"></result>
+        <result property="company_name" column="company_name"></result>
+        <result property="peichang" column="peichang"></result>
+    </resultMap>
     <select id="get_like" resultMap="company">
         select post_like
         from user_info
@@ -21,4 +31,10 @@
     <update id="update_like">
         update fba.user_info set post_like=#{post_like} where id=#{id}
     </update>
+    <!--       根据shipid获取发货人信息-->
+    <select id="get_supplier_info" resultMap="supplier">
+            select a.*
+            from "fba".ship_schdule as s, "fba".supplier_address as a
+            where a.user_id=s.user_id  and s.id=#{item_id}
+        </select>
 </mapper>

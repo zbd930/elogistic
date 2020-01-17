@@ -21,15 +21,15 @@
     <!-- resultMap指定使用上面定义的结果集,查询使用关联查询，查询列要和上面的column对应 -->
     <!--添加订单1-->
      <insert id="addorder" parameterType="com.duogesi.entities.order" useGeneratedKeys="true" keyProperty="id">
-         insert into orders (numbers,item_id, address_id,status,picking,dest,songhuo,chaigui)  value (#{numbers},#{item_id},#{address_id},#{status},#{picking},#{dest},#{songhuo},#{chaigui})
+         insert into orders (numbers,item_id, address_id,status,picking,dest,songhuo)  value (#{numbers},#{item_id},#{address_id},#{status},#{picking},#{dest},#{songhuo})
      </insert>
     <!--添加订单2-->
     <insert id="addorder2" parameterType="com.duogesi.entities.order_details">
-        insert into orders_details(ctn, weight, volume, beizhu,order_id) value (#{ctn},#{weight},#{volume},#{beizhu},#{order_id})
+        insert into orders_details (ctn, weight, volume, beizhu, ups, order_id, chaigui, category)  value (#{ctn},#{weight},#{volume},#{beizhu},#{ups},#{order_id},#{chaigui},#{category})
     </insert>
     <!--评价后-->
     <update id="pinjie">
-        update orders set status=5
+        update orders set status=6
         where id=#{id}
     </update>
 

@@ -1,5 +1,7 @@
 package com.duogesi.controller;
 
+import com.duogesi.entities.order;
+import com.duogesi.entities.order_details;
 import com.duogesi.service.wechatservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,5 +32,30 @@ public class wechatservlet {
         out.flush();
         out.close();
         return null;
+    }
+
+    //普通下单
+    @RequestMapping("pay.do")
+    @ResponseBody
+    public String pay(HttpServletRequest request, HttpServletResponse response, order order, order_details order_details,String method,String country){
+        String result="";
+        try {
+            result=wechatservice.wechat_pay(request,response,order,order_details, method,country);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    //秒杀下单
+    @RequestMapping("pay_miaosha.do")
+    @ResponseBody
+    public String pay_miaosha(HttpServletRequest request, HttpServletResponse response, order order, order_details order_details){
+        String result="";
+        try {
+            result=wechatservice.wechat_pay1(request,response,order,order_details);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

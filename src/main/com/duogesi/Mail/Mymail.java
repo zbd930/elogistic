@@ -4,7 +4,9 @@ import org.springframework.stereotype.Component;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
-import javax.mail.*;
+import javax.mail.Message;
+import javax.mail.Session;
+import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
@@ -17,11 +19,11 @@ import java.util.Properties;
 @Component
 public class Mymail {
     // 发送邮件的账号
-    public static String ownEmailAccount = "18811876912@139.com";
+    public static String ownEmailAccount = "jemmy_ywt@163.com";
     // 发送邮件的密码------》授权码
     public static String ownEmailPassword = "Zbd7895123";
     // 发送邮件的smtp 服务器 地址
-    public static String myEmailSMTPHost = "smtp.139.com";
+    public static String myEmailSMTPHost = "smtp.163.com";
     //防止附件名称过长，变成.bin
     static {
         System.setProperty("mail.mime.splitlongparameters", "false");
@@ -67,7 +69,7 @@ public class Mymail {
     public  Message createSimpleMail(Session session,String receiveMailAccount,String context,String title) throws Exception {
         MimeMessage message = new MimeMessage(session);
         // 设置发送邮件地址,param1 代表发送地址 param2 代表发送的名称(任意的) param3 代表名称编码方式
-        message.setFrom(new InternetAddress("18811876912@139.com", "E物流科技有限公司", "utf-8"));
+        message.setFrom(new InternetAddress("jemmy_ywt@163.com", "易物通科技有限公司", "utf-8"));
         // 代表收件人
         message.setRecipient(Message.RecipientType.TO, new InternetAddress(receiveMailAccount, "发货人", "utf-8"));
         // To: 增加收件人（可选）
@@ -79,8 +81,16 @@ public class Mymail {
 
         // 设置邮件主题
         message.setSubject(title);
+        StringBuilder stringBuilder=new StringBuilder();
+        stringBuilder.append(context+"<br><br><br>深圳市易物通科技有限公司<br>" +
+                "<br>" +
+                "Shenzhen Yiwutong Technology Co., Ltd. <br>" +
+                "<br>" +
+                "广东省深圳市南山区数字技术园B2栋<br>" +
+                "<br>" +
+                "Tel:（86）18811876912");
         // 设置邮件内容
-        message.setContent(context, "text/html;charset=utf-8");
+        message.setContent(String.valueOf(stringBuilder), "text/html;charset=utf-8");
         // 设置发送时间
         message.setSentDate(Calendar.getInstance().getTime());
         // 保存上面的编辑内容
@@ -113,7 +123,7 @@ public class Mymail {
         /*2.设置发件人
          * 其中 InternetAddress 的三个参数分别为: 邮箱, 显示的昵称(只用于显示, 没有特别的要求), 昵称的字符集编码
          * */
-        message.setFrom(new InternetAddress("18811876912@139.com", "E物流科技有限公司", "utf-8"));
+        message.setFrom(new InternetAddress("jemmy_ywt@163.com", "易物通科技有限公司", "utf-8"));
         // 代表收件人
         message.setRecipient(Message.RecipientType.TO, new InternetAddress(receiveMailAccount, "发货人", "utf-8"));
 
@@ -129,7 +139,15 @@ public class Mymail {
 
         //创建文本节点
         MimeBodyPart text = new MimeBodyPart();
-        text.setContent(context,"text/html;charset=UTF-8");
+        StringBuilder stringBuilder=new StringBuilder();
+        stringBuilder.append(context+"<br><br><br>深圳市易物通科技有限公司<br>" +
+                "<br>" +
+                "Shenzhen Yiwutong Technology Co., Ltd. <br>" +
+                "<br>" +
+                "广东省深圳市南山区数字技术园B2栋<br>" +
+                "<br>" +
+                "Tel:（86）18811876912");
+        text.setContent(String.valueOf(stringBuilder),"text/html;charset=UTF-8");
         //将文本和图片添加到multipart
         multipart.addBodyPart(text);
         for (int i = 0; i < realPath.length; i++) {
@@ -171,7 +189,7 @@ public class Mymail {
         /*2.设置发件人
          * 其中 InternetAddress 的三个参数分别为: 邮箱, 显示的昵称(只用于显示, 没有特别的要求), 昵称的字符集编码
          * */
-        message.setFrom(new InternetAddress("18811876912@139.com", "E物流科技有限公司", "utf-8"));
+        message.setFrom(new InternetAddress("jemmy_ywt@163.com", "易物通科技有限公司", "utf-8"));
         // 代表收件人
         message.setRecipient(Message.RecipientType.TO, new InternetAddress(receiveMailAccount, "发货人", "utf-8"));
 

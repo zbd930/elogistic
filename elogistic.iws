@@ -7,11 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34fddbbc-f199-4c2e-8b96-c704aac51672" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.ideaDataSources/e6b13166-36e3-4a69-8c86-678718036350.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.ideaDataSources/e6b13166-36e3-4a69-8c86-678718036350.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elogistic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/elogistic.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elogistic.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/elogistic.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elogistic.iws" beforeDir="false" afterPath="$PROJECT_DIR$/elogistic.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/ItemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/ItemsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/ItemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/ItemsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/lib/junit-4.13-rc-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/index.jsp" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,18 +38,12 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@129.211.65.130" type="feb32156:DbDataSourceImpl" />
+        <item name="@localhost [2]" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@129.211.65.130" type="feb32156:DbDataSourceImpl" />
+        <item name="@localhost [2]" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@129.211.65.130" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="fba: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -71,10 +70,10 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.38850576" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="project.structure.side.proportion" value="0.38275862" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -95,12 +94,12 @@
   </component>
   <component name="RunManager">
     <configuration name="test1" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.49" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/elogistic/" />
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="elogistic:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/elogistic" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
@@ -175,17 +174,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@85ee3c14" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@79a59bb6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@85ee3c14" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@79aa1b52" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@85ee3c14" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@2c28b7c7" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@79a59bb6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@12b1b85d" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -209,6 +203,8 @@
       <workItem from="1575015643892" duration="11000" />
       <workItem from="1575019084887" duration="27000" />
       <workItem from="1575250076905" duration="1609000" />
+      <workItem from="1575333316839" duration="484000" />
+      <workItem from="1575333832520" duration="830000" />
     </task>
     <servers />
   </component>
@@ -220,7 +216,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -11,13 +11,30 @@ public class supplier_company {
     private String contact_mail;
     private String contact_address;
     private String company_name;
-    private items items;
+    private String peichang;
+    private com.duogesi.entities.items items;
 
-    public items getItems() {
+    public int getSupplier_id() {
+        return supplier_id;
+    }
+
+    public void setSupplier_id(int supplier_id) {
+        this.supplier_id = supplier_id;
+    }
+
+    public String getPeichang() {
+        return peichang;
+    }
+
+    public void setPeichang(String peichang) {
+        this.peichang = peichang;
+    }
+
+    public com.duogesi.entities.items getItems() {
         return items;
     }
 
-    public void setItems(items items) {
+    public void setItems(com.duogesi.entities.items items) {
         this.items = items;
     }
 

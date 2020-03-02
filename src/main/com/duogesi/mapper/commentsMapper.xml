@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace命名空间，唯一标识。一般指定为自定义的接口文件，下面相当于这个接口的实现类 -->
+<mapper namespace="com.duogesi.mapper.commentsMapper">
+    <resultMap id="comments" type="com.duogesi.entities.comments">
+        <id column="id" property="id"/>
+        <result column="comments_text" property="comments_text"/>
+        <result column="user_id" property="user_id"/>
+        <result column="address_id" property="address_id"/>
+        <result column="star" property="star"/>
+        <association property="address" javaType="com.duogesi.entities.address">
+            <id column="supplier_id" property="supplier_id"/>
+            <result column="openid" property="openid"/>
+            <result column="phone" property="phone"/>
+            <result column="address" property="address"/>
+            <result column="name" property="name"/>
+            <result column="email" property="email"/>
+        </association>
+    </resultMap>
+
+    <!--提交评论-->
+    <insert id="insert_comment" parameterType="com.duogesi.entities.comments">
+            insert into comments (comments_text, address_id, user_id,star) values (#{comments_text},#{address_id},#{user_id},#{star})
+    </insert>
+
+    <!--获取评论-->
+    <select id="get_comments" resultMap="comments">
+        select c.comments_text,s.name,c.star
+        from comments as c,subscriber_address as s,user_info as u
+        where u.id=c.user_id and c.user_id=#{user_id} and s.id=c.address_id
+    </select>
+</mapper>

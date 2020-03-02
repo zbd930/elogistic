@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace命名空间，唯一标识。一般指定为自定义的接口文件，下面相当于这个接口的实现类 -->
+<mapper namespace="com.duogesi.mapper.priceMapper">
+     <!--引入自定义缓存类实现cache接口 -->
+    <!--<cache type="com.duogesi.cache.RedisCache"/>-->
+    <!-- 定义结果集，column表示sql查询列,property表示映射到实体的属性 -->
+    <resultMap type="com.duogesi.entities.price" id="my" >
+        <result column="west" property="west"/>
+        <result column="middle" property="middle"/>
+        <result column="east" property="east"/>
+        <result column="user_id" property="user_id"/>
+        <result column="valid_date_start" property="valid_date_start"/>
+        <result column="valid_date_end" property="valid_date_end"/>
+    </resultMap>
+    <!-- resultMap指定使用上面定义的结果集,查询使用关联查询，查询列要和上面的column对应 -->
+    <resultMap type="com.duogesi.entities.price_haika" id="my1" >
+        <result column="mudigang" property="mudigang"/>
+        <result column="price" property="price"/>
+        <result column="qiyungang" property="qiyungang"/>
+        <result column="user_id" property="user_id"/>
+        <result column="valid_date_start" property="valid_date_start"/>
+        <result column="valid_date_end" property="valid_date_end"/>
+    </resultMap>
+    <resultMap id="price" type="com.duogesi.entities.price_include">
+        <id property="id" column="id"></id>
+        <result column="area" property="area"/>
+        <result column="valid_date_start" property="valid_date_start"/>
+        <result column="valid_date_end" property="valid_date_end"/>
+        <result column="way" property="way"/>
+        <result column="user_id" property="user_id"/>
+        <result column="one" property="one"/>
+        <result column="three" property="three"/>
+        <result column="five" property="five"/>
+        <result column="ten" property="ten"/>
+    </resultMap>
+            <!--海派价格-->
+            <select id="get_price1" resultMap="price">
+                select *
+                from price_include
+                where user_id=#{user_id} and #{date}>valid_date_start and  valid_date_end>=#{date} and way=1 and area=#{area}
+            </select>
+            <!--空派价格-->
+            <select id="get_price0" resultMap="price">
+                select *
+                from price_include
+                where user_id=#{user_id} and #{date}>=valid_date_start and  valid_date_end>=#{date} and way=0 and area=#{area}
+            </select>
+            <!--美森价格-->
+            <select id="get_price2" resultMap="price">
+                select *
+                from price_include
+                where user_id=#{user_id} and #{date}>=valid_date_start and  valid_date_end>=#{date} and way=2 and area=#{area}
+            </select>
+            <!--直飞价格-->
+            <select id="get_price3" resultMap="price">
+                        select *
+                        from price_include
+                        where user_id=#{user_id} and #{date}>=valid_date_start and  valid_date_end>=#{date} and way=3 and area=#{area}
+                    </select>
+            <!--敏感货空运价格-->
+            <select id="get_price4" resultMap="price">
+                select *
+                from price_include
+                where user_id=#{user_id} and #{date}>valid_date_start and  valid_date_end>=#{date} and way=4 and area=#{area}
+            </select>
+            <!--海卡价格-->
+             <select id="get_price_haika" resultMap="my1">
+                 select *
+                 from price_noinclude
+                 where user_id=#{user_id} and #{date}>valid_date_start and  valid_date_end>=#{date} and mudigang=#{mudigang} and qiyungang=#{qiyungang}
+             </select>
+</mapper>

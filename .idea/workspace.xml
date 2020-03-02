@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="elogistic:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d174d0b2-1f68-4b9d-963f-8a974fa6403b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/META-INF/MANIFEST.MF" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="fba@www.yikuajing.cn" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="fba@www.yikuajing.cn" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="fba@www.yikuajing.cn" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="fba: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="fba@yikuajing.cn" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="fba@yikuajing.cn [2]" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="972643596">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="amount" value="1" />
+          <entry key="class" value="3" />
+          <entry key="java" value="11" />
+          <entry key="orders" value="1" />
+          <entry key="orders_details" value="1" />
+          <entry key="schdule_details" value="1" />
+          <entry key="ship_schdule" value="1" />
+          <entry key="sql" value="1" />
+          <entry key="xml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="3" />
+          <entry key="Database Element" value="5" />
+          <entry key="JAVA" value="11" />
+          <entry key="Scratch" value="1" />
+          <entry key="XML" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="txt" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>request</find>
+      <find>serv</find>
+      <find>javax.servlet</find>
+      <find>red</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="elogistic Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="9" />
+    <option name="width" value="1920" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectId" id="1UaS3kV6zKORdK737jjEOTFeWHo" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="CatdeaLogs" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="elogistic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="elogistic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="elogistic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="elogistic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="elogistic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="elogistic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582023767884" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../online/elogistic" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15161557" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\new\elogistic\src\main\res" />
+      <recent name="E:\project\new\elogistic\src\main\com\duogesi" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.duogesi.entities" />
+      <recent name="com.duogesi.Utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\new\elogistic\src\main\com\duogesi" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.49">
+    <configuration name="itemservletTest.testGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="elogistic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.com.duogesi.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.com.duogesi.controller" />
+      <option name="MAIN_CLASS_NAME" value="test.com.duogesi.controller.itemservletTest" />
+      <option name="METHOD_NAME" value="testGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.49" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.49" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8091/elogistic/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="elogistic:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/elogistic" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_elogistic_3" />
+        <option name="HTTP_PORT" value="8091" />
+        <option name="JNDI_PORT" value="1101" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50597" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="elogistic:war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.Tomcat 8.5.49" />
+      <item itemvalue="JUnit.itemservletTest.testGet" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.itemservletTest.testGet" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.17092034" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d174d0b2-1f68-4b9d-963f-8a974fa6403b" name="Default Changelist" comment="" />
+      <created>1575593015674</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575593015674</updated>
+      <workItem from="1575593020836" duration="210000" />
+      <workItem from="1575594182679" duration="20000" />
+      <workItem from="1575603262554" duration="115000" />
+      <workItem from="1575604110245" duration="61000" />
+      <workItem from="1575606232810" duration="3145000" />
+      <workItem from="1575618445546" duration="2631000" />
+      <workItem from="1575638508503" duration="2644000" />
+      <workItem from="1575801784932" duration="1140000" />
+      <workItem from="1575855114375" duration="907000" />
+      <workItem from="1575861275994" duration="4334000" />
+      <workItem from="1575938319663" duration="11566000" />
+      <workItem from="1575966033039" duration="644000" />
+      <workItem from="1576027274164" duration="3016000" />
+      <workItem from="1576045216966" duration="3506000" />
+      <workItem from="1576057171415" duration="218000" />
+      <workItem from="1576112235554" duration="4859000" />
+      <workItem from="1576132512436" duration="1366000" />
+      <workItem from="1576143810912" duration="323000" />
+      <workItem from="1576197670691" duration="5678000" />
+      <workItem from="1576217978346" duration="1302000" />
+      <workItem from="1576222818527" duration="716000" />
+      <workItem from="1576226630151" duration="694000" />
+      <workItem from="1576234067400" duration="2700000" />
+      <workItem from="1576289421194" duration="645000" />
+      <workItem from="1576376237306" duration="232000" />
+      <workItem from="1576456696148" duration="73000" />
+      <workItem from="1576461266687" duration="10000" />
+      <workItem from="1576463091041" duration="347000" />
+      <workItem from="1576463560933" duration="8000" />
+      <workItem from="1576467633908" duration="816000" />
+      <workItem from="1576477015878" duration="20000" />
+      <workItem from="1576545322016" duration="2246000" />
+      <workItem from="1576635715819" duration="669000" />
+      <workItem from="1576649444861" duration="2966000" />
+      <workItem from="1576668032206" duration="3243000" />
+      <workItem from="1576718811890" duration="21000" />
+      <workItem from="1576739521744" duration="4482000" />
+      <workItem from="1576803945236" duration="3625000" />
+      <workItem from="1576810226368" duration="66000" />
+      <workItem from="1577154856310" duration="407000" />
+      <workItem from="1577177228431" duration="3892000" />
+      <workItem from="1577236596986" duration="4010000" />
+      <workItem from="1577243842898" duration="3552000" />
+      <workItem from="1577254635177" duration="640000" />
+      <workItem from="1577258065769" duration="1639000" />
+      <workItem from="1577322399480" duration="7915000" />
+      <workItem from="1577348525815" duration="5655000" />
+      <workItem from="1577354299034" duration="208000" />
+      <workItem from="1577357215425" duration="4732000" />
+      <workItem from="1577406566604" duration="17142000" />
+      <workItem from="1577434925595" duration="1926000" />
+      <workItem from="1577448289152" duration="5237000" />
+      <workItem from="1577516007020" duration="644000" />
+      <workItem from="1577596429908" duration="1097000" />
+      <workItem from="1577686866879" duration="2621000" />
+      <workItem from="1577693684028" duration="4657000" />
+      <workItem from="1577752869108" duration="333000" />
+      <workItem from="1577765139340" duration="2577000" />
+      <workItem from="1577779556194" duration="2269000" />
+      <workItem from="1577846982903" duration="4308000" />
+      <workItem from="1577945927287" duration="13000" />
+      <workItem from="1577946864124" duration="1109000" />
+      <workItem from="1577948841618" duration="2533000" />
+      <workItem from="1578012648467" duration="704000" />
+      <workItem from="1578013501922" duration="11442000" />
+      <workItem from="1578031688458" duration="9040000" />
+      <workItem from="1578051729771" duration="10605000" />
+      <workItem from="1578063793923" duration="2938000" />
+      <workItem from="1578066892117" duration="71000" />
+      <workItem from="1578099153513" duration="32166000" />
+      <workItem from="1578213846147" duration="1713000" />
+      <workItem from="1578273935011" duration="1000" />
+      <workItem from="1578277174289" duration="882000" />
+      <workItem from="1578278233395" duration="526000" />
+      <workItem from="1578296429417" duration="11000" />
+      <workItem from="1578356476811" duration="38000" />
+      <workItem from="1578357222460" duration="1487000" />
+      <workItem from="1578360152161" duration="32000" />
+      <workItem from="1578379679260" duration="607000" />
+      <workItem from="1578383025885" duration="3578000" />
+      <workItem from="1578536952404" duration="8848000" />
+      <workItem from="1578618261056" duration="353000" />
+      <workItem from="1578621435050" duration="427000" />
+      <workItem from="1578622930262" duration="19000" />
+      <workItem from="1578630117019" duration="182000" />
+      <workItem from="1578636762203" duration="115000" />
+      <workItem from="1578643362226" duration="230000" />
+      <workItem from="1578646288936" duration="50000" />
+      <workItem from="1578648002433" duration="35000" />
+      <workItem from="1578648630095" duration="42000" />
+      <workItem from="1578879394181" duration="6235000" />
+      <workItem from="1578896127079" duration="6830000" />
+      <workItem from="1578968981443" duration="177000" />
+      <workItem from="1578970034183" duration="2044000" />
+      <workItem from="1578974305212" duration="779000" />
+      <workItem from="1578982454562" duration="443000" />
+      <workItem from="1578984253643" duration="22000" />
+      <workItem from="1578984306329" duration="25000" />
+      <workItem from="1578984504773" duration="65000" />
+      <workItem from="1579050385456" duration="4686000" />
+      <workItem from="1579136656356" duration="393000" />
+      <workItem from="1579141445082" duration="9804000" />
+      <workItem from="1579223133439" duration="6920000" />
+      <workItem from="1581920031227" duration="4698000" />
+      <workItem from="1581937754906" duration="5239000" />
+      <workItem from="1582001216448" duration="2095000" />
+      <workItem from="1582702616398" duration="80000" />
+      <workItem from="1582706134110" duration="22000" />
+      <workItem from="1582787268505" duration="138000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="12272000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Database Console" order="14" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.32899022" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="6" weight="0.23933902" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578974826610">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1578974826610" />
+    <state x="488" y="56" key="#com.intellij.ide.util.MemberChooser" timestamp="1578971303806">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="56" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1578971303806" />
+    <state x="463" y="61" key="FileChooserDialogImpl" timestamp="1579137041815">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="61" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579137041815" />
+    <state width="1071" height="170" key="GridCell.Tab.0.bottom" timestamp="1579233694498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1071" height="170" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
+    <state width="1071" height="170" key="GridCell.Tab.0.center" timestamp="1579233694498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1071" height="170" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
+    <state width="1071" height="170" key="GridCell.Tab.0.left" timestamp="1579233694498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1071" height="170" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
+    <state width="1071" height="170" key="GridCell.Tab.0.right" timestamp="1579233694498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1071" height="170" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
+    <state width="1071" height="170" key="GridCell.Tab.1.bottom" timestamp="1579233694498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1071" height="170" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
+    <state width="1071" height="170" key="GridCell.Tab.1.center" timestamp="1579233694498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1071" height="170" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
+    <state width="1071" height="170" key="GridCell.Tab.1.left" timestamp="1579233694498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1071" height="170" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
+    <state width="1071" height="170" key="GridCell.Tab.1.right" timestamp="1579233694498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1071" height="170" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
+    <state width="1071" height="170" key="GridCell.Tab.2.bottom" timestamp="1579233694498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1071" height="170" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
+    <state width="1071" height="170" key="GridCell.Tab.2.center" timestamp="1579233694498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1071" height="170" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
+    <state width="1071" height="170" key="GridCell.Tab.2.left" timestamp="1579233694498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1071" height="170" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
+    <state width="1071" height="170" key="GridCell.Tab.2.right" timestamp="1579233694498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1071" height="170" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
+    <state x="323" y="60" key="NewModule_or_Project.wizard" timestamp="1579137044285">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="323" y="60" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1579137044285" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1578630256668">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1578630256668" />
+    <state x="555" y="115" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1578974808121">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="555" y="115" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1366.728@0.0.1366.728" timestamp="1578974808121" />
+    <state x="368" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1579223133669">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="368" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579223133669" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1579141531364">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1579141531364" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/wechatservlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/orderservice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="89" column="39" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/wechatservice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/shoppingservice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/addressservlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.0/javax.servlet-api-4.0.0.jar!/javax/servlet/http/HttpServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Mail/RedisUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/uploadservlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.0/javax.servlet-api-4.0.0.jar!/javax/servlet/ServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/redisUtils/RedisKeyUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/TestXml2Json.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/81005729-050c-40c3-b003-07483f754e13/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://81005729-050c-40c3-b003-07483f754e13/schema/fba/table/orders">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://81005729-050c-40c3-b003-07483f754e13/schema/fba/table/orders_details">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://81005729-050c-40c3-b003-07483f754e13/schema/fba/table/amount">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://81005729-050c-40c3-b003-07483f754e13/schema/fba/table/ship_schdule">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://81005729-050c-40c3-b003-07483f754e13/schema/fba/table/schdule_details">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

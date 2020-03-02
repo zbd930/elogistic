@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace命名空间，唯一标识。一般指定为自定义的接口文件，下面相当于这个接口的实现类 -->
+<mapper namespace="com.duogesi.mapper.amountMapper">
+    <resultMap id="amount" type="com.duogesi.entities.amount">
+        <id column="id" property="id"/>
+        <result column="order_id" property="order_id"/>
+        <result column="paid" property="paid"/>
+        <result column="total" property="total"/>
+        <result column="item_id" property="item_id"/>
+        <result column="tax" property="tax"/>
+        <result column="customer" property="customer"/>
+        <result column="inspect" property="inspect"/>
+        <result column="additional" property="additional"/>
+        <result column="openid" property="openid"/>
+        <association property="order" javaType="com.duogesi.entities.order">
+            <id column="id" property="id"/>
+            <result column="ctn" property="ctn"></result>
+            <result column="openid" property="openid"/>
+            <result column="weight" property="weight"/>
+            <result column="volume" property="volume"/>
+            <result column="numbers" property="numbers"></result>
+            <result column="item_id" property="item_id"/>
+            <result column="dest" property="dest"/>
+            <result column="address_id" property="address_id"/>
+            <result column="status" property="status"/>
+            <result column="beizhu" property="beizhu"/>
+            <result column="ups" property="ups"/>
+        </association>
+        <association property="items" javaType="com.duogesi.entities.items">
+            <id column="id" property="id"/>
+            <result column="qiyungang" property="qiyungang"/>
+            <result column="mudigang" property="mudigang"/>
+            <result column="etd" property="etd"/>
+            <result column="method" property="method"/>
+            <result column="eta" property="eta"/>
+            <result property="status" column="status"></result>
+            <result column="desc" property="desc"/>
+            <result column="shichang" property="shichang"/>
+        </association>
+    </resultMap>
+
+    <!--插入金额-->
+    <insert id="insert_amount" parameterType="com.duogesi.entities.amount">
+            insert into amount (order_id, paid, total, item_id,openid) values (#{order_id},#{paid},#{total},#{item_id},#{openid})
+    </insert>
+
+    <!--获取本月的金额-->
+    <select id="get_amount" resultMap="amount">
+        select  sum(a.paid) as paid , sum(a.total) as total,sum(a.tax) as tax,sum(a.inspect) as inspect,sum(a.customer) as customer,sum(a.additional) as additional
+        from fba.amount as a,fba.ship_schdule as s
+        where a.item_id=s.id and s.etd>#{start_data} and #{end_data}>=s.etd  and a.openid=#{openid}
+    </select>
+    <!--获取某个订单的金额-->
+    <select id="get_amount_byid" resultMap="amount">
+        select paid,total,tax,customer,inspect,additional
+        from amount as a
+        where a.order_id=#{order_id}
+    </select>
+
+
+</mapper>

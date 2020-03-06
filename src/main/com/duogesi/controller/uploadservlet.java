@@ -1,5 +1,6 @@
 package com.duogesi.controller;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,7 +17,35 @@ import java.io.IOException;
 @RequestMapping("/upload/")
 @Controller
 public class uploadservlet {
-    
+
+    //在需要使用日志的地方加上这句代码即可
+    private static Logger logger = Logger.getLogger(uploadservlet.class);
+
+    //打包上传
+    @RequestMapping(value = "file.do",method = {RequestMethod.POST},produces="text/html;charset=UTF-8")
+    public ModelAndView upfile(HttpServletRequest request, HttpServletResponse response,ModelAndView mv) throws IOException {
+        mv.setViewName("/uploadfile");
+        MultipartHttpServletRequest req = (MultipartHttpServletRequest) request;
+        //对应前端的upload的name参数"file"
+        MultipartFile multipartFile = req.getFile("file");
+        //获取订单号
+//        String order=request.getParameter("number");
+        //取得图片的格式后缀
+        String originalLastName = multipartFile.getOriginalFilename();
+        String picLastName = originalLastName.substring(originalLastName.lastIndexOf("."));
+        String name=multipartFile.getName();
+        //拼接：名字+时间戳+后缀
+        String packageName = name+picLastName;
+        String realPath = request.getServletContext().getRealPath("/files/");
+        if (copy(multipartFile, realPath, packageName)){
+            logger.info("上传成功");
+            mv.addObject("upload_result","上传成功");
+        }else {
+            logger.error("上传失败");
+            mv.addObject("upload_result", "上传失败");
+        }
+        return mv;
+    }
 
     @RequestMapping(value = "upload.do", method = {RequestMethod.POST, RequestMethod.GET},produces="text/html;charset=UTF-8")
     @ResponseBody
@@ -149,14 +178,15 @@ public class uploadservlet {
             //如果文件目录不存在，创建文件目录
             if (!dir.exists()) {
                 dir.mkdir();
-                System.out.println("创建文件目录成功：" + realPath);
+                logger.info("创建文件目录成功：" + realPath);
             }
             File file = new File(realPath, picName);
             if (file.exists()){
+                logger.error("文件已存在");
                 return false;
             }
             multipartFile.transferTo(file);
-            System.out.println("添加图片成功！");
+            logger.info("添加图片成功！");
             return true;
         } catch (IOException e) {
             e.printStackTrace();
@@ -167,4 +197,5 @@ public class uploadservlet {
         }
 
     }
-}
+
+    }

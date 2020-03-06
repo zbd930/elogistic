@@ -13,5 +13,6 @@ public interface amountMapper {
    //获取本月的金额
    amount get_amount(@Param("start_data") String start_data, @Param("end_data") String end_data, @Param("openid") String openid);
 
+    int delete_order_price(int id);
 
 }

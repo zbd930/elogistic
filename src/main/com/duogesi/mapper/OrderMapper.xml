@@ -33,4 +33,16 @@
         where id=#{id}
     </update>
 
+    <delete id="delete_order" >
+        delete
+        from orders
+        where id=#{id}
+    </delete>
+
+    <delete id="delete_order_details" >
+        delete
+        from orders_details
+        where order_id=#{id}
+    </delete>
+
 </mapper>

@@ -73,7 +73,7 @@ public class orderservice {
                 amount.setItem_id(order.getItem_id());
                 BigDecimal decimal = new BigDecimal(String.valueOf(map.get("amount")));
                 amount.setTotal(decimal);
-                //模拟已支付的金额
+                //已支付的金额
                 BigDecimal decimal1 = new BigDecimal("0.00");
                 decimal1 = BigDecimal.valueOf(Integer.valueOf(cash_fee)/100);
                 amount.setPaid(decimal1);

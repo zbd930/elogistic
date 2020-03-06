@@ -14,6 +14,7 @@ import javax.mail.internet.MimeMultipart;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Properties;
 
 @Component
@@ -66,18 +67,22 @@ public class Mymail {
         trans.close();
     }
 
-    public  Message createSimpleMail(Session session,String receiveMailAccount,String context,String title) throws Exception {
+    public  Message createSimpleMail(Session session, String receiveMailAccount, String context, String title, List<String> ccemails) throws Exception {
         MimeMessage message = new MimeMessage(session);
         // 设置发送邮件地址,param1 代表发送地址 param2 代表发送的名称(任意的) param3 代表名称编码方式
         message.setFrom(new InternetAddress("jemmy_ywt@163.com", "易物通科技有限公司", "utf-8"));
         // 代表收件人
         message.setRecipient(Message.RecipientType.TO, new InternetAddress(receiveMailAccount, "发货人", "utf-8"));
         // To: 增加收件人（可选）
-        /*message.addRecipient(MimeMessage.RecipientType.TO, new InternetAddress("dd@receive.com", "USER_DD", "UTF-8"));
+//        message.addRecipient(MimeMessage.RecipientType.TO, new InternetAddress("dd@receive.com", "USER_DD", "UTF-8"));
         // Cc: 抄送（可选）
-        message.setRecipient(MimeMessage.RecipientType.CC, new InternetAddress("ee@receive.com", "USER_EE", "UTF-8"));
+        if (ccemails.size()!=0) {
+            for (String s : ccemails) {
+                message.setRecipient(MimeMessage.RecipientType.CC, new InternetAddress(s, "USER_EE", "UTF-8"));
+            }
+        }
         // Bcc: 密送（可选）
-        message.setRecipient(MimeMessage.RecipientType.BCC, new InternetAddress("ff@receive.com", "USER_FF", "UTF-8"));*/
+//        message.setRecipient(MimeMessage.RecipientType.BCC, new InternetAddress("ff@receive.com", "USER_FF", "UTF-8"));
 
         // 设置邮件主题
         message.setSubject(title);

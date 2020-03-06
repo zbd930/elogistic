@@ -109,15 +109,91 @@ public class wechatservice {
              //更新账单表和更新订单详情表
              if ((amountMapper.insert_amount(amount)==1) && (orderMapper.addorder2(order_details) == 1)) {
                  //发送邮件
-//                 int ship_id=order.getItem_id();
-//                 List<supplier_company> supplier_companies=user_infoMapper.get_supplier_info(ship_id);
-//                 String email=supplier_companies.get(0).getContact_mail();
-//                 try {
-//                     mymail.send(email,"您发布的拼柜任务有新订单","【任务更新】");
-//                 } catch (Exception e) {
-//                     e.printStackTrace();
-//                 }
-             return "成功";
+                 int ship_id=order.getItem_id();
+                 List<supplier_company> supplier_companies=user_infoMapper.get_supplier_info(ship_id);
+                 String email=supplier_companies.get(0).getContact_mail();
+                 try {
+                     mymail.send(email,"您发布的拼柜任务有新订单","【任务更新】");
+                 } catch (Exception e) {
+                     e.printStackTrace();
+                 }
+                 //发送完毕
+                        String openid = request.getParameter("openid");
+                        String total = request.getParameter("total");
+                        System.out.println("openid = " + openid);
+                        String url = "https://api.mch.weixin.qq.com/pay/unifiedorder";
+                        //组装预下单的请求数据
+                        String reqStr = getReqStr(openid, order,total);
+                        System.out.println("reqStr=" + reqStr);
+                        //发送post数据到微信预下单
+                        results = sendPost(url,reqStr);
+                        System.out.println("prepay from weixin: \n " + results);
+                        Map<String,String> return_data = null;
+                        try {
+                            return_data = WXPayUtil.xmlToMap(results);//微信的一个工具类
+                        } catch (Exception e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                            System.out.println(e.getMessage());
+                        }
+                        String return_code = return_data.get("return_code");
+                        System.out.println("return_code=" + return_code);
+                        if("SUCCESS".equals(return_code)){
+                            String prepay_id = return_data.get("prepay_id");
+                            Map map3= conPayParam(prepay_id); //组装返回数据
+                            //存入购物车500秒
+                            Map map =object2Map(order);
+                            Map map1 =object2Map(order_details);
+                            map.put("amount",total);
+                            map.putAll(map1);
+                            map.putAll(map3);
+                            //定义定时器，恢复库存
+                            Timer timer=new Timer();
+                            timer.schedule(new TimerTask() {
+                                @Override
+                                public void run() {
+                                    Map map2 =new HashMap();
+                                    try {
+                                        map2 = redisUtil.hmget(number);
+                                    }catch (NullPointerException e){
+                                       e.printStackTrace();
+                                       timer.cancel();
+                                    }
+                                    order order1=new order();
+                                    order_details order_details = new order_details();
+                                    try {
+                                        BeanUtils.populate(order_details,map2);
+                                        BeanUtils.populate(order1,map2);
+                                    } catch (IllegalAccessException e) {
+                                        e.printStackTrace();
+                                    } catch (InvocationTargetException e) {
+                                        e.printStackTrace();
+                                    }
+                                    //恢复数据
+                                    itemsMapper.return_items(order_details.getWeight(),order_details.getVolume(),order1.getItem_id());
+                                      //删除订单
+                                        orderMapper.delete_order(order.getId());
+                                        orderMapper.delete_order_details(order.getId());
+                                        //删除价格
+                                        amountMapper.delete_order_price(order.getId());
+                                      //取消线程
+                                    timer.cancel();
+                                }
+                            },300000);
+                            //先存入redis
+                            redisUtil.hmset(number,map,300);
+                            redisUtil.sSetAndTime(openid,300,number);
+                            results=JSONObject.toJSONString(map);
+                        }else{
+                            results ="{\"return_code\":\"fail\"}";
+                            response.setContentType("application/json;charset=UTF-8");
+                            response.setHeader("catch-control", "no-catch");
+                            PrintWriter out = response.getWriter();
+                            out.write(results);
+                            out.flush();
+                            out.close();
+                        }
+                    return results;
              } else return "失败";
              } else return "失败";
 

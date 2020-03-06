@@ -7,13 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d174d0b2-1f68-4b9d-963f-8a974fa6403b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Aspect/orderAsper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Aspect/orderAsper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Mail/Mymail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Mail/Mymail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/addressservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/addressservlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/orderservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/orderservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/wechatservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/wechatservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/spring.xml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,94 +42,33 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@www.yikuajing.cn" type="feb32156:DbDataSourceImpl" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@www.yikuajing.cn" type="feb32156:DbDataSourceImpl" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@www.yikuajing.cn" type="feb32156:DbDataSourceImpl" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="fba: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="fba: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@yikuajing.cn" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@yikuajing.cn [2]" type="feb32156:DbDataSourceImpl" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="fba: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="copy_email: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="972643596">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.32" value="1" />
-          <entry key="project.open.time.43" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="amount" value="1" />
-          <entry key="class" value="3" />
-          <entry key="java" value="11" />
-          <entry key="orders" value="1" />
-          <entry key="orders_details" value="1" />
-          <entry key="schdule_details" value="1" />
-          <entry key="ship_schdule" value="1" />
-          <entry key="sql" value="1" />
-          <entry key="xml" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="3" />
-          <entry key="Database Element" value="5" />
-          <entry key="JAVA" value="11" />
-          <entry key="Scratch" value="1" />
-          <entry key="XML" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="txt" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="3" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -136,12 +84,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -156,57 +98,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="elogistic Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="9" />
-    <option name="width" value="1920" />
-    <option name="height" value="1047" />
-  </component>
   <component name="ProjectId" id="1UaS3kV6zKORdK737jjEOTFeWHo" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="CatdeaLogs" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="elogistic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="elogistic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="elogistic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="elogistic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="elogistic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="elogistic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -215,39 +107,29 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582023767884" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../online/elogistic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/com/duogesi/mapper" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15161557" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\project\new\elogistic\src\main\res" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\project\new\elogistic\src\main\com\duogesi" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.duogesi.entities" />
       <recent name="com.duogesi.Utils" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\new\elogistic\src\main\com\duogesi\mapper" />
+      <recent name="E:\project\new\elogistic\src\main\res" />
       <recent name="E:\project\new\elogistic\src\main\com\duogesi" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.49">
     <configuration name="itemservletTest.testGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -281,11 +163,11 @@
         <option name="HTTP_PORT" value="8091" />
         <option name="JNDI_PORT" value="1101" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="50597" />
       </RunnerSettings>
@@ -342,8 +224,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Tomcat 8.5.49" />
       <item itemvalue="JUnit.itemservletTest.testGet" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.49" />
     </list>
     <recent_temporary>
       <list>
@@ -364,8 +246,12 @@
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@6d6c699f" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -493,49 +379,11 @@
       <workItem from="1582702616398" duration="80000" />
       <workItem from="1582706134110" duration="22000" />
       <workItem from="1582787268505" duration="138000" />
+      <workItem from="1583378338871" duration="1636000" />
+      <workItem from="1583380009318" duration="805000" />
+      <workItem from="1583389558976" duration="575000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12272000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Database Console" order="14" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.32899022" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32995737" />
-      <window_info anchor="right" id="Database" order="6" weight="0.23933902" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -546,12 +394,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -559,38 +401,35 @@
       </map>
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578974826610">
+    <state x="275" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583379795749">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1578974826610" />
-    <state x="488" y="56" key="#com.intellij.ide.util.MemberChooser" timestamp="1578971303806">
+    <state x="275" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1583379795749" />
+    <state x="488" y="56" key="#com.intellij.ide.util.MemberChooser" timestamp="1583389681872">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="56" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1578971303806" />
+    <state x="488" y="56" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1583389681872" />
     <state x="463" y="61" key="FileChooserDialogImpl" timestamp="1579137041815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="61" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579137041815" />
-    <state width="1071" height="170" key="GridCell.Tab.0.bottom" timestamp="1579233694498">
+    <state width="1071" height="77" key="GridCell.Tab.0.bottom" timestamp="1583390080049">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="170" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
-    <state width="1071" height="170" key="GridCell.Tab.0.center" timestamp="1579233694498">
+    <state width="1071" height="77" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583390080049" />
+    <state width="1071" height="77" key="GridCell.Tab.0.center" timestamp="1583390080049">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="170" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
-    <state width="1071" height="170" key="GridCell.Tab.0.left" timestamp="1579233694498">
+    <state width="1071" height="77" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583390080049" />
+    <state width="1071" height="77" key="GridCell.Tab.0.left" timestamp="1583390080049">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="170" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
-    <state width="1071" height="170" key="GridCell.Tab.0.right" timestamp="1579233694498">
+    <state width="1071" height="77" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583390080049" />
+    <state width="1071" height="77" key="GridCell.Tab.0.right" timestamp="1583390080049">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="170" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579233694498" />
+    <state width="1071" height="77" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583390080049" />
     <state width="1071" height="170" key="GridCell.Tab.1.bottom" timestamp="1579233694498">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -631,141 +470,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1578630256668" />
+    <state x="399" y="11" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1583389673301">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="399" y="11" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1583389673301" />
     <state x="555" y="115" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1578974808121">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="555" y="115" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1366.728@0.0.1366.728" timestamp="1578974808121" />
-    <state x="368" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1579223133669">
+    <state x="368" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1583389563355">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="368" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579223133669" />
+    <state x="368" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583389563355" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1579141531364">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1579141531364" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/wechatservlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/orderservice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="89" column="39" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/wechatservice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/shoppingservice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/addressservlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.0/javax.servlet-api-4.0.0.jar!/javax/servlet/http/HttpServletRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Mail/RedisUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/uploadservlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.0/javax.servlet-api-4.0.0.jar!/javax/servlet/ServletRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/redisUtils/RedisKeyUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/TestXml2Json.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/81005729-050c-40c3-b003-07483f754e13/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://81005729-050c-40c3-b003-07483f754e13/schema/fba/table/orders">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://81005729-050c-40c3-b003-07483f754e13/schema/fba/table/orders_details">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://81005729-050c-40c3-b003-07483f754e13/schema/fba/table/amount">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://81005729-050c-40c3-b003-07483f754e13/schema/fba/table/ship_schdule">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://81005729-050c-40c3-b003-07483f754e13/schema/fba/table/schdule_details">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

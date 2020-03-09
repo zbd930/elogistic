@@ -1,5 +1,6 @@
 package com.duogesi.controller;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,10 +10,16 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.servlet.jsp.PageContext;
 import java.io.File;
 import java.io.IOException;
+import java.util.Map;
+import java.util.Vector;
+import java.util.concurrent.ConcurrentHashMap;
 
 @RequestMapping("/upload/")
 @Controller
@@ -23,19 +30,17 @@ public class uploadservlet {
 
     //打包上传
     @RequestMapping(value = "file.do",method = {RequestMethod.POST},produces="text/html;charset=UTF-8")
-    public ModelAndView upfile(HttpServletRequest request, HttpServletResponse response,ModelAndView mv) throws IOException {
-        mv.setViewName("/uploadfile");
+    public ModelAndView upfile(HttpServletRequest request, HttpServletResponse response,ModelAndView mv,String order) throws IOException {
+        System.out.println(order);
+        mv.setViewName("uploadfile");
         MultipartHttpServletRequest req = (MultipartHttpServletRequest) request;
         //对应前端的upload的name参数"file"
         MultipartFile multipartFile = req.getFile("file");
-        //获取订单号
-//        String order=request.getParameter("number");
         //取得图片的格式后缀
         String originalLastName = multipartFile.getOriginalFilename();
-        String picLastName = originalLastName.substring(originalLastName.lastIndexOf("."));
-        String name=multipartFile.getName();
+//        String picLastName = originalLastName.substring(originalLastName.lastIndexOf("."));
         //拼接：名字+时间戳+后缀
-        String packageName = name+picLastName;
+        String packageName = order+originalLastName;
         String realPath = request.getServletContext().getRealPath("/files/");
         if (copy(multipartFile, realPath, packageName)){
             logger.info("上传成功");

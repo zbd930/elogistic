@@ -37,6 +37,7 @@ public class wechatservlet {
     //普通下单
     @RequestMapping("pay.do")
     @ResponseBody
+    //orderservlet判断仓位情况后，如果有仓位，再下单
     public String pay(HttpServletRequest request, HttpServletResponse response, order order, order_details order_details,String method,String country){
         String result="";
         try {

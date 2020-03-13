@@ -207,8 +207,23 @@ public class items implements Serializable {
                 ", qiyungang='" + qiyungang + '\'' +
                 ", mudigang='" + mudigang + '\'' +
                 ", method='" + method + '\'' +
+                ", country='" + country + '\'' +
                 ", etd=" + etd +
                 ", eta=" + eta +
+                ", desc='" + desc + '\'' +
+                ", details=" + details +
+                ", status=" + status +
+                ", statu='" + statu + '\'' +
+                ", user_id=" + user_id +
+                ", discount=" + discount +
+                ", orders=" + orders +
+                ", supplier_companies=" + supplier_companies +
+                ", myprices=" + myprices +
+                ", addition=" + addition +
+                ", price=" + price +
+                ", like=" + like +
+                ", amount=" + amount +
+                ", order_details=" + order_details +
                 '}';
     }
 }

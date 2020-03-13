@@ -70,7 +70,7 @@ public class Mymail {
     public  Message createSimpleMail(Session session, String receiveMailAccount, String context, String title) throws Exception {
         MimeMessage message = new MimeMessage(session);
         // 设置发送邮件地址,param1 代表发送地址 param2 代表发送的名称(任意的) param3 代表名称编码方式
-        message.setFrom(new InternetAddress("jemmy_ywt@163.com", "易物通科技有限公司", "utf-8"));
+        message.setFrom(new InternetAddress("jemmy_ywt@163.com", "Shenzhen Yiwutong Technology", "utf-8"));
         // 代表收件人
         message.setRecipient(Message.RecipientType.TO, new InternetAddress(receiveMailAccount, "发货人", "utf-8"));
         // To: 增加收件人（可选）
@@ -87,11 +87,11 @@ public class Mymail {
         // 设置邮件主题
         message.setSubject(title);
         StringBuilder stringBuilder=new StringBuilder();
-        stringBuilder.append(context+"<br><br><br>深圳市易物通科技有限公司<br>" +
+        stringBuilder.append(context+"<br><br><br>Shenzhen Yiwutong Technology<br>" +
                 "<br>" +
                 "Shenzhen Yiwutong Technology Co., Ltd. <br>" +
                 "<br>" +
-                "广东省深圳市南山区数字技术园B2栋<br>" +
+                "Shenzhen Yiwutong Technology<br>" +
                 "<br>" +
                 "Tel:（86）18811876912");
         // 设置邮件内容
@@ -128,7 +128,7 @@ public class Mymail {
         /*2.设置发件人
          * 其中 InternetAddress 的三个参数分别为: 邮箱, 显示的昵称(只用于显示, 没有特别的要求), 昵称的字符集编码
          * */
-        message.setFrom(new InternetAddress("jemmy_ywt@163.com", "易物通科技有限公司", "utf-8"));
+        message.setFrom(new InternetAddress("jemmy_ywt@163.com", "Shenzhen Yiwutong Technology", "utf-8"));
         // 代表收件人
         message.setRecipient(Message.RecipientType.TO, new InternetAddress(receiveMailAccount, "发货人", "utf-8"));
 
@@ -145,11 +145,11 @@ public class Mymail {
         //创建文本节点
         MimeBodyPart text = new MimeBodyPart();
         StringBuilder stringBuilder=new StringBuilder();
-        stringBuilder.append(context+"<br><br><br>深圳市易物通科技有限公司<br>" +
+        stringBuilder.append(context+"<br><br><br>Shenzhen Yiwutong Technology<br>" +
                 "<br>" +
                 "Shenzhen Yiwutong Technology Co., Ltd. <br>" +
                 "<br>" +
-                "广东省深圳市南山区数字技术园B2栋<br>" +
+                "Shenzhen Yiwutong Technology<br>" +
                 "<br>" +
                 "Tel:（86）18811876912");
         text.setContent(String.valueOf(stringBuilder),"text/html;charset=UTF-8");

@@ -14,5 +14,6 @@ public interface amountMapper {
    amount get_amount(@Param("start_data") String start_data, @Param("end_data") String end_data, @Param("openid") String openid);
 
     int delete_order_price(int id);
-
+    //修改已支付金额
+    int updata_paid(@Param("paid")float paid,@Param("order_id")String order_id);
 }

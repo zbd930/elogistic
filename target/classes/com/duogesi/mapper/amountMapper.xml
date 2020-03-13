@@ -65,5 +65,10 @@
                 delete
                 from amount
                 where order_id=#{id}
-            </delete>
+     </delete>
+    <!--  修改paid-->
+    <update id="updata_paid">
+        update amount set paid=#{paid}
+        where  order_id=#{order_id}
+    </update>
 </mapper>

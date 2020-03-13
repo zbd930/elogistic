@@ -2,6 +2,7 @@ package com.duogesi.mapper;
 
 import com.duogesi.entities.details;
 import com.duogesi.entities.items;
+import com.duogesi.entities.supplier_company;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
@@ -35,4 +36,8 @@ public interface ItemsMapper {
     List<items> get_orders(String openid);
 
    int return_items(@Param("weight") float weight, @Param("volume") float volume, @Param("id") int id);
+   //     根据shipid获取发货人信息
+
+    items get_supplier_info(int item_id);
+
 }

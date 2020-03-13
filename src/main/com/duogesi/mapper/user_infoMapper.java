@@ -10,5 +10,4 @@ public interface user_infoMapper {
     int get_like(int user_id);
     int update_like(@Param("post_like") int post_like, @Param("id") int id);
 
-    List<supplier_company> get_supplier_info(int item_id);
 }

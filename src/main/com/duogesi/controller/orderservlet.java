@@ -26,11 +26,11 @@ public class orderservlet {
     //支付成功后通知添加订单
     public void update(HttpServletRequest request,HttpServletResponse response){
        orderservice.add_order(request,response);
-
     }
 
     @RequestMapping(value = "make.do",produces="text/html;charset=UTF-8")
     @ResponseBody
+    //这个是接到请求后的第一个流程
     public String order(String total, order order, order_details order_details, HttpServletResponse response, HttpServletRequest request){
         int i=0;
         try {
@@ -65,5 +65,11 @@ public class orderservlet {
         }
         return null;
     }
+
+//    //支付成功后删除redis购物车
+//    @RequestMapping("delete_gouwuche.do",produces="text/html;charset=UTF-8")
+//    public void delete_redis(){
+//
+//    }
 
 }

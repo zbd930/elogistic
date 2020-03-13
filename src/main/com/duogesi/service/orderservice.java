@@ -61,44 +61,48 @@ public class orderservice {
             if (json.getString("return_code").equals("SUCCESS")) {
                 String out_trade_no = json.get("out_trade_no") + "";//订单号
                 String cash_fee=json.get("cash_fee")+"";//商户订单号
-                String openid=json.get("openid")+"";
+//                String openid=json.get("openid")+"";
 //              String trade_type=json.get("trade_type")+"";
                 //接下来是做自己的业务处理
-                Map map = redisUtil.hmget(out_trade_no);
-                order order = new order();
-                order_details order_details = new order_details();
-                amount amount = new amount();
-                BeanUtils.populate(order, map);
-                BeanUtils.populate(order_details, map);
-                amount.setItem_id(order.getItem_id());
-                BigDecimal decimal = new BigDecimal(String.valueOf(map.get("amount")));
-                amount.setTotal(decimal);
-                //已支付的金额
-                BigDecimal decimal1 = new BigDecimal("0.00");
-                decimal1 = BigDecimal.valueOf(Integer.valueOf(cash_fee)/100);
-                amount.setPaid(decimal1);
-                amount.setOpenid(order.getOpenid());
-                if (!order.getTihuo()) {
-                    order.setStatus(4);
-                } else order.setStatus(0);
-                try {
-                    if (order_details.getChaigui().equals("美东") || order_details.getChaigui().equals("美中") || order_details.getChaigui().equals("美西")) {
-                        Swtich s = new Swtich();
-                        order_details.setChaigui(s.switch_mudigang_fan(order_details.getChaigui()));
-                    }
-                    //添加订单
-                    if (orderMapper.addorder(order) == 1) {
-                        order_details.setOrder_id(order.getId());
-                        amount.setOrder_id(order.getId());
-                        //更新账单表和更新订单详情表
-                        if ((amountMapper.insert_amount(amount) == 1) && (orderMapper.addorder2(order_details) == 1)) {
-                                redisUtil.del(out_trade_no);
-                        }
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-                }
+//                Map map = redisUtil.hmget(out_trade_no);
+//                order order = new order();
+//                order_details order_details = new order_details();
+//                amount amount = new amount();
+//                BeanUtils.populate(order, map);
+//                BeanUtils.populate(order_details, map);
+//                amount.setItem_id(order.getItem_id());
+//                BigDecimal decimal = new BigDecimal(String.valueOf(map.get("amount")));
+//                amount.setTotal(decimal);
+//                //已支付的金额
+//                BigDecimal decimal1 = new BigDecimal("0.00");
+//                decimal1 = BigDecimal.valueOf(Integer.valueOf(cash_fee)/100);
+//                amount.setPaid(decimal1);
+//                amount.setOpenid(order.getOpenid());
+//                if (!order.getTihuo()) {
+//                    order.setStatus(4);
+//                } else order.setStatus(0);
+//                try {
+//                    if (order_details.getChaigui().equals("美东") || order_details.getChaigui().equals("美中") || order_details.getChaigui().equals("美西")) {
+//                        Swtich s = new Swtich();
+//                        order_details.setChaigui(s.switch_mudigang_fan(order_details.getChaigui()));
+//                    }
+//                    //添加订单
+//                    if (orderMapper.addorder(order) == 1) {
+//                        order_details.setOrder_id(order.getId());
+//                        amount.setOrder_id(order.getId());
+//                        //更新账单表和更新订单详情表
+//                        if ((amountMapper.insert_amount(amount) == 1) && (orderMapper.addorder2(order_details) == 1)) {
+//                                redisUtil.del(out_trade_no);
+//                        }
+//                    }
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                    TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+//                }
+                //删除redis
+                redisUtil.del(out_trade_no);
+                //修改已支付金额
+                amountMapper.updata_paid(Integer.valueOf(cash_fee)/100,out_trade_no);
                 //告诉微信服务器，我收到信息了，不要在调用回调action了
                 response.getWriter().write("<xml><return_code><![CDATA[SUCCESS]]></return_code></xml>");
                 System.out.println("----结束---" + inputString.toString());

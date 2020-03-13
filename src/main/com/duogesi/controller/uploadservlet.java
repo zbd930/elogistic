@@ -31,7 +31,6 @@ public class uploadservlet {
     //打包上传
     @RequestMapping(value = "file.do",method = {RequestMethod.POST},produces="text/html;charset=UTF-8")
     public ModelAndView upfile(HttpServletRequest request, HttpServletResponse response,ModelAndView mv,String order) throws IOException {
-        System.out.println(order);
         mv.setViewName("uploadfile");
         MultipartHttpServletRequest req = (MultipartHttpServletRequest) request;
         //对应前端的upload的name参数"file"

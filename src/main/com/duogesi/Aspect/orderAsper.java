@@ -2,10 +2,7 @@ package com.duogesi.Aspect;
 
 
 import com.duogesi.Mail.Mymail;
-import com.duogesi.entities.details;
-import com.duogesi.entities.order;
-import com.duogesi.entities.order_details;
-import com.duogesi.entities.supplier_company;
+import com.duogesi.entities.*;
 import com.duogesi.mapper.ItemsMapper;
 import com.duogesi.mapper.OrderMapper;
 import com.duogesi.mapper.user_infoMapper;
@@ -137,10 +134,9 @@ public class orderAsper {
         details details=itemsMapper.get_para(order.getItem_id());
         if(details.getWeight()<=0 && details.getVolume()<=0) {
             //后置通知
-            int ship_id = order.getItem_id();
-            //获取供应商邮箱
-            List<supplier_company> supplier_company = user_infoMapper.get_supplier_info(ship_id);
-            String email = supplier_company.get(0).getContact_mail();
+            int item_id = order.getItem_id();
+            items items =itemsMapper.get_supplier_info(item_id);
+            String email=items.getSupplier_companies().get(0).getContact_mail();
             try {
                 mymail.send(email, "您发布的拼柜任务已收收到货，请登录查看", "【任务更新】");
             } catch (Exception e) {

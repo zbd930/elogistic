@@ -5,10 +5,7 @@ import com.duogesi.Mail.Mymail;
 import com.duogesi.Mail.RedisUtil;
 import com.duogesi.Utils.*;
 import com.duogesi.Utils.Date;
-import com.duogesi.entities.amount;
-import com.duogesi.entities.order;
-import com.duogesi.entities.order_details;
-import com.duogesi.entities.supplier_company;
+import com.duogesi.entities.*;
 import com.duogesi.mapper.ItemsMapper;
 import com.duogesi.mapper.OrderMapper;
 import com.duogesi.mapper.amountMapper;
@@ -75,29 +72,30 @@ public class wechatservice {
         order.setNumbers(number);
         //测试下单的东西
          //调用第三方支付接口,并返回已支付的金额
-             amount amount = new amount();
-             amount.setItem_id(order.getItem_id());
-             BigDecimal decimal = new BigDecimal("25800");
-             amount.setTotal(decimal);
-             //模拟已支付的金额
-             BigDecimal decimal1 = new BigDecimal(2);
-             decimal1 = BigDecimal.valueOf(105.57);
-             amount.setPaid(decimal1);
-             amount.setOpenid(order.getOpenid());
-             if (!order.getTihuo()) {
-             order.setStatus(4);
-             } else order.setStatus(0);
-             String chaigui = order_details.getChaigui();
+        amount amount = new amount();
+        amount.setItem_id(order.getItem_id());
+        String total = request.getParameter("total");
+        BigDecimal decimal = new BigDecimal(total);
+        amount.setTotal(decimal);
+        //模拟已支付的金额
+        BigDecimal decimal1 = new BigDecimal(2);
+        decimal1 = BigDecimal.valueOf(0);
+        amount.setPaid(decimal1);
+        amount.setOpenid(order.getOpenid());
+        if (!order.getTihuo()) {
+            order.setStatus(4);
+        } else order.setStatus(0);
+        String chaigui = order_details.getChaigui();
         if (!method.equals("海卡")&&!country.equals("American")) {
-                 //遍历下单的中文地址欧洲和其他分开
-                 if (chaigui.equals("英国") || chaigui.equals("德国") || chaigui.equals("法国") || chaigui.equals("卢森堡") || chaigui.equals("荷兰") || chaigui.equals("比利时") || chaigui.equals("爱尔兰") || chaigui.equals("西班牙") || chaigui.equals("意大利") || chaigui.equals("奥地利") || chaigui.equals("丹麦") || chaigui.equals("捷克") || chaigui.equals("其他")) {
-                     order_details.setChaigui(swtich.switch_mudigang_zhong_ouzhou(chaigui));
-                 } else {
-                     order_details.setChaigui(swtich.switch_mudigang_zhong(chaigui));
-                 }
-                 //遍历下单的中文地址
-                 order.setDest(swtich.switch_mudigang_zhong(order.getDest()));
-             }
+            //遍历下单的中文地址欧洲和其他分开
+            if (chaigui.equals("英国") || chaigui.equals("德国") || chaigui.equals("法国") || chaigui.equals("卢森堡") || chaigui.equals("荷兰") || chaigui.equals("比利时") || chaigui.equals("爱尔兰") || chaigui.equals("西班牙") || chaigui.equals("意大利") || chaigui.equals("奥地利") || chaigui.equals("丹麦") || chaigui.equals("捷克") || chaigui.equals("其他")) {
+                order_details.setChaigui(swtich.switch_mudigang_zhong_ouzhou(chaigui));
+            } else {
+                order_details.setChaigui(swtich.switch_mudigang_zhong(chaigui));
+            }
+            //遍历下单的中文地址
+            order.setDest(swtich.switch_mudigang_zhong(order.getDest()));
+        }
         //美国海派等
         else if(country.equals("American")&&!method.equals("海卡")){
                     order_details.setChaigui(swtich.switch_mudigang_zhong(chaigui));
@@ -110,16 +108,15 @@ public class wechatservice {
              if ((amountMapper.insert_amount(amount)==1) && (orderMapper.addorder2(order_details) == 1)) {
                  //发送邮件
                  int ship_id=order.getItem_id();
-                 List<supplier_company> supplier_companies=user_infoMapper.get_supplier_info(ship_id);
-                 String email=supplier_companies.get(0).getContact_mail();
+                 items items =itemsMapper.get_supplier_info(ship_id);
+                 String email=items.getSupplier_companies().get(0).getContact_mail();
                  try {
                      mymail.send(email,"您发布的拼柜任务有新订单","【任务更新】");
                  } catch (Exception e) {
                      e.printStackTrace();
                  }
-                 //发送完毕
+                 //邮件发送完毕，调用支付接口
                         String openid = request.getParameter("openid");
-                        String total = request.getParameter("total");
                         System.out.println("openid = " + openid);
                         String url = "https://api.mch.weixin.qq.com/pay/unifiedorder";
                         //组装预下单的请求数据
@@ -139,6 +136,7 @@ public class wechatservice {
                         String return_code = return_data.get("return_code");
                         System.out.println("return_code=" + return_code);
                         if("SUCCESS".equals(return_code)){
+                            //调用成功，存入redis
                             String prepay_id = return_data.get("prepay_id");
                             Map map3= conPayParam(prepay_id); //组装返回数据
                             //存入购物车500秒
@@ -169,13 +167,15 @@ public class wechatservice {
                                     } catch (InvocationTargetException e) {
                                         e.printStackTrace();
                                     }
-                                    //恢复数据
-                                    itemsMapper.return_items(order_details.getWeight(),order_details.getVolume(),order1.getItem_id());
-                                      //删除订单
+                                    if (order1.getNumbers()!=null) {
+                                        //恢复数据
+                                        itemsMapper.return_items(order_details.getWeight(), order_details.getVolume(), order1.getItem_id());
+                                        //删除订单
                                         orderMapper.delete_order(order.getId());
                                         orderMapper.delete_order_details(order.getId());
                                         //删除价格
                                         amountMapper.delete_order_price(order.getId());
+                                    }
                                       //取消线程
                                     timer.cancel();
                                 }
@@ -372,6 +372,8 @@ public class wechatservice {
 //        预付百分之10String.valueOf(Integer.valueOf(total)*10)
         data.put("total_fee", "1");
         data.put("spbill_create_ip", "129.211.21.50");
+//        data.put("spbill_create_ip", "192.168.1.111");
+//        data.put("notify_url", "http://192.168.1.111:8091/elogistic/order/update.do");
         data.put("notify_url", "https://www.yikuajing.cn/elogistic/order/update.do");
         data.put("trade_type", "JSAPI");
         data.put("product_id", String.valueOf(order.getItem_id()));

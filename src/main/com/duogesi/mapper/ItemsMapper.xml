@@ -42,6 +42,7 @@
             <result property="contact_address" column="contact_address"></result>
             <result property="contact_phone" column="contact_phone"></result>
             <result property="company_name" column="company_name"></result>
+            <result property="contact_mail" column="contact_mail"></result>
             <result property="peichang" column="peichang"></result>
         </collection>
         <collection property="orders" ofType="com.duogesi.entities.order" column="id">
@@ -121,5 +122,10 @@
                 where ship_id=#{id}
         </update>
 
-
+    <!--       根据shipid获取发货人信息-->
+    <select id="get_supplier_info" resultMap="result">
+            select s.*,a.*
+            from ship_schdule as s, supplier_address as a
+            where  s.id=#{item_id} and a.user_id=s.user_id
+    </select>
 </mapper>

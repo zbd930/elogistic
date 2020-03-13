@@ -33,8 +33,8 @@
     </update>
     <!--       根据shipid获取发货人信息-->
     <select id="get_supplier_info" resultMap="supplier">
-            select s.*,
-            from "fba".ship_schdule as s, "fba".supplier_address as a
-            where a.user_id=s.user_id  and s.id=#{item_id}
-        </select>
+            select s.*,a.contact_mail
+            from ship_schdule as s, supplier_address as a
+            where  s.id=#{item_id} and a.user_id=s.user_id
+    </select>
 </mapper>

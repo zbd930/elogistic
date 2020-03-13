@@ -70,8 +70,9 @@
                 $(".file").click()
             })
             var orderCode = getCode("order");
-            $("#order").val(orderCode)
-            alert(orderCode)
+            if(orderCode!=""){
+                $("#order").val(orderCode)
+            }
         })
         // --js 获取url参数值
         function getCode(orderCode) {

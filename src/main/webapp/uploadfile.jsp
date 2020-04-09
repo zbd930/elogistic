@@ -86,7 +86,7 @@
         <div class="container">
             <div class="upload">选择</div>
             <input name="order" id="order" style="display: none">
-            <input type="file" name="file" class="file" value="选择">
+            <input type="file" name="file" class="file" value="选择" >
         </div>
         <div class="container1">
             <input type="button" value="提交"  onclick="upload()" class="submit">

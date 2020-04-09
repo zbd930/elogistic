@@ -47,7 +47,7 @@
         </collection>
         <collection property="orders" ofType="com.duogesi.entities.order" column="id">
             <id column="id" property="id"/>
-            <result column="openid" property="openid"/>
+            <result column="unionId" property="unionId"/>
             <result column="numbers" property="numbers"></result>
             <result column="item_id" property="item_id"/>
             <result column="dest" property="dest"/>
@@ -58,9 +58,9 @@
     <!-- resultMap指定使用上面定义的结果集,查询使用关联查询，查询列要和上面的column对应 -->
     <!--<!- 查询订单&ndash;&gt;-->
             <select id="get_orders" resultMap="result">
-                 select s.method,s.etd,s.`desc`,s.eta,s.mudigang,o.dest,f.volume,f.weight,f.ctn,a.openid,s.qiyungang,d.cut_time,d.cut_end,o.status,f.ups,c.contact_address,c.contact_phone,o.numbers,o.id,s.user_id,o.address_id
+                 select s.method,s.etd,s.`desc`,s.eta,s.mudigang,o.dest,f.volume,f.weight,f.ctn,a.unionId,s.qiyungang,d.cut_time,d.cut_end,o.status,f.ups,c.contact_address,c.contact_phone,o.numbers,o.id,s.user_id,o.address_id
                   from fba.ship_schdule as s,fba.schdule_details as d,fba.orders as o,fba.subscriber_address as a,fba.supplier_address as c,fba.orders_details as f
-                  where s.id=d.ship_id and s.id=o.item_id and a.id=o.address_id and s.user_id=c.user_id and a.openid=#{openid} and f.order_id=o.id order by o.id ;
+                  where s.id=d.ship_id and s.id=o.item_id and a.id=o.address_id and s.user_id=c.user_id and a.unionId=#{unionId} and f.order_id=o.id order by o.id ;
             </select>
 
     <!--(UNIX_TIMESTAMP(s.eta) - UNIX_TIMESTAMP(s.etd))/(60*60*24) as shichang-->

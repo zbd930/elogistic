@@ -14,11 +14,11 @@
         <result column="customer" property="customer"/>
         <result column="inspect" property="inspect"/>
         <result column="additional" property="additional"/>
-        <result column="openid" property="openid"/>
+        <result column="unionId" property="unionId"/>
         <association property="order" javaType="com.duogesi.entities.order">
             <id column="id" property="id"/>
             <result column="ctn" property="ctn"></result>
-            <result column="openid" property="openid"/>
+            <result column="unionId" property="unionId"/>
             <result column="weight" property="weight"/>
             <result column="volume" property="volume"/>
             <result column="numbers" property="numbers"></result>
@@ -44,14 +44,14 @@
 
     <!--插入金额-->
     <insert id="insert_amount" parameterType="com.duogesi.entities.amount">
-            insert into amount (order_id, paid, total, item_id,openid) values (#{order_id},#{paid},#{total},#{item_id},#{openid})
+            insert into amount (order_id, paid, total, item_id,unionId) values (#{order_id},#{paid},#{total},#{item_id},#{unionId})
     </insert>
 
     <!--获取本月的金额-->
     <select id="get_amount" resultMap="amount">
         select  sum(a.paid) as paid , sum(a.total) as total,sum(a.tax) as tax,sum(a.inspect) as inspect,sum(a.customer) as customer,sum(a.additional) as additional
         from fba.amount as a,fba.ship_schdule as s
-        where a.item_id=s.id and s.etd>#{start_data} and #{end_data}>=s.etd  and a.openid=#{openid}
+        where a.item_id=s.id and s.etd>#{start_data} and #{end_data}>=s.etd  and a.unionId=#{unionId}
     </select>
     <!--获取某个订单的金额-->
     <select id="get_amount_byid" resultMap="amount">

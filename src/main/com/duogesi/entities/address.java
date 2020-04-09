@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class address {
     private int id ;
-    private String openid;
+    private String unionId;
     private String phone;
     private String name;
     private String address;
@@ -27,12 +27,12 @@ public class address {
         this.id = id;
     }
 
-    public String getOpenid() {
-        return openid;
+    public String getUnionId() {
+        return unionId;
     }
 
-    public void setOpenid(String openid) {
-        this.openid = openid;
+    public void setUnionId(String unionId) {
+        this.unionId = unionId;
     }
 
     public String getPhone() {
@@ -63,7 +63,7 @@ public class address {
     public String toString() {
         return "address{" +
                 "id=" + id +
-                ", openid='" + openid + '\'' +
+                ", unionId='" + unionId + '\'' +
                 ", phone='" + phone + '\'' +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +

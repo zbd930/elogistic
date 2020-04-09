@@ -9,7 +9,7 @@
     <!-- 定义结果集，column表示sql查询列,property表示映射到实体的属性 -->
     <!--<resultMap type="com.duogesi.entities.order" id="my" >-->
         <!--<id column="id" property="id"/>-->
-        <!--<result column="openid" property="openid"/>-->
+        <!--<result column="unionId" property="unionId"/>-->
         <!--<result column="weight" property="weight"/>-->
         <!--<result column="volume" property="volume"/>-->
         <!--<result column="item_id" property="item_id"/>-->

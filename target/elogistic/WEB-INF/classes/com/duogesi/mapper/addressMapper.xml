@@ -9,7 +9,7 @@
     <!-- 定义结果集，column表示sql查询列,property表示映射到实体的属性 -->
     <resultMap type="com.duogesi.entities.address" id="my" >
         <id column="id" property="id"/>
-        <result column="openid" property="openid"/>
+        <result column="unionId" property="unionId"/>
         <result column="phone" property="phone"/>
         <result column="address" property="address"/>
         <result column="name" property="name"/>
@@ -18,11 +18,11 @@
     <!-- resultMap指定使用上面定义的结果集,查询使用关联查询，查询列要和上面的column对应 -->
 
              <insert id="addaddress" parameterType="com.duogesi.entities.address" >
-                   insert into subscriber_address value (#{id},#{openid},#{phone},#{address},#{name},#{email})
+                   insert into subscriber_address value (#{id},#{unionId},#{phone},#{address},#{name},#{email})
             </insert>
           <select id="get_address"  resultMap="my">
                    select * from subscriber_address
-                   where openid=#{opnid}
+                   where unionId=#{unionId}
             </select>
             <delete id="delete_address">
                 delete

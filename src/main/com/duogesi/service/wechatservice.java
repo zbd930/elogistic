@@ -1,5 +1,6 @@
 package com.duogesi.service;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.duogesi.Mail.Mymail;
 import com.duogesi.Mail.RedisUtil;
@@ -11,10 +12,18 @@ import com.duogesi.mapper.OrderMapper;
 import com.duogesi.mapper.amountMapper;
 import com.duogesi.mapper.user_infoMapper;
 import org.apache.commons.beanutils.BeanUtils;
+import org.apache.log4j.Logger;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+import org.bouncycastle.util.encoders.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.testng.util.TimeUtils;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
@@ -23,9 +32,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.net.URL;
 import java.net.URLConnection;
+import java.security.*;
+import java.security.spec.InvalidParameterSpecException;
 import java.time.LocalDateTime;
-
 import java.util.*;
+
 
 @Component
 public class wechatservice {
@@ -34,6 +45,8 @@ public class wechatservice {
     private String secretKey = "51dac2d4115c60fec05ad7215c996ddd";
     private static String mer_id = "1573208531";//店铺支付密码
     private static String merKey = "zbd12345678912345678912345678912";//店铺支付密码
+    private final static String requestUrl = "https://api.weixin.qq.com/sns/jscode2session";
+    private static Logger log = Logger.getLogger(wechatservice.class);
 
     @Autowired
     private RedisUtil redisUtil;
@@ -50,7 +63,7 @@ public class wechatservice {
     @Autowired
     private Swtich swtich;
 
-    public String getopenid(HttpServletRequest request, String code) {
+    public String getopenid(HttpServletRequest request, String code, String iv, String encryptedData) {
         String url = "https://api.weixin.qq.com/sns/jscode2session?appid=" + appid + "&secret=" + secretKey
                 + "&js_code=" + code + "&grant_type=authorization_code";   //接口地址
         System.out.println("url" + url);
@@ -81,7 +94,7 @@ public class wechatservice {
         BigDecimal decimal1 = new BigDecimal(2);
         decimal1 = BigDecimal.valueOf(0);
         amount.setPaid(decimal1);
-        amount.setOpenid(order.getOpenid());
+        amount.setUnionId(order.getUnionId());
         if (!order.getTihuo()) {
             order.setStatus(4);
         } else order.setStatus(0);
@@ -196,87 +209,6 @@ public class wechatservice {
                     return results;
              } else return "失败";
              } else return "失败";
-
-
-
-        //微信支付的东西
-//        String openid = request.getParameter("openid");
-//        String total = request.getParameter("total");
-//        System.out.println("openid = " + openid);
-//        String url = "https://api.mch.weixin.qq.com/pay/unifiedorder";
-//        //组装预下单的请求数据
-//        String reqStr = getReqStr(openid, order,total);
-//        System.out.println("reqStr=" + reqStr);
-//        //发送post数据到微信预下单
-//        results = sendPost(url,reqStr);
-//        System.out.println("prepay from weixin: \n " + results);
-//        Map<String,String> return_data = null;
-//        try {
-//            return_data = WXPayUtil.xmlToMap(results);//微信的一个工具类
-//        } catch (Exception e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//            System.out.println(e.getMessage());
-//        }
-//        String return_code = return_data.get("return_code");
-//        System.out.println("return_code=" + return_code);
-//        if("SUCCESS".equals(return_code)){
-//            String prepay_id = return_data.get("prepay_id");
-//            Map map3= conPayParam(prepay_id); //组装返回数据
-//            //存入购物车500秒
-//            Map map =object2Map(order);
-//            Map map1 =object2Map(order_details);
-//            map.put("amount",total);
-//            map.putAll(map1);
-//            map.putAll(map3);
-//            //定义定时器，恢复库存
-//            Timer timer=new Timer();
-//            timer.schedule(new TimerTask() {
-//                @Override
-//                public void run() {
-//                    Map map2 =new HashMap();
-//                    try {
-//                        map2 = redisUtil.hmget(number);
-//                    }catch (NullPointerException e){
-//                       e.printStackTrace();
-//                       timer.cancel();
-//                    }
-//                    order order1=new order();
-//                    order_details order_details = new order_details();
-//                    try {
-//                        BeanUtils.populate(order_details,map2);
-//                        BeanUtils.populate(order1,map2);
-//                    } catch (IllegalAccessException e) {
-//                        e.printStackTrace();
-//                    } catch (InvocationTargetException e) {
-//                        e.printStackTrace();
-//                    }
-//                    //恢复数据
-//                    itemsMapper.return_items(order_details.getWeight(),order_details.getVolume(),order1.getItem_id());
-//                      //删除订单
-//                            orderMapper.delete_order(order.getId());
-//                            orderMapper.delete_order_details(order.getId());
-//                            //删除价格
-//                            amountMapper.delete_order_price(order.getId());
-//                      取消线程
-//                    timer.cancel();
-//                }
-//            },300000);
-//            //先存入redis
-//            redisUtil.hmset(number,map,300);
-//            redisUtil.sSetAndTime(openid,300,number);
-//            results=JSONObject.toJSONString(map);
-//        }else{
-//            results ="{\"return_code\":\"fail\"}";
-//            response.setContentType("application/json;charset=UTF-8");
-//            response.setHeader("catch-control", "no-catch");
-//            PrintWriter out = response.getWriter();
-//            out.write(results);
-//            out.flush();
-//            out.close();
-//        }
-//        return results;
-
     }
 
     //秒杀下单
@@ -394,13 +326,6 @@ public class wechatservice {
         }
         return reqBody;
     }
-
-    //保证唯一
-//    public static String setTradeNo(){
-//        String orderid = "20211909105011" + (int)((Math.random()*9+1)*100000);
-//        System.out.println("orderid = " + orderid);
-//        return orderid;
-//    }
 
     //组装返回客户端的请求数据
     public static Map conPayParam(String prepayid){
@@ -527,6 +452,229 @@ public class wechatservice {
         }
         if(in!=null){
             in.close();
+        }
+        return result;
+    }
+
+//    public Map getunionid(String encryptedData, String iv, String code) {
+//        Map map = new HashMap();
+//
+//        //登录凭证不能为空
+//        if (code == null || code.length() == 0) {
+//            map.put("status", 0);
+//            map.put("msg", "code 不能为空");
+//            return map;
+//        }
+//        //授权（必填）
+//        String grant_type = "authorization_code";
+//        //////////////// 1、向微信服务器 使用登录凭证 code 获取 session_key 和 unionId ////////////////
+//        //请求参数
+//        String params = "appid=" + appid + "&secret=" + secretKey + "&js_code=" + code + "&grant_type=" + grant_type;
+//        //发送请求
+////        String sr = HttpRequest.sendGet("https://api.weixin.qq.com/sns/jscode2session", params);
+//        String sr=sendGetReq("https://api.weixin.qq.com/sns/jscode2session?"+params);
+//
+//      //解析相应内容（转换成json对象）
+//       JSONObject json = JSONObject.parseObject(sr);
+//        //获取会话密钥（session_key）
+//        String session_key = json.get("session_key").toString();
+//        //用户的唯一标识（openid）
+//        String openid = (String) json.get("openid");
+//        //////////////// 2、对encryptedData加密数据进行AES解密 ////////////////
+//        AesUtil aesUtil=new AesUtil();
+//        try {
+//            String result = aesUtil.decrypt(encryptedData, session_key, iv, "UTF-8");
+//            System.out.println(result);
+//            if (null != result && result.length() > 0) {
+//                map.put("status", 1);
+//                map.put("msg", "解密成功");
+//
+//                JSONObject userInfoJSON = JSONObject.parseObject(result);
+//                Map userInfo = new HashMap();
+//                userInfo.put("openId", userInfoJSON.get("openId"));
+//                userInfo.put("nickName", userInfoJSON.get("nickName"));
+//                userInfo.put("gender", userInfoJSON.get("gender"));
+//                userInfo.put("city", userInfoJSON.get("city"));
+//                userInfo.put("province", userInfoJSON.get("province"));
+//                userInfo.put("country", userInfoJSON.get("country"));
+//                userInfo.put("avatarUrl", userInfoJSON.get("avatarUrl"));
+//                userInfo.put("unionId", userInfoJSON.get("unionId"));
+//                map.put("userInfo", userInfo);
+//                return map;
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        map.put("status", 0);
+//        map.put("msg", "解密失败");
+//        return map;
+//    }
+
+
+        /**
+     * 获取微信小程序 session_key 和 openid
+     *
+     * @param code 调用微信登陆返回的Code
+     * @return
+     * @author YeFei
+     */
+    public Map getSessionKeyOrOpenId(String code, String iv, String encryptedData) {
+        //微信端登录code值
+        Map<String, String> requestUrlParam = new HashMap<>();
+        requestUrlParam.put("appid", appid);    //开发者设置中的appId
+        requestUrlParam.put("secret", secretKey);    //开发者设置中的appSecret
+        requestUrlParam.put("js_code", code);    //小程序调用wx.login返回的code
+        requestUrlParam.put("grant_type", "authorization_code");    //默认参数
+
+        //发送post请求读取调用微信 https://api.weixin.qq.com/sns/jscode2session 接口获取openid用户唯一标识
+        JSONObject res1 = JSON.parseObject(sendPost(requestUrl, requestUrlParam));
+        Map result = new HashMap();
+        if (res1 != null && res1.get("errcode") != null) {
+            result.put("status", 0);
+            result.put("msg", "解析失败,请检查入参code!");
+            return result;
+        } else {
+            JSONObject res2 = getUserInfo(encryptedData, res1.get("session_key").toString(), iv);
+            if (null != res2) {
+                Map userInfo = new HashMap();
+                result.put("status", 1);
+                result.put("msg", "解密成功!");
+                userInfo.put("openId", res2.get("openId"));
+                userInfo.put("nickName", res2.get("nickName"));
+                userInfo.put("gender", res2.get("gender"));
+                userInfo.put("city", res2.get("city"));
+                userInfo.put("province", res2.get("province"));
+                userInfo.put("country", res2.get("country"));
+                userInfo.put("avatarUrl", res2.get("avatarUrl"));
+                userInfo.put("unionId", res2.get("unionId"));
+                result.put("userInfo", userInfo);
+                return result;
+            }
+        }
+        result.put("status", 0);
+        result.put("msg", "解析失败,请检查入参!");
+        return result;
+    }
+
+    /**
+     * 解密用户敏感数据获取用户信息
+     *
+     * @param sessionKey    数据进行加密签名的密钥
+     * @param encryptedData 包括敏感数据在内的完整用户信息的加密数据
+     * @param iv            加密算法的初始向量
+     * @return
+     * @author YeFei
+     */
+    public  JSONObject getUserInfo(String encryptedData, String sessionKey, String iv) {
+        // 被加密的数据
+        byte[] dataByte = Base64.decode(encryptedData);
+        // 加密秘钥
+        byte[] keyByte = Base64.decode(sessionKey);
+        // 偏移量
+        byte[] ivByte = Base64.decode(iv);
+        try {
+            // 如果密钥不足16位，那么就补足.  这个if 中的内容很重要
+            int base = 16;
+            if (keyByte.length % base != 0) {
+                int groups = keyByte.length / base + (keyByte.length % base != 0 ? 1 : 0);
+                byte[] temp = new byte[groups * base];
+                Arrays.fill(temp, (byte) 0);
+                System.arraycopy(keyByte, 0, temp, 0, keyByte.length);
+                keyByte = temp;
+            }
+            // 初始化
+            Security.addProvider(new BouncyCastleProvider());
+            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS7Padding", "BC");
+            SecretKeySpec spec = new SecretKeySpec(keyByte, "AES");
+            AlgorithmParameters parameters = AlgorithmParameters.getInstance("AES");
+            parameters.init(new IvParameterSpec(ivByte));
+            cipher.init(Cipher.DECRYPT_MODE, spec, parameters);// 初始化
+            byte[] resultByte = cipher.doFinal(dataByte);
+            if (null != resultByte && resultByte.length > 0) {
+                String result = new String(resultByte, "UTF-8");
+                return JSON.parseObject(result);
+            }
+        } catch (NoSuchAlgorithmException e) {
+            log.error(e.getMessage(), e);
+        } catch (NoSuchPaddingException e) {
+            log.error(e.getMessage(), e);
+        } catch (InvalidParameterSpecException e) {
+            log.error(e.getMessage(), e);
+        } catch (IllegalBlockSizeException e) {
+            log.error(e.getMessage(), e);
+        } catch (BadPaddingException e) {
+            log.error(e.getMessage(), e);
+        } catch (UnsupportedEncodingException e) {
+            log.error(e.getMessage(), e);
+        } catch (InvalidKeyException e) {
+            log.error(e.getMessage(), e);
+        } catch (InvalidAlgorithmParameterException e) {
+            log.error(e.getMessage(), e);
+        } catch (NoSuchProviderException e) {
+            log.error(e.getMessage(), e);
+        }
+        return null;
+    }
+
+    /**
+     * 向指定 URL 发送POST方法的请求
+     *
+     * @param url      发送请求的 URL
+     * @param paramMap 请求参数
+     * @return 所代表远程资源的响应结果
+     */
+    public static String sendPost(String url, Map<String, ?> paramMap) {
+        PrintWriter out = null;
+        BufferedReader in = null;
+        String result = "";
+
+        String param = "";
+        Iterator<String> it = paramMap.keySet().iterator();
+
+        while (it.hasNext()) {
+            String key = it.next();
+            param += key + "=" + paramMap.get(key) + "&";
+        }
+
+        try {
+            URL realUrl = new URL(url);
+            // 打开和URL之间的连接
+            URLConnection conn = realUrl.openConnection();
+            // 设置通用的请求属性
+            conn.setRequestProperty("accept", "*/*");
+            conn.setRequestProperty("connection", "Keep-Alive");
+            conn.setRequestProperty("Accept-Charset", "utf-8");
+            conn.setRequestProperty("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)");
+            // 发送POST请求必须设置如下两行
+            conn.setDoOutput(true);
+            conn.setDoInput(true);
+            // 获取URLConnection对象对应的输出流
+            out = new PrintWriter(conn.getOutputStream());
+            // 发送请求参数
+            out.print(param);
+            // flush输出流的缓冲
+            out.flush();
+            // 定义BufferedReader输入流来读取URL的响应
+            in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+            String line;
+            while ((line = in.readLine()) != null) {
+                result += line;
+            }
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+        }
+        //使用finally块来关闭输出流、输入流
+        finally {
+            try {
+                if (out != null) {
+                    out.close();
+                }
+                if (in != null) {
+                    in.close();
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
         }
         return result;
     }

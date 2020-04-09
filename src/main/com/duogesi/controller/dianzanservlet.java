@@ -15,14 +15,14 @@ public class dianzanservlet {
 
     @RequestMapping(value = "add.do",method = RequestMethod.POST)
     @ResponseBody
-    public String add(String topicid,String openid){
+    public String add(String topicid,String unionId){
         try {
             long shuliang = dianzanservice.get_count(topicid);
             String resultes=String.valueOf(shuliang);
             if (Integer.valueOf(resultes)%10==0) {
 
             }
-            if (dianzanservice.add(topicid, openid)) {
+            if (dianzanservice.add(topicid, unionId)) {
                 return resultes;
             } else return "fail";
         }catch (Exception e){
@@ -32,8 +32,8 @@ public class dianzanservlet {
 
     @RequestMapping(value = "delete.do",method = RequestMethod.POST)
     @ResponseBody
-    public String delete(String topicid,String openid){
-        if (dianzanservice.delete(topicid,openid)){
+    public String delete(String topicid,String unionId){
+        if (dianzanservice.delete(topicid,unionId)){
             return "code:success";
         }else return "code:fail";
     }

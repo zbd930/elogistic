@@ -12,7 +12,7 @@
         <result column="star" property="star"/>
         <association property="address" javaType="com.duogesi.entities.address">
             <id column="supplier_id" property="supplier_id"/>
-            <result column="openid" property="openid"/>
+            <result column="unionId" property="unionId"/>
             <result column="phone" property="phone"/>
             <result column="address" property="address"/>
             <result column="name" property="name"/>

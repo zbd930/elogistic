@@ -11,7 +11,7 @@ public interface amountMapper {
     amount get_amount_byid(@Param("order_id") int order_id);
 
    //获取本月的金额
-   amount get_amount(@Param("start_data") String start_data, @Param("end_data") String end_data, @Param("openid") String openid);
+   amount get_amount(@Param("start_data") String start_data, @Param("end_data") String end_data, @Param("unionId") String unionId);
 
     int delete_order_price(int id);
     //修改已支付金额

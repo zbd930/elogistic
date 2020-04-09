@@ -8,6 +8,6 @@ import java.util.List;
 @Component
 public interface addressMapper {
     int addaddress(address address);
-    List<address> get_address(String openid);
+    List<address> get_address(String unionId);
     int delete_address(int id);
 }

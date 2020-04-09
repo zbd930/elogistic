@@ -13,7 +13,7 @@ public class amount {
     private BigDecimal local;
     private BigDecimal additional;
     private int item_id;
-    private String openid;
+    private String unionId;
     private com.duogesi.entities.order order;
     private com.duogesi.entities.items items;
 
@@ -97,12 +97,12 @@ public class amount {
         this.item_id = item_id;
     }
 
-    public String getOpenid() {
-        return openid;
+    public String getUnionId() {
+        return unionId;
     }
 
-    public void setOpenid(String openid) {
-        this.openid = openid;
+    public void setUnionId(String unionId) {
+        this.unionId = unionId;
     }
 
     public com.duogesi.entities.order getOrder() {

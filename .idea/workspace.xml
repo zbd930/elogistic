@@ -8,57 +8,87 @@
   <component name="ChangeListManager">
     <list default="true" id="d174d0b2-1f68-4b9d-963f-8a974fa6403b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Aspect/orderAsper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Aspect/orderAsper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Mail/Mymail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Mail/Mymail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/orderservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/orderservlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/uploadservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/uploadservlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/addressservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/addressservlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/dianzanservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/dianzanservlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/itemservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/itemservlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/wechatservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/wechatservlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/entities/items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/entities/address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/amount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/entities/amount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/entities/order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/addressMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/addressMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/addressMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/addressMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/commentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/commentsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/addressservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/addressservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/itemsservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/itemsservice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/orderservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/orderservice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/wechatservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/wechatservice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Aspect/orderAsper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Aspect/orderAsper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Mail/Mymail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Mail/Mymail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/orderservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/orderservlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/uploadservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/uploadservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/redis.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uploadfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/addressservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/addressservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/dianzanservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/dianzanservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/itemservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/itemservlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/wechatservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/wechatservlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/items.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/entities/items.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/ItemsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/ItemsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/entities/address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/amount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/entities/amount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/entities/order.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/ItemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/ItemsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/addressMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/addressMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/amountMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/amountMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/amountMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/amountMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/user_infoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/user_infoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/user_infoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/user_infoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/orderservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/orderservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/commentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/commentsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/addressservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/addressservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/wechatservice$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/wechatservice$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/wechatservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/wechatservice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/res/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/res/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/redis.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/res/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/res/redis.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/webapp/uploadfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webapp/uploadfile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/elogistic.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Aspect/orderAsper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Aspect/orderAsper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Mail/Mymail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Mail/Mymail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/orderservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/orderservlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/uploadservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/uploadservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/addressservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/addressservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/dianzanservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/dianzanservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/itemservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/itemservlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/wechatservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/wechatservlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/items.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/items.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/ItemsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/ItemsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/amount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/amount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/order.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/ItemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/ItemsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/addressMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/addressMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/amountMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/amountMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/amountMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/amountMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/user_infoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/user_infoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/user_infoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/user_infoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/orderservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/orderservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/commentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/commentsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/addressservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/addressservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/wechatservice$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/wechatservice$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/wechatservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/wechatservice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/redis.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/redis.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/webapp/uploadfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/webapp/uploadfile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/elogistic/uploadfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/uploadfile.jsp" afterDir="false" />
     </list>
@@ -81,25 +111,25 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@yikuajing.cn" type="feb32156:DbDataSourceImpl" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@yikuajing.cn" type="feb32156:DbDataSourceImpl" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@yikuajing.cn" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="fba: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@yikuajing.cn" type="feb32156:DbDataSourceImpl" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="fba: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="supplier_address: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="fba: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="mission_small: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -107,8 +137,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -138,29 +169,31 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582023767884" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/com/duogesi/mapper" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15161557" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\project\new\elogistic\src\main\webapp" />
-      <recent name="E:\project\new\elogistic\src\main\com\duogesi\mapper" />
-      <recent name="E:\project\new\elogistic\src\main\res" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\project\new\elogistic\src\main\com\duogesi" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.duogesi.entities" />
       <recent name="com.duogesi.Utils" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\new\elogistic\src\main\com\duogesi\mapper" />
+      <recent name="E:\project\new\elogistic\src\main\com\duogesi\entities" />
+      <recent name="E:\project\new\elogistic\src\main\webapp" />
+      <recent name="E:\project\new\elogistic\src\main\res" />
       <recent name="E:\project\new\elogistic\src\main\com\duogesi" />
     </key>
   </component>
@@ -288,32 +321,8 @@
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:fba@yikuajing.cn" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:fba@yikuajing.cn" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@18ac438c" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:fba@yikuajing.cn" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@68c8b720" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:fba@yikuajing.cn" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@5b91eb4b" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:fba@yikuajing.cn" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@142490af" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:fba@yikuajing.cn" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@31ae3395" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@6b52d66c" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -479,6 +488,21 @@
       <workItem from="1584061496106" duration="23000" />
       <workItem from="1584062108006" duration="6038000" />
       <workItem from="1584073490179" duration="8378000" />
+      <workItem from="1584320705427" duration="130000" />
+      <workItem from="1584325377656" duration="693000" />
+      <workItem from="1584327021075" duration="135000" />
+      <workItem from="1584327506283" duration="1128000" />
+      <workItem from="1584338909718" duration="8399000" />
+      <workItem from="1584347876000" duration="1002000" />
+      <workItem from="1584349748105" duration="2090000" />
+      <workItem from="1584404885178" duration="3468000" />
+      <workItem from="1584408919494" duration="2567000" />
+      <workItem from="1584411702687" duration="4066000" />
+      <workItem from="1584429294613" duration="39000" />
+      <workItem from="1584433822306" duration="1195000" />
+      <workItem from="1584503741773" duration="444000" />
+      <workItem from="1586331417194" duration="3641000" />
+      <workItem from="1586416207869" duration="5387000" />
     </task>
     <servers />
   </component>
@@ -499,70 +523,74 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583379795749">
+    <state x="274" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584434353162">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1583379795749" />
-    <state x="488" y="56" key="#com.intellij.ide.util.MemberChooser" timestamp="1583997274459">
+    <state x="274" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1584434353162" />
+    <state x="488" y="56" key="#com.intellij.ide.util.MemberChooser" timestamp="1586417173706">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="56" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1583997274459" />
-    <state x="413" y="112" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1584065668292">
+    <state x="488" y="56" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586417173706" />
+    <state x="412" y="27" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1584434352526">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="112" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1584065668292" />
+    <state x="412" y="27" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1366.728@0.0.1366.728" timestamp="1584434352526" />
+    <state x="413" y="112" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1586416934320">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="112" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586416934320" />
     <state x="463" y="61" key="FileChooserDialogImpl" timestamp="1583888920282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="61" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583888920282" />
-    <state width="1071" height="252" key="GridCell.Tab.0.bottom" timestamp="1584088486912">
+    <state width="1071" height="204" key="GridCell.Tab.0.bottom" timestamp="1586423829312">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="252" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584088486912" />
-    <state width="1071" height="252" key="GridCell.Tab.0.center" timestamp="1584088486912">
+    <state width="1071" height="204" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586423829312" />
+    <state width="1071" height="204" key="GridCell.Tab.0.center" timestamp="1586423829312">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="252" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584088486912" />
-    <state width="1071" height="252" key="GridCell.Tab.0.left" timestamp="1584088486912">
+    <state width="1071" height="204" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586423829312" />
+    <state width="1071" height="204" key="GridCell.Tab.0.left" timestamp="1586423829312">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="252" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584088486912" />
-    <state width="1071" height="252" key="GridCell.Tab.0.right" timestamp="1584088486912">
+    <state width="1071" height="204" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586423829312" />
+    <state width="1071" height="204" key="GridCell.Tab.0.right" timestamp="1586423829312">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="252" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584088486912" />
-    <state width="1071" height="252" key="GridCell.Tab.1.bottom" timestamp="1584088486912">
+    <state width="1071" height="204" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586423829312" />
+    <state width="1071" height="204" key="GridCell.Tab.1.bottom" timestamp="1586423829312">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="252" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584088486912" />
-    <state width="1071" height="252" key="GridCell.Tab.1.center" timestamp="1584088486912">
+    <state width="1071" height="204" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586423829312" />
+    <state width="1071" height="204" key="GridCell.Tab.1.center" timestamp="1586423829312">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="252" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1584088486912" />
-    <state width="1071" height="252" key="GridCell.Tab.1.left" timestamp="1584088486912">
+    <state width="1071" height="204" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586423829312" />
+    <state width="1071" height="204" key="GridCell.Tab.1.left" timestamp="1586423829312">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="252" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1584088486912" />
-    <state width="1071" height="252" key="GridCell.Tab.1.right" timestamp="1584088486912">
+    <state width="1071" height="204" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586423829312" />
+    <state width="1071" height="204" key="GridCell.Tab.1.right" timestamp="1586423829312">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="252" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1584088486912" />
-    <state width="1071" height="252" key="GridCell.Tab.2.bottom" timestamp="1584088486912">
+    <state width="1071" height="204" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586423829312" />
+    <state width="1071" height="204" key="GridCell.Tab.2.bottom" timestamp="1586423829312">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="252" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584088486912" />
-    <state width="1071" height="252" key="GridCell.Tab.2.center" timestamp="1584088486912">
+    <state width="1071" height="204" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586423829312" />
+    <state width="1071" height="204" key="GridCell.Tab.2.center" timestamp="1586423829312">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="252" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1584088486912" />
-    <state width="1071" height="252" key="GridCell.Tab.2.left" timestamp="1584088486912">
+    <state width="1071" height="204" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1586423829312" />
+    <state width="1071" height="204" key="GridCell.Tab.2.left" timestamp="1586423829312">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="252" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1584088486912" />
-    <state width="1071" height="252" key="GridCell.Tab.2.right" timestamp="1584088486912">
+    <state width="1071" height="204" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1586423829312" />
+    <state width="1071" height="204" key="GridCell.Tab.2.right" timestamp="1586423829312">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1071" height="252" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1584088486912" />
+    <state width="1071" height="204" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1586423829312" />
     <state width="1071" height="198" key="GridCell.Tab.3.bottom" timestamp="1583997087992">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -587,18 +615,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1578630256668" />
-    <state x="399" y="11" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1583389673301">
+    <state x="399" y="11" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584410327245">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="399" y="11" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1583389673301" />
+    <state x="399" y="11" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1584410327245" />
     <state x="555" y="115" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1578974808121">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="555" y="115" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1366.728@0.0.1366.728" timestamp="1578974808121" />
-    <state x="368" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1584073489876">
+    <state x="368" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1584503744228">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="368" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584073489876" />
+    <state x="368" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584503744228" />
     <state x="477" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583889381671">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -607,9 +635,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="386" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1584065656982" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584065979672">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584409568734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584065979672" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584409568734" />
   </component>
 </project>

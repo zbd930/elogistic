@@ -17,8 +17,8 @@ public class addressservice {
                 return true;
             }else return false;
     }
-    public List<address> get(String openid){
-        return addressMapper.get_address(openid);
+    public List<address> get(String unionId){
+        return addressMapper.get_address(unionId);
     }
 
     public int delete_address(int id){

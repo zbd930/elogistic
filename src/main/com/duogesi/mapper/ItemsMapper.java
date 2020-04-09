@@ -33,7 +33,7 @@ public interface ItemsMapper {
     details get_para(int id);
 
 //    用户的所有订单
-    List<items> get_orders(String openid);
+    List<items> get_orders(String unionId);
 
    int return_items(@Param("weight") float weight, @Param("volume") float volume, @Param("id") int id);
    //     根据shipid获取发货人信息

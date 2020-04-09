@@ -2,6 +2,7 @@ package com.duogesi.controller;
 
 import com.duogesi.entities.amount;
 import com.duogesi.entities.items;
+import com.duogesi.entities.xiaobao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,9 +34,9 @@ public class itemservlet {
 //    获取所有订单
     @RequestMapping(value = "orders.do")
     @ResponseBody
-    public List<items> get_order(String openid){
+    public List<items> get_order(String unionId){
         try{
-        return  itemsservice.get_orders(openid);
+        return  itemsservice.get_orders(unionId);
     }catch (Exception e){
         e.printStackTrace();
         }return null;
@@ -43,10 +44,10 @@ public class itemservlet {
     //获取当前月份总金额
     @RequestMapping(value = "get.do")
     @ResponseBody
-    public amount get_order1(String openid){
+    public amount get_order1(String unionId){
         amount amount=new amount();
         try {
-            amount=itemsservice.get_amount_bymount(openid);
+            amount=itemsservice.get_amount_bymount(unionId);
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -63,6 +64,18 @@ public class itemservlet {
         }catch (Exception e){
             e.printStackTrace();
         }
+        return list;
+    }
+    //小包渠道获取仓位
+    @RequestMapping("get_xiaobao.do")
+    @ResponseBody
+    public List<xiaobao>get_xiaobao(float weight,float volume,String qiyungang,String mudiguo){
+        List list=null;
+            try{
+                list=itemsservice.get_xiaobao(mudiguo,weight);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
         return list;
     }
 }

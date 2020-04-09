@@ -8,7 +8,7 @@ import java.sql.Date;
 @Component
 public class order implements Serializable {
     private int item_id;
-    private String openid;
+    private String unionId;
     private String numbers;
     private int id;
     private int address_id;
@@ -77,12 +77,12 @@ public class order implements Serializable {
         this.item_id = item_id;
     }
 
-    public String getOpenid() {
-        return openid;
+    public String getUnionId() {
+        return unionId;
     }
 
-    public void setOpenid(String openid) {
-        this.openid = openid;
+    public void setUnionId(String unionId) {
+        this.unionId = unionId;
     }
 
     public int getId() {

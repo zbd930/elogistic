@@ -61,7 +61,7 @@ public class orderservice {
             if (json.getString("return_code").equals("SUCCESS")) {
                 String out_trade_no = json.get("out_trade_no") + "";//订单号
                 String cash_fee=json.get("cash_fee")+"";//商户订单号
-//                String openid=json.get("openid")+"";
+//                String unionId=json.get("unionId")+"";
 //              String trade_type=json.get("trade_type")+"";
                 //接下来是做自己的业务处理
 //                Map map = redisUtil.hmget(out_trade_no);

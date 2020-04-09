@@ -6,6 +6,7 @@ import com.duogesi.Utils.SerializeUtil;
 import com.duogesi.Utils.Swtich;
 import com.duogesi.entities.*;
 import com.duogesi.mapper.ItemsMapper;
+import com.duogesi.mapper.xiaobaoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +31,8 @@ public class itemsservice {
     private com.duogesi.mapper.additionMapper additionMapper;
     @Autowired
     private RedisUtil redisUtil;
+    @Autowired
+    private xiaobaoMapper xiaobaoMapper;
 
 
     public List<items> get_items(items _items, String category) {
@@ -552,8 +555,8 @@ public class itemsservice {
     }
 
     //    获取所有订单
-    public List<items> get_orders(String openid) {
-        List<items> items = itemsMapper.get_orders(openid);
+    public List<items> get_orders(String unionId) {
+        List<items> items = itemsMapper.get_orders(unionId);
         for (com.duogesi.entities.items i : items
         ) {
             order order = i.getOrders().get(0);
@@ -573,7 +576,7 @@ public class itemsservice {
     }
 
     //获取当前月份总金额
-    public amount get_amount_bymount(String openid) {
+    public amount get_amount_bymount(String unionId) {
         // 获取当前年份、月份、日期
         Calendar cale = Calendar.getInstance();
         // 获取当月第一天和最后一天
@@ -589,7 +592,7 @@ public class itemsservice {
         cale.add(Calendar.MONTH, 1);
         cale.set(Calendar.DAY_OF_MONTH, 0);
         end_data = format.format(cale.getTime());
-        amount amount = amountMapper.get_amount(start_data, end_data, openid);
+        amount amount = amountMapper.get_amount(start_data, end_data, unionId);
         if (amount==null) {
             amount amount1=new amount();
             amount1.setTotal(BigDecimal.valueOf(0));
@@ -683,5 +686,56 @@ public class itemsservice {
             });
             return list;
         }else return list;
+    }
+
+    //用户搜索小包渠道
+    public List<xiaobao> get_xiaobao(String country,float weight){
+        switch (country){
+            case "美国":
+                country= "American";
+                break;
+            case "韩国":
+                country= "Korea";
+                break;
+            case "日本":
+                country= "Japan";
+                break;
+            case "荷兰":
+                country= "Netherlands";
+                break;
+            case "俄罗斯":
+                country= "Russia";
+                break;
+            case "意大利":
+                country= "Italy";
+                break;
+            case "英国":
+                country= "England";
+                break;
+        }
+        List<xiaobao> list=xiaobaoMapper.get_channel_xiaobao(country);
+        int index=0;
+        //先遍历小包的渠道
+        for (int i = 0; i <list.size() ; i++) {
+            xiaobao xiaobao=list.get(i);
+           int xiaobao_id=xiaobao.getXiaobao_id();
+           List<price_xiaobao> price_xiaobaos=xiaobaoMapper.get_price_xiaobao(xiaobao_id);
+           //获取等级重
+           float[] weights=new float[price_xiaobaos.size()];
+            for (int j = 0; j <weights.length ; j++) {
+                weights[j]=price_xiaobaos.get(j).getWeight();
+            }
+            //获取重量所对应的区间
+            for (int k = 0; k <weights.length ; k++) {
+                if(weights[k]<=weight&&weight<weights[k+1]&&k!=weights.length){
+                    index=k;
+                    break;
+                }
+            }
+            //获取小包价格对象
+            price_xiaobao price_xiaobao= price_xiaobaos.get(index);
+            xiaobao.setPrice_xiaobao(price_xiaobao);
+        }
+        return list;
     }
 }

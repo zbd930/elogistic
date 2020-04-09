@@ -49,7 +49,7 @@ public class addressservlet {
     @RequestMapping(value = "add.do",produces="text/html;charset=UTF-8")
     @ResponseBody
     public String add(address address, String code){
-        Map map=redisUtil.hmget(address.getOpenid());
+        Map map=redisUtil.hmget(address.getUnionId());
         String email = new String();
         String code1= new String();
         try {
@@ -70,8 +70,8 @@ public class addressservlet {
 
     @RequestMapping("get.do")
     @ResponseBody
-    public List<address> get(String openid){
-        return addressservice.get(openid);
+    public List<address> get(String unionId){
+        return addressservice.get(unionId);
     }
 
     @RequestMapping(value = "delete.do",produces="text/html;charset=UTF-8")
@@ -92,7 +92,7 @@ public class addressservlet {
 //    验证邮箱的正确性
     @RequestMapping(value = "valid_email.do",produces="text/html;charset=UTF-8")
     @ResponseBody
-    public String valid(String openid,String email) {
+    public String valid(String unionId,String email) {
         Mymail mymail = new Mymail();
         StringBuilder s = new StringBuilder();
         String code = getNonce_str();
@@ -100,8 +100,8 @@ public class addressservlet {
         Map map = new HashMap();
         map.put("email", email);
         map.put("code", code);
-        if (!redisUtil.hasKey(openid)) {
-            redisUtil.hmset(openid, map, 60);
+        if (!redisUtil.hasKey(unionId)) {
+            redisUtil.hmset(unionId, map, 60);
             try {
                 mymail.send(email, String.valueOf(s), "【邮箱验证】");
             } catch (Exception e) {

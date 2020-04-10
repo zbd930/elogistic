@@ -735,6 +735,8 @@ public class itemsservice {
             //获取小包价格对象
             price_xiaobao price_xiaobao= price_xiaobaos.get(index);
             xiaobao.setPrice_xiaobao(price_xiaobao);
+            //缺少判断快递还是小包xiaobao.setMethod("快递");
+            xiaobao.setMethod("小包");
         }
         return list;
     }

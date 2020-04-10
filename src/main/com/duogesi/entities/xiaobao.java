@@ -8,7 +8,16 @@ public class xiaobao {
     private String timetable;
     private String detail;
     private price_xiaobao price_xiaobao;
+    private String method;
     private int  user_id;
+
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method;
+    }
 
     public com.duogesi.entities.price_xiaobao getPrice_xiaobao() {
         return price_xiaobao;

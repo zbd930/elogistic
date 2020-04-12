@@ -37,7 +37,7 @@ public class addressservlet {
     public static String getNonce_str() {
 
         // 如果需要4位，那 new char[4] 即可，其他位数同理可得
-        char[] nonceChars = new char[5];
+        char[] nonceChars = new char[6];
 
         for (int index = 0; index < nonceChars.length; ++index) {
             nonceChars[index] = SYMBOLS.charAt(RANDOM.nextInt(SYMBOLS.length()));

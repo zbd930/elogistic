@@ -37,4 +37,16 @@
             from ship_schdule as s, supplier_address as a
             where  s.id=#{item_id} and a.user_id=s.user_id
     </select>
+    <!--获取公司名字-->
+    <select id="get_company_name" resultMap="supplier">
+        select company_name,contact_address,supplier_id,user_id
+        from supplier_address
+        where user_id=#{user_id}
+    </select>
+    <!--获取公司邮箱-->
+    <select id="get_company_email" resultType="String">
+        select contact_mail
+        from supplier_address
+        where supplier_id=#{supplier_id}
+    </select>
 </mapper>

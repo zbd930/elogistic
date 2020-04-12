@@ -124,4 +124,23 @@ public class order implements Serializable {
     public void setPicking(Date picking) {
         this.picking = picking;
     }
+
+    @Override
+    public String toString() {
+        return "order{" +
+                "item_id=" + item_id +
+                ", unionId='" + unionId + '\'' +
+                ", numbers='" + numbers + '\'' +
+                ", id=" + id +
+                ", address_id=" + address_id +
+                ", status=" + status +
+                ", statu='" + statu + '\'' +
+                ", items=" + items +
+                ", picking=" + picking +
+                ", dest='" + dest + '\'' +
+                ", songhuo='" + songhuo + '\'' +
+                ", tihuo=" + tihuo +
+                ", order_details=" + order_details +
+                '}';
+    }
 }

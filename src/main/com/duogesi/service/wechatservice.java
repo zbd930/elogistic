@@ -84,7 +84,6 @@ public class wechatservice {
         String number = frist + middle + myStr;
         order.setNumbers(number);
         //测试下单的东西
-         //调用第三方支付接口,并返回已支付的金额
         amount amount = new amount();
         amount.setItem_id(order.getItem_id());
         String total = request.getParameter("total");

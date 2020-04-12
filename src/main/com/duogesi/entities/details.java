@@ -20,6 +20,16 @@ public class details {
         private String countDownHour;
         private String countDownMinute;
         private String countDownSecond;
+        private int user_id;
+
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
 
     public String getCountDownHour() {
         return countDownHour;

@@ -20,7 +20,7 @@
 
 <!--    获取渠道-->
     <select id="get_channel_xiaobao" resultMap="xiaobao">
-        select timetable,detail,`desc`,xiaobao_id
+        select timetable,detail,`desc`,xiaobao_id,user_id
         from mission_small
         where country=#{country}
     </select>

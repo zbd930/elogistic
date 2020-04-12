@@ -1,5 +1,8 @@
 package com.duogesi.entities;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class xiaobao {
 
     private int xiaobao_id;
@@ -9,7 +12,17 @@ public class xiaobao {
     private String detail;
     private price_xiaobao price_xiaobao;
     private String method;
+    private supplier_company supplier_company;
     private int  user_id;
+
+
+    public com.duogesi.entities.supplier_company getSupplier_company() {
+        return supplier_company;
+    }
+
+    public void setSupplier_company(com.duogesi.entities.supplier_company supplier_company) {
+        this.supplier_company = supplier_company;
+    }
 
     public String getMethod() {
         return method;

@@ -6,6 +6,7 @@ import com.duogesi.Utils.SerializeUtil;
 import com.duogesi.Utils.Swtich;
 import com.duogesi.entities.*;
 import com.duogesi.mapper.ItemsMapper;
+import com.duogesi.mapper.user_infoMapper;
 import com.duogesi.mapper.xiaobaoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,6 +34,8 @@ public class itemsservice {
     private RedisUtil redisUtil;
     @Autowired
     private xiaobaoMapper xiaobaoMapper;
+    @Autowired
+    private user_infoMapper user_infoMapper;
 
 
     public List<items> get_items(items _items, String category) {
@@ -735,8 +738,13 @@ public class itemsservice {
             //获取小包价格对象
             price_xiaobao price_xiaobao= price_xiaobaos.get(index);
             xiaobao.setPrice_xiaobao(price_xiaobao);
+            //获取公司的名字
+            supplier_company supplier_company=user_infoMapper.get_company_name(xiaobao.getUser_id()).get(0);
+            xiaobao.setSupplier_company(supplier_company);
             //缺少判断快递还是小包xiaobao.setMethod("快递");
             xiaobao.setMethod("小包");
+            //设置国家
+            xiaobao.setCountry(country);
         }
         return list;
     }

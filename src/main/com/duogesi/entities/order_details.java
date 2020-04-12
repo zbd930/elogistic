@@ -100,4 +100,21 @@ public class order_details {
     public void setUps(String ups) {
         this.ups = ups;
     }
+
+    @Override
+    public String toString() {
+        return "order_details{" +
+                "id=" + id +
+                ", ctn=" + ctn +
+                ", weight=" + weight +
+                ", volume=" + volume +
+                ", beizhu='" + beizhu + '\'' +
+                ", ups='" + ups + '\'' +
+                ", order=" + order +
+                ", order_id=" + order_id +
+                ", change=" + change +
+                ", chaigui='" + chaigui + '\'' +
+                ", category='" + category + '\'' +
+                '}';
+    }
 }

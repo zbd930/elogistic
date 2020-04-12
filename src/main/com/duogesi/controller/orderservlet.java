@@ -27,6 +27,15 @@ public class orderservlet {
     public void update(HttpServletRequest request,HttpServletResponse response){
        orderservice.add_order(request,response);
     }
+    @RequestMapping("update_xiaobao.do")
+    //支付成功后通知添加订单
+    public void update_xiaobao(HttpServletRequest request,HttpServletResponse response){
+        try {
+            orderservice.add_order_xiaobao(request, response);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
     @RequestMapping(value = "make.do",produces="text/html;charset=UTF-8")
     @ResponseBody

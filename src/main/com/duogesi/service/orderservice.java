@@ -2,11 +2,9 @@ package com.duogesi.service;
 
 import com.alibaba.fastjson.JSONObject;
 import com.duogesi.Mail.Mymail;
-import com.duogesi.Mail.RedisUtil;
-import com.duogesi.Utils.Date;
-import com.duogesi.Utils.Swtich;
+import com.duogesi.Utils.RedisUtil;
 import com.duogesi.Utils.TestXml2Json;
-import com.duogesi.entities.*;
+import com.duogesi.beans.*;
 import com.duogesi.mapper.ItemsMapper;
 import com.duogesi.mapper.OrderMapper;
 import com.duogesi.mapper.user_infoMapper;
@@ -14,7 +12,6 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.dom4j.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,7 +19,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -65,11 +61,11 @@ public class orderservice {
 //          XmlUtil.XmlToJson(inputString.toString());
             if (json.getString("return_code").equals("SUCCESS")) {
                 String out_trade_no = json.get("out_trade_no") + "";//订单号
-                String cash_fee=json.get("cash_fee")+"";//商户订单号
+                String cash_fee = json.get("cash_fee") + "";//商户订单号
                 //删除redis
                 redisUtil.del(out_trade_no);
                 //修改已支付金额
-                amountMapper.updata_paid(Integer.valueOf(cash_fee)/100,out_trade_no);
+                amountMapper.updata_paid(Integer.valueOf(cash_fee) / 100, out_trade_no);
                 //告诉微信服务器，我收到信息了，不要在调用回调action了
                 response.getWriter().write("<xml><return_code><![CDATA[SUCCESS]]></return_code></xml>");
                 System.out.println("----结束---" + inputString.toString());
@@ -80,6 +76,7 @@ public class orderservice {
         }
 
     }
+
     //添加订单
     public void add_order_xiaobao(HttpServletRequest request, HttpServletResponse response) throws IOException {
         BufferedReader reader = null;
@@ -147,21 +144,22 @@ public class orderservice {
                 }
             }
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     //  0是成功，1是订单添加有误，
     public int add(order order, String total, order_details order_details, HttpServletRequest request, HttpServletResponse response) {
-       //先判断库存
-        if (itemsMapper.update_items(order_details.getWeight(),order_details.getVolume(),order.getItem_id())!= 0) {
-           return 0;
-         } else return 3;
+        //先判断库存
+        if (itemsMapper.update_items(order_details.getWeight(), order_details.getVolume(), order.getItem_id()) != 0) {
+            return 0;
+        } else return 3;
 
     }
 
     //  0是成功，1是订单添加有误，
-    public  int add_redis(order order, String total, order_details order_details) {
+    public int add_redis(order order, String total, order_details order_details) {
         int item_id = order.getItem_id();
         float order_volume = order_details.getVolume();
         float order_weight = order_details.getWeight();
@@ -185,9 +183,9 @@ public class orderservice {
                     redisUtil.hdecr(number1, "weight", order_details.getWeight());
                     redisUtil.hdecr(number1, "volume", order_details.getVolume());
                     return 0;
-                }else return 3;
                 } else return 3;
-            }
+            } else return 3;
         }
+    }
 
 }

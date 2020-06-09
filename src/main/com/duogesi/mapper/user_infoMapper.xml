@@ -5,14 +5,14 @@
 <!-- namespace命名空间，唯一标识。一般指定为自定义的接口文件，下面相当于这个接口的实现类 -->
 <mapper namespace="com.duogesi.mapper.user_infoMapper">
 
-    <resultMap id="company" type="com.duogesi.entities.user_info">
+    <resultMap id="company" type="com.duogesi.beans.user_info">
         <id column="id" property="id"></id>
         <result property="username" column="username"></result>
         <result property="password" column="password"></result>
         <result property="type" column="type"></result>
         <result property="Post_like" column="Post_like"></result>
     </resultMap>
-    <resultMap id="supplier" type="com.duogesi.entities.supplier_company">
+    <resultMap id="supplier" type="com.duogesi.beans.supplier_company">
         <id column="supplier_id" property="supplier_id"></id>
         <result property="user_id" column="user_id"></result>
         <result property="contact_name" column="contact_name"></result>
@@ -33,9 +33,9 @@
     </update>
     <!--       根据shipid获取发货人信息-->
     <select id="get_supplier_info" resultMap="supplier">
-            select s.*,a.contact_mail
-            from ship_schdule as s, supplier_address as a
-            where  s.id=#{item_id} and a.user_id=s.user_id
+        select s.*,a.contact_mail
+        from ship_schdule as s, supplier_address as a
+        where s.id=#{item_id} and a.user_id=s.user_id
     </select>
     <!--获取公司名字-->
     <select id="get_company_name" resultMap="supplier">

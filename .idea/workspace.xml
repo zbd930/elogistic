@@ -7,24 +7,298 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81aa1cdc-48d1-4fc5-b5c8-c8b4fd3da8a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ideaDataSources/e6b13166-36e3-4a69-8c86-678718036350.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.ideaDataSources/e6b13166-36e3-4a69-8c86-678718036350.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ideaDataSources/e78aa5cf-e428-4bac-bf78-c8337705ffc9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.ideaDataSources/e78aa5cf-e428-4bac-bf78-c8337705ffc9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Aspect/orderAsper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Aspect/orderAsper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Mail/Mymail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Mail/Mymail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Mail/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Utils/RedisUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Utils/AesUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Utils/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Utils/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Utils/Httputils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Utils/Httputils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Utils/IWXPayDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Utils/IWXPayDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Utils/SerializeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Utils/SerializeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Utils/Swtich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Utils/Swtich.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Utils/TestXml2Json.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Utils/WXPayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Utils/WXPayConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Utils/WXPayConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Utils/WXPayConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Utils/WXPayUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Utils/WXPayUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Utils/details.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Utils/details.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/Utils/getOrderExpireTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/Utils/getOrderExpireTime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/addressservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/addressservlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/commentservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/commentservlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/dianzanservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/dianzanservlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/itemservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/itemservlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/orderservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/orderservlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/details.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/entities/details.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/entities/order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/order_details.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/entities/order_details.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/xiaobao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/entities/xiaobao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/shoppingservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/shoppingservlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/uploadservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/uploadservlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/wechatservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/wechatservlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/controller/xiaobaoservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/controller/xiaobaoservlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/PageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/PageBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/addition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/addition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/amount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/amount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/copy_email.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/copy_email.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/details.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/details.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/limit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/limit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/order_details.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/order_details.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/pic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/pic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/price.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/price.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/price_haika.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/price_haika.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/price_include.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/price_include.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/price_xiaobao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/price_xiaobao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/shopping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/shopping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/supplier_company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/supplier_company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/user_info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/user_info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/entities/xiaobao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/beans/xiaobao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/additionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/additionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/additionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/additionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/addressMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/addressMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/addressMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/addressMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/commentsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/commentsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/commentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/commentsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/copy_emailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/copy_emailMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/priceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/priceMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/priceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/priceMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/xiaobaoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/xiaobaoMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/mapper/xiaobaoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/mapper/xiaobaoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/redisUtils/RedisKeyUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/redisUtils/RedisKeyUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/addressservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/addressservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/commentservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/commentservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/dianzanservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/dianzanservice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/itemsservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/itemsservice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/orderservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/orderservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/shoppingservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/shoppingservice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/wechatservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/wechatservice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/elogistic/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/duogesi/service/xiaobaoservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/duogesi/service/xiaobaoservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/apiclient_cert.p12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/apiclient_cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/apiclient_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/spring-data-redis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/spring-data-redis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/spring-mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/证书使用说明.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/duogesi/controller/itemservletTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/duogesi/controller/itemservletTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/duogesi/controller/orderservletTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/duogesi/controller/orderservletTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uploadfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/apiclient_cert.p12" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apiclient_cert.p12" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Aspect/orderAsper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Aspect/orderAsper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Mail/Mymail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Mail/Mymail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Mail/RedisUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Mail/RedisUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/AesUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/AesUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/Date.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/Date.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/Httputils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/Httputils$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/Httputils$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/Httputils$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/Httputils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/Httputils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/IWXPayDomain$DomainInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/IWXPayDomain$DomainInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/Swtich.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/Swtich.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/TestXml2Json.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/TestXml2Json.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/WXPayConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/WXPayConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/WXPayUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/WXPayUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/getOrderExpireTime.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/Utils/getOrderExpireTime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/addressservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/addressservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/commentservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/commentservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/dianzanservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/dianzanservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/itemservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/itemservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/orderservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/orderservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/shoppingservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/shoppingservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/uploadservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/uploadservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/wechatservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/wechatservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/controller/xiaobaoservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/controller/xiaobaoservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/PageBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/addition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/amount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/comments.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/copy_email.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/details.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/items.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/limit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/order_details.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/pic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/price.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/price_haika.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/price_include.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/price_xiaobao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/shopping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/supplier_company.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/user_info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/entities/xiaobao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/ItemsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/ItemsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/ItemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/ItemsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/OrderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/OrderMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/additionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/additionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/additionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/additionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/addressMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/addressMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/addressMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/addressMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/amountMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/amountMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/amountMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/amountMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/commentsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/commentsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/commentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/commentsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/copy_emailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/copy_emailMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/priceMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/priceMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/priceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/priceMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/user_infoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/user_infoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/user_infoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/user_infoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/xiaobaoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/xiaobaoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/xiaobaoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/mapper/xiaobaoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/redisUtils/RedisKeyUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/redisUtils/RedisKeyUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/addressservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/addressservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/commentservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/commentservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/itemsservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/orderservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/orderservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/shoppingservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/shoppingservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/wechatservice$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/wechatservice$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/wechatservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/wechatservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/duogesi/service/xiaobaoservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/duogesi/service/xiaobaoservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/res/apiclient_cert.p12" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/res/apiclient_cert.p12" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/res/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/res/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/res/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/res/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/res/spring-data-redis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/res/spring-data-redis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/res/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/res/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/res/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/res/spring-mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/res/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/res/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring-data-redis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-data-redis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/com/duogesi/controller/itemservletTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/com/duogesi/controller/itemservletTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/com/duogesi/controller/orderservletTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/com/duogesi/controller/orderservletTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webapp/uploadfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webapp/uploadfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/apiclient_cert.p12" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/apiclient_cert.p12" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Aspect/orderAsper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Aspect/orderAsper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Mail/Mymail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Mail/Mymail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Mail/RedisUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Mail/RedisUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/AesUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/AesUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/Date.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/Date.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/Httputils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/Httputils$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/Httputils$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/Httputils$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/Httputils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/Httputils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/IWXPayDomain$DomainInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/IWXPayDomain$DomainInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/Swtich.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/Swtich.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/TestXml2Json.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/TestXml2Json.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/WXPayConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/WXPayConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/WXPayUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/WXPayUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/getOrderExpireTime.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/Utils/getOrderExpireTime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/addressservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/addressservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/commentservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/commentservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/dianzanservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/dianzanservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/itemservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/itemservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/orderservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/orderservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/shoppingservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/shoppingservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/uploadservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/uploadservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/wechatservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/wechatservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/xiaobaoservlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/controller/xiaobaoservlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/PageBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/addition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/amount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/comments.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/copy_email.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/details.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/items.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/limit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/order_details.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/pic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/price.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/price_haika.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/price_include.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/price_xiaobao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/shopping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/supplier_company.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/user_info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/entities/xiaobao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/ItemsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/ItemsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/ItemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/ItemsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/OrderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/OrderMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/additionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/additionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/additionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/additionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/addressMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/addressMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/addressMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/addressMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/amountMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/amountMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/amountMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/amountMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/commentsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/commentsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/commentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/commentsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/copy_emailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/copy_emailMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/priceMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/priceMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/priceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/priceMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/user_infoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/user_infoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/user_infoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/user_infoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/xiaobaoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/xiaobaoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/xiaobaoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/mapper/xiaobaoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/redisUtils/RedisKeyUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/redisUtils/RedisKeyUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/addressservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/addressservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/commentservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/commentservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/itemsservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/orderservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/orderservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/shoppingservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/shoppingservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/wechatservice$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/wechatservice$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/wechatservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/wechatservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/xiaobaoservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/com/duogesi/service/xiaobaoservice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/apiclient_cert.p12" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/apiclient_cert.p12" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/spring-data-redis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/spring-data-redis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/spring-mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/res/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/spring-data-redis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/spring-data-redis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/spring-mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/test/com/duogesi/controller/itemservletTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/test/com/duogesi/controller/itemservletTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/test/com/duogesi/controller/orderservletTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/test/com/duogesi/controller/orderservletTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/webapp/uploadfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/classes/webapp/uploadfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/elogistic/uploadfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/elogistic/uploadfile.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,24 +323,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="fba@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="fba: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="fba@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="fba: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="orders_details: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -74,85 +330,88 @@
     <session id="972643596">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="amount" value="2" />
-          <entry key="java" value="41" />
-          <entry key="orders" value="6" />
-          <entry key="orders_details" value="2" />
-          <entry key="sql" value="7" />
-          <entry key="supplier_address" value="2" />
-          <entry key="xml" value="12" />
+          <entry key="amount" value="4" />
+          <entry key="class" value="1" />
+          <entry key="comments" value="1" />
+          <entry key="copy_email" value="1" />
+          <entry key="html" value="4" />
+          <entry key="java" value="106" />
+          <entry key="jsp" value="2" />
+          <entry key="orders" value="11" />
+          <entry key="orders_details" value="6" />
+          <entry key="pem" value="2" />
+          <entry key="properties" value="5" />
+          <entry key="sql" value="8" />
+          <entry key="subscriber_address" value="1" />
+          <entry key="supplier_address" value="3" />
+          <entry key="txt" value="1" />
+          <entry key="user_info" value="1" />
+          <entry key="xml" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="12" />
-          <entry key="JAVA" value="41" />
-          <entry key="Scratch" value="7" />
-          <entry key="XML" value="12" />
+          <entry key="CLASS" value="1" />
+          <entry key="Database Element" value="28" />
+          <entry key="HTML" value="4" />
+          <entry key="JAVA" value="106" />
+          <entry key="JSP" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Properties" value="5" />
+          <entry key="Scratch" value="8" />
+          <entry key="XML" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cell" value="10" />
-          <entry key="java" value="1101" />
+          <entry key="cell" value="28" />
+          <entry key="html" value="10" />
+          <entry key="java" value="1459" />
           <entry key="sql" value="105" />
-          <entry key="txt" value="13" />
+          <entry key="txt" value="16" />
           <entry key="xml" value="195" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1101" />
-          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="HTML" value="10" />
+          <entry key="JAVA" value="1459" />
+          <entry key="PLAIN_TEXT" value="16" />
           <entry key="SQL" value="88" />
-          <entry key="Scratch" value="31" />
+          <entry key="Scratch" value="49" />
           <entry key="XML" value="191" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.closed" value="17" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.32" value="3" />
           <entry key="project.open.time.33" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="20" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0fc05f11-2714-4d51-97aa-5cf24189f63d/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" selection-start-column="26" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/itemsservice.java">
+        <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/RedisUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="741" column="62" selection-start-line="741" selection-start-column="62" selection-end-line="741" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/orderservice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="129" column="91" selection-start-line="129" selection-start-column="82" selection-end-line="129" selection-end-column="91" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="27" column="203" selection-start-line="27" selection-start-column="203" selection-end-line="27" selection-end-column="203" />
+            <state relative-caret-position="186">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -162,9 +421,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -177,7 +436,17 @@
       <find>results</find>
       <find>out_trade_no</find>
       <find>get_company_name</find>
+      <find>item_id</find>
+      <find>beizhu</find>
+      <find>picking</find>
+      <find>songhuo</find>
+      <find>chaigui</find>
+      <find>category</find>
+      <find>country</find>
+      <find>ups</find>
+      <find>total</find>
       <find>addorder2</find>
+      <find>user_id</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -189,20 +458,36 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/com/duogesi/mapper/xiaobaoMapper.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0fc05f11-2714-4d51-97aa-5cf24189f63d/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/com/duogesi/controller/addressservlet.java" />
-        <option value="$PROJECT_DIR$/src/main/com/duogesi/service/itemsservice.java" />
-        <option value="$PROJECT_DIR$/src/main/com/duogesi/service/wechatservice.java" />
         <option value="$PROJECT_DIR$/src/main/com/duogesi/entities/order.java" />
-        <option value="$PROJECT_DIR$/src/main/com/duogesi/entities/order_details.java" />
         <option value="$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/com/duogesi/controller/xiaobaoservlet.java" />
-        <option value="$PROJECT_DIR$/src/main/com/duogesi/controller/orderservlet.java" />
         <option value="$PROJECT_DIR$/src/main/com/duogesi/entities/xiaobao.java" />
-        <option value="$PROJECT_DIR$/src/main/com/duogesi/service/xiaobaoservice.java" />
-        <option value="$PROJECT_DIR$/src/main/com/duogesi/service/orderservice.java" />
         <option value="$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/com/duogesi/entities/details.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/new.html" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/entities/order_details.java" />
         <option value="$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/controller/shoppingservlet.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/service/shoppingservice.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/controller/dianzanservlet.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/controller/commentservlet.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/controller/itemservlet.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/controller/xiaobaoservlet.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/Mail/Mymail.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/controller/addressservlet.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/controller/orderservlet.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/controller/uploadservlet.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/controller/wechatservlet.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/Mail/RedisUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/mapper/copy_emailMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/service/itemsservice.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/service/wechatservice.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/service/xiaobaoservice.java" />
+        <option value="$PROJECT_DIR$/src/main/res/jdbc.properties" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/Utils/RedisUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/service/orderservice.java" />
+        <option value="$PROJECT_DIR$/src/main/com/duogesi/Utils/TestXml2Json.java" />
       </list>
     </option>
   </component>
@@ -229,9 +514,9 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="9" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="116" />
+    <option name="y" value="44" />
     <option name="width" value="1920" />
     <option name="height" value="1047" />
   </component>
@@ -242,8 +527,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="CatdeaLogs" />
       <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -277,22 +560,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="duogesi" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="elogistic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="elogistic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="duogesi" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="elogistic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="elogistic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="duogesi" type="462c0819:PsiDirectoryNode" />
               <item name="Mail" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -300,21 +567,19 @@
               <item name="elogistic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="duogesi" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="elogistic" type="b2602c69:ProjectViewProjectNode" />
               <item name="elogistic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="duogesi" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="CatdeaLogs" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -329,7 +594,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586685726285" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591670100187" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/com/duogesi/mapper" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -338,6 +603,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\Project\Logistic\new\elogistic\src\main\res" />
       <recent name="E:\project\new\elogistic\src\main\com\duogesi" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -345,11 +611,11 @@
       <recent name="com.duogesi.Utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\Project\Logistic\new\elogistic\src\main\webapp" />
       <recent name="E:\project\new\elogistic\src\main\com\duogesi\mapper" />
       <recent name="E:\project\new\elogistic\src\main\com\duogesi\entities" />
       <recent name="E:\project\new\elogistic\src\main\webapp" />
       <recent name="E:\project\new\elogistic\src\main\res" />
-      <recent name="E:\project\new\elogistic\src\main\com\duogesi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -366,11 +632,11 @@
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.100">
     <configuration name="xiaobao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.duogesi.entities.xiaobao" />
+      <option name="MAIN_CLASS_NAME" value="com.duogesi.beans.xiaobao" />
       <module name="elogistic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.duogesi.entities.*" />
+          <option name="PATTERN" value="com.duogesi.beans.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -678,16 +944,34 @@
       <workItem from="1586486642416" duration="2788000" />
       <workItem from="1586565122757" duration="15000" />
       <workItem from="1586583330312" duration="19172000" />
+      <workItem from="1586827823653" duration="4590000" />
+      <workItem from="1586846686502" duration="1526000" />
+      <workItem from="1587368102114" duration="636000" />
+      <workItem from="1587536559504" duration="1199000" />
+      <workItem from="1587604429407" duration="1329000" />
+      <workItem from="1587693083089" duration="1848000" />
+      <workItem from="1587799213834" duration="1210000" />
+      <workItem from="1588045859682" duration="57000" />
+      <workItem from="1588210768206" duration="67000" />
+      <workItem from="1588211512119" duration="586000" />
+      <workItem from="1588384840422" duration="204000" />
+      <workItem from="1588657648988" duration="373000" />
+      <workItem from="1588819645629" duration="4574000" />
+      <workItem from="1588919643753" duration="40000" />
+      <workItem from="1589534150247" duration="817000" />
+      <workItem from="1590195330532" duration="5853000" />
+      <workItem from="1590205960022" duration="866000" />
+      <workItem from="1591667474146" duration="2497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19445000" />
+    <option name="totallyTimeSpent" value="47717000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="509" y="28" width="1920" height="1047" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2548387" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -695,10 +979,9 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.34636265" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3475877" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -711,13 +994,14 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.34636265" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.21375267" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.15053764" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -901,225 +1185,311 @@
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584409568734" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/afa41da5-35ee-4436-8387-b9f60481d06d/console.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/uploadservlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/wechatservlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/xiaobaoservlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="29" column="18" selection-start-line="28" selection-start-column="12" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Mail/Mymail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-725">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/additionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/additionMapper.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/entities/price_xiaobao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/addressMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/addressMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/amountMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-668" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/commentsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/commentsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/copy_emailMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/copy_emailMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-855">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/redisUtils/RedisKeyUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/addressservice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/commentservice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/itemsservice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="37" column="65" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/shoppingservice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/wechatservice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1461">
+          <caret line="507" column="14" selection-start-line="507" selection-start-column="14" selection-end-line="507" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/xiaobaoservice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1480">
+          <caret line="128" column="35" lean-forward="true" selection-start-line="128" selection-start-column="35" selection-end-line="130" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/details.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Mail/Mymail.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/Httputils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="-2147">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/entities/supplier_company.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/IWXPayDomain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="95">
+          <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/itemservlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/Swtich.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="49" column="38" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="50" />
+        <state relative-caret-position="-592">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/addressservlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/WXPayConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-665">
-          <caret line="14" selection-start-line="14" selection-end-line="15" selection-end-column="28" />
+        <state relative-caret-position="76">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/entities/order.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/getOrderExpireTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="128" column="18" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
+        <state relative-caret-position="95">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/entities/order_details.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://0fc05f11-2714-4d51-97aa-5cf24189f63d/schema/fba/table/supplier_address">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://0fc05f11-2714-4d51-97aa-5cf24189f63d/schema/fba/table/orders_details">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Mail/RedisUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="202" column="19" selection-start-line="202" selection-start-column="19" selection-end-line="202" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/entities/xiaobao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/SerializeUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/uploadfile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/证书使用说明.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/apiclient_cert.pem">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/apiclient_key.pem">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Aspect/orderAsper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1864">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/redis.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/spring-mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/spring.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1710">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/AesUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/TestXml2Json.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://0fc05f11-2714-4d51-97aa-5cf24189f63d/schema/fba/table/orders">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/xiaobaoservlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://0fc05f11-2714-4d51-97aa-5cf24189f63d/schema/fba/table/amount">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/xiaobaoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/xiaobaoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/user_infoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0fc05f11-2714-4d51-97aa-5cf24189f63d/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/orderservlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/orderservice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="129" column="91" selection-start-line="129" selection-start-column="82" selection-end-line="129" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/OrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="27" column="203" selection-start-line="27" selection-start-column="203" selection-end-line="27" selection-end-column="203" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/controller/wechatservlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/wechatservice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6379">
-          <caret line="86" column="37" lean-forward="true" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="37" />
-          <folding>
-            <element signature="e#12520#13039#0" />
-            <element signature="e#13045#14819#0" />
-            <element signature="e#17916#19519#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/xiaobaoservice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1042">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="-1">
+          <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#object2Map#0;class#xiaobaoservice#0" />
-            <element signature="method#conPayParam#0;class#xiaobaoservice#0" />
-            <element signature="method#sendPost#1;class#xiaobaoservice#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/mapper/ItemsMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/Utils/RedisUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-912" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/entities/details.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="27" />
-          <folding>
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-            <element signature="e#781#782#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/duogesi/service/itemsservice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="741" column="62" selection-start-line="741" selection-start-column="62" selection-end-line="741" selection-end-column="62" />
+        <state relative-caret-position="186">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>

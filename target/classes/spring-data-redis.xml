@@ -11,15 +11,15 @@
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
     <!-- 载入redis.properties,这里要特别注意，如果有多个properties文件，必须用逗号分开，不能写成两个 <context:property-placeholder/> -->
-    <context:property-placeholder location="classpath:redis.properties" />
+    <context:property-placeholder location="classpath:redis.properties"/>
     <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
-        <property name="connectionFactory"   ref="jedisConnFactory" />
+        <property name="connectionFactory" ref="jedisConnFactory"/>
         <property name="keySerializer">
             <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"></bean>
         </property>
         <property name="valueSerializer">
-            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
-<!--            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"></bean>-->
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
+            <!--            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"></bean>-->
         </property>
         <property name="hashKeySerializer">
             <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
@@ -36,11 +36,11 @@
           p:poolConfig-ref="poolConfig"
           p:use-pool="true"/>
 
-            <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
-                <!--最大空闲连接数-->
-                <property name="maxIdle" value="300"></property>
-                <property name="maxWaitMillis" value="1000"></property>
-                <property name="maxTotal" value="600"></property>
-            </bean>
+    <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <!--最大空闲连接数-->
+        <property name="maxIdle" value="300"></property>
+        <property name="maxWaitMillis" value="1000"></property>
+        <property name="maxTotal" value="600"></property>
+    </bean>
 
 </beans>

@@ -1,6 +1,6 @@
 package com.duogesi.mapper;
 
-import com.duogesi.entities.addition;
+import com.duogesi.beans.addition;
 import org.apache.ibatis.annotations.Param;
 
 public interface additionMapper {
@@ -11,5 +11,5 @@ public interface additionMapper {
     //获取附加费
     addition get_price(@Param("category") String category, @Param("user_id") int user_id);
 
-    
+
 }

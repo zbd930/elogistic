@@ -5,12 +5,11 @@
 <!-- namespace命名空间，唯一标识。一般指定为自定义的接口文件，下面相当于这个接口的实现类 -->
 <mapper namespace="com.duogesi.mapper.copy_emailMapper">
     <!-- 定义结果集，column表示sql查询列,property表示映射到实体的属性 -->
-    <resultMap type="com.duogesi.entities.copy_email" id="my" >
+    <resultMap type="com.duogesi.beans.copy_email" id="my">
         <id column="email_id" property="email_id"/>
         <result column="supplier_id" property="supplier_id"/>
         <result column="email_address" property="email_address"/>
     </resultMap>
-    <!-- resultMap指定使用上面定义的结果集,查询使用关联查询，查询列要和上面的column对应 -->
 
 
 </mapper>

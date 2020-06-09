@@ -1,4 +1,5 @@
 package com.duogesi.Utils;
+
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.util.encoders.Base64;
 
@@ -32,21 +33,21 @@ public class AesUtil {
     public static String decrypt(String data, String key, String iv, String encodingFormat) throws Exception {
 
         //被加密的数据
-        byte[] dataByte =  Base64.decode(data);
+        byte[] dataByte = Base64.decode(data);
         //加密秘钥
         byte[] keyByte = Base64.decode(key);
         //偏移量
         byte[] ivByte = Base64.decode(iv);
         int base = 16;
         if (ivByte.length % base != 0) {
-                int groups = ivByte.length / base + (ivByte.length % base != 0 ? 1 : 0);
-                byte[] temp = new byte[groups * base];
-                Arrays.fill(temp, (byte) 0);
-                System.arraycopy(ivByte, 0, temp, 0, ivByte.length);
-                ivByte = temp;
-            }
+            int groups = ivByte.length / base + (ivByte.length % base != 0 ? 1 : 0);
+            byte[] temp = new byte[groups * base];
+            Arrays.fill(temp, (byte) 0);
+            System.arraycopy(ivByte, 0, temp, 0, ivByte.length);
+            ivByte = temp;
+        }
         try {
-            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS7Padding","BC");
+            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS7Padding", "BC");
             SecretKeySpec spec = new SecretKeySpec(keyByte, "AES");
             AlgorithmParameters parameters = AlgorithmParameters.getInstance("AES");
             parameters.init(new IvParameterSpec(ivByte));

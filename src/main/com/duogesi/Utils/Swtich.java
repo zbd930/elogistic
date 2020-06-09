@@ -1,12 +1,12 @@
 package com.duogesi.Utils;
 
-import com.duogesi.entities.items;
+import com.duogesi.beans.items;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Swtich {
-    public String switch_mudigang_fan(String origin){
-        switch (origin){
+    public String switch_mudigang_fan(String origin) {
+        switch (origin) {
             case "美西":
                 return "west";
             case "美东":
@@ -17,8 +17,9 @@ public class Swtich {
         }
         return null;
     }
-    public String switch_mudigang_zhong_ouzhou(String origin){
-        switch (origin){
+
+    public String switch_mudigang_zhong_ouzhou(String origin) {
+        switch (origin) {
             case ("英国"):
                 return "zone1";
             case ("德国"):
@@ -50,8 +51,8 @@ public class Swtich {
     }
 
 
-    public String switch_mudigang_zhong(String origin){
-        switch (origin){
+    public String switch_mudigang_zhong(String origin) {
+        switch (origin) {
             case "west":
                 return "west";
             case "east":
@@ -105,8 +106,8 @@ public class Swtich {
         return null;
     }
 
-    public String switch_mudigang(String origin){
-        switch (origin){
+    public String switch_mudigang(String origin) {
+        switch (origin) {
             case "west":
                 return "美西";
             case "east":

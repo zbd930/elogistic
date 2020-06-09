@@ -1,8 +1,7 @@
 package com.duogesi.controller;
 
-import com.duogesi.entities.order;
-import com.duogesi.entities.order_details;
-import com.duogesi.service.wechatservice;
+import com.duogesi.beans.order;
+import com.duogesi.beans.order_details;
 import com.duogesi.service.xiaobaoservice;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,11 +24,11 @@ public class xiaobaoservlet {
 
     @RequestMapping("pay_xiaobao.do")
     @ResponseBody
-    public String pay(HttpServletRequest request, HttpServletResponse response,order order, order_details order_details, String method, String country,int supplier_id){
-        String result="";
+    public String pay(HttpServletRequest request, HttpServletResponse response, order order, order_details order_details, String method, String country, int supplier_id) {
+        String result = "";
         try {
-            result= xiaobaoservice.wechat_pay(request,response,order,order_details,method,country,supplier_id);
-        }catch (IOException E){
+            result = xiaobaoservice.wechat_pay(request, response, order, order_details, method, country, supplier_id);
+        } catch (IOException E) {
             log.error(E.getMessage(), E);
         }
         return result;

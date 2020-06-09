@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- namespace命名空间，唯一标识。一般指定为自定义的接口文件，下面相当于这个接口的实现类 -->
 <mapper namespace="com.duogesi.mapper.amountMapper">
-    <resultMap id="amount" type="com.duogesi.entities.amount">
+    <resultMap id="amount" type="com.duogesi.beans.amount">
         <id column="id" property="id"/>
         <result column="order_id" property="order_id"/>
         <result column="paid" property="paid"/>
@@ -15,7 +15,7 @@
         <result column="inspect" property="inspect"/>
         <result column="additional" property="additional"/>
         <result column="unionId" property="unionId"/>
-        <association property="order" javaType="com.duogesi.entities.order">
+        <association property="order" javaType="com.duogesi.beans.order">
             <id column="id" property="id"/>
             <result column="ctn" property="ctn"></result>
             <result column="unionId" property="unionId"/>
@@ -29,7 +29,7 @@
             <result column="beizhu" property="beizhu"/>
             <result column="ups" property="ups"/>
         </association>
-        <association property="items" javaType="com.duogesi.entities.items">
+        <association property="items" javaType="com.duogesi.beans.items">
             <id column="id" property="id"/>
             <result column="qiyungang" property="qiyungang"/>
             <result column="mudigang" property="mudigang"/>
@@ -43,15 +43,17 @@
     </resultMap>
 
     <!--插入金额-->
-    <insert id="insert_amount" parameterType="com.duogesi.entities.amount">
-            insert into amount (order_id, paid, total, item_id,unionId) values (#{order_id},#{paid},#{total},#{item_id},#{unionId})
+    <insert id="insert_amount" parameterType="com.duogesi.beans.amount">
+        insert into amount (order_id, paid, total, item_id,unionId) values
+        (#{order_id},#{paid},#{total},#{item_id},#{unionId})
     </insert>
 
     <!--获取本月的金额-->
     <select id="get_amount" resultMap="amount">
-        select  sum(a.paid) as paid , sum(a.total) as total,sum(a.tax) as tax,sum(a.inspect) as inspect,sum(a.customer) as customer,sum(a.additional) as additional
+        select sum(a.paid) as paid , sum(a.total) as total,sum(a.tax) as tax,sum(a.inspect) as inspect,sum(a.customer)
+        as customer,sum(a.additional) as additional
         from fba.amount as a,fba.ship_schdule as s
-        where a.item_id=s.id and s.etd>#{start_data} and #{end_data}>=s.etd  and a.unionId=#{unionId}
+        where a.item_id=s.id and s.etd>#{start_data} and #{end_data}>=s.etd and a.unionId=#{unionId}
     </select>
     <!--获取某个订单的金额-->
     <select id="get_amount_byid" resultMap="amount">
@@ -62,13 +64,13 @@
 
     <!--    删除价格-->
     <delete id="delete_order_price">
-                delete
-                from amount
-                where order_id=#{id}
-     </delete>
+        delete
+        from amount
+        where order_id=#{id}
+    </delete>
     <!--  修改paid-->
     <update id="updata_paid">
         update amount set paid=#{paid}
-        where  order_id=#{order_id}
+        where order_id=#{order_id}
     </update>
 </mapper>

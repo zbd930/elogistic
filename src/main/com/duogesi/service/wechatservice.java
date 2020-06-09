@@ -3,10 +3,10 @@ package com.duogesi.service;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.duogesi.Mail.Mymail;
-import com.duogesi.Mail.RedisUtil;
+import com.duogesi.Utils.RedisUtil;
 import com.duogesi.Utils.*;
 import com.duogesi.Utils.Date;
-import com.duogesi.entities.*;
+import com.duogesi.beans.*;
 import com.duogesi.mapper.ItemsMapper;
 import com.duogesi.mapper.OrderMapper;
 import com.duogesi.mapper.amountMapper;
@@ -69,11 +69,11 @@ public class wechatservice {
         System.out.println("url" + url);
         results = sendGetReq(url);// 发送http请求
         System.out.println("results" + results);
-        return results ;
+        return results;
     }
 
     //普通下单
-    public String wechat_pay(HttpServletRequest request, HttpServletResponse response, order order, order_details order_details,String method,String country) throws IOException {
+    public String wechat_pay(HttpServletRequest request, HttpServletResponse response, order order, order_details order_details, String method, String country) throws IOException {
         //order设置number
         String frist = "880";
         LocalDateTime localDateTime = LocalDateTime.now();
@@ -98,7 +98,7 @@ public class wechatservice {
             order.setStatus(4);
         } else order.setStatus(0);
         String chaigui = order_details.getChaigui();
-        if (!method.equals("海卡")&&!country.equals("American")) {
+        if (!method.equals("海卡") && !country.equals("American")) {
             //遍历下单的中文地址欧洲和其他分开
             if (chaigui.equals("英国") || chaigui.equals("德国") || chaigui.equals("法国") || chaigui.equals("卢森堡") || chaigui.equals("荷兰") || chaigui.equals("比利时") || chaigui.equals("爱尔兰") || chaigui.equals("西班牙") || chaigui.equals("意大利") || chaigui.equals("奥地利") || chaigui.equals("丹麦") || chaigui.equals("捷克") || chaigui.equals("其他")) {
                 order_details.setChaigui(swtich.switch_mudigang_zhong_ouzhou(chaigui));
@@ -109,105 +109,105 @@ public class wechatservice {
             order.setDest(swtich.switch_mudigang_zhong(order.getDest()));
         }
         //美国海派等
-        else if(country.equals("American")&&!method.equals("海卡")){
-                    order_details.setChaigui(swtich.switch_mudigang_zhong(chaigui));
+        else if (country.equals("American") && !method.equals("海卡")) {
+            order_details.setChaigui(swtich.switch_mudigang_zhong(chaigui));
+        }
+        //添加订单
+        if (orderMapper.addorder(order) == 1) {
+            order_details.setOrder_id(order.getId());
+            amount.setOrder_id(order.getId());
+            //更新账单表和更新订单详情表
+            if ((amountMapper.insert_amount(amount) == 1) && (orderMapper.addorder2(order_details) == 1)) {
+                //发送邮件
+                int ship_id = order.getItem_id();
+                items items = itemsMapper.get_supplier_info(ship_id);
+                String email = items.getSupplier_companies().get(0).getContact_mail();
+                try {
+                    mymail.send(email, "您发布的拼柜任务有新订单", "【任务更新】");
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-             //添加订单
-             if (orderMapper.addorder(order)==1) {
-             order_details.setOrder_id(order.getId());
-             amount.setOrder_id(order.getId());
-             //更新账单表和更新订单详情表
-             if ((amountMapper.insert_amount(amount)==1) && (orderMapper.addorder2(order_details) == 1)) {
-                 //发送邮件
-                 int ship_id=order.getItem_id();
-                 items items =itemsMapper.get_supplier_info(ship_id);
-                 String email=items.getSupplier_companies().get(0).getContact_mail();
-                 try {
-                     mymail.send(email,"您发布的拼柜任务有新订单","【任务更新】");
-                 } catch (Exception e) {
-                     e.printStackTrace();
-                 }
-                 //邮件发送完毕，调用支付接口
-                        String openid = request.getParameter("openid");
-                        System.out.println("openid = " + openid);
-                        String url = "https://api.mch.weixin.qq.com/pay/unifiedorder";
-                        //组装预下单的请求数据
-                        String reqStr = getReqStr(openid, order,total);
-                        System.out.println("reqStr=" + reqStr);
-                        //发送post数据到微信预下单
-                        results = sendPost(url,reqStr);
-                        System.out.println("prepay from weixin: \n " + results);
-                        Map<String,String> return_data = null;
-                        try {
-                            return_data = WXPayUtil.xmlToMap(results);//微信的一个工具类
-                        } catch (Exception e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
-                            System.out.println(e.getMessage());
+                //邮件发送完毕，调用支付接口
+                String openid = request.getParameter("openid");
+                System.out.println("openid = " + openid);
+                String url = "https://api.mch.weixin.qq.com/pay/unifiedorder";
+                //组装预下单的请求数据
+                String reqStr = getReqStr(openid, order, total);
+                System.out.println("reqStr=" + reqStr);
+                //发送post数据到微信预下单
+                results = sendPost(url, reqStr);
+                System.out.println("prepay from weixin: \n " + results);
+                Map<String, String> return_data = null;
+                try {
+                    return_data = WXPayUtil.xmlToMap(results);//微信的一个工具类
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    System.out.println(e.getMessage());
+                }
+                String return_code = return_data.get("return_code");
+                System.out.println("return_code=" + return_code);
+                if ("SUCCESS".equals(return_code)) {
+                    //调用成功，存入redis
+                    String prepay_id = return_data.get("prepay_id");
+                    Map map3 = conPayParam(prepay_id); //组装返回数据
+                    //存入购物车500秒
+                    Map map = object2Map(order);
+                    Map map1 = object2Map(order_details);
+                    map.put("amount", total);
+                    map.putAll(map1);
+                    map.putAll(map3);
+                    //定义定时器，恢复库存
+                    Timer timer = new Timer();
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            Map map2 = new HashMap();
+                            try {
+                                map2 = redisUtil.hmget(number);
+                            } catch (NullPointerException e) {
+                                e.printStackTrace();
+                                timer.cancel();
+                            }
+                            order order1 = new order();
+                            order_details order_details = new order_details();
+                            try {
+                                BeanUtils.populate(order_details, map2);
+                                BeanUtils.populate(order1, map2);
+                            } catch (IllegalAccessException e) {
+                                e.printStackTrace();
+                            } catch (InvocationTargetException e) {
+                                e.printStackTrace();
+                            }
+                            if (order1.getNumbers() != null) {
+                                //恢复数据
+                                itemsMapper.return_items(order_details.getWeight(), order_details.getVolume(), order1.getItem_id());
+                                //删除订单
+                                orderMapper.delete_order(order.getId());
+                                orderMapper.delete_order_details(order.getId());
+                                //删除价格
+                                amountMapper.delete_order_price(order.getId());
+                            }
+                            //取消线程
+                            timer.cancel();
                         }
-                        String return_code = return_data.get("return_code");
-                        System.out.println("return_code=" + return_code);
-                        if("SUCCESS".equals(return_code)){
-                            //调用成功，存入redis
-                            String prepay_id = return_data.get("prepay_id");
-                            Map map3= conPayParam(prepay_id); //组装返回数据
-                            //存入购物车500秒
-                            Map map =object2Map(order);
-                            Map map1 =object2Map(order_details);
-                            map.put("amount",total);
-                            map.putAll(map1);
-                            map.putAll(map3);
-                            //定义定时器，恢复库存
-                            Timer timer=new Timer();
-                            timer.schedule(new TimerTask() {
-                                @Override
-                                public void run() {
-                                    Map map2 =new HashMap();
-                                    try {
-                                        map2 = redisUtil.hmget(number);
-                                    }catch (NullPointerException e){
-                                       e.printStackTrace();
-                                       timer.cancel();
-                                    }
-                                    order order1=new order();
-                                    order_details order_details = new order_details();
-                                    try {
-                                        BeanUtils.populate(order_details,map2);
-                                        BeanUtils.populate(order1,map2);
-                                    } catch (IllegalAccessException e) {
-                                        e.printStackTrace();
-                                    } catch (InvocationTargetException e) {
-                                        e.printStackTrace();
-                                    }
-                                    if (order1.getNumbers()!=null) {
-                                        //恢复数据
-                                        itemsMapper.return_items(order_details.getWeight(), order_details.getVolume(), order1.getItem_id());
-                                        //删除订单
-                                        orderMapper.delete_order(order.getId());
-                                        orderMapper.delete_order_details(order.getId());
-                                        //删除价格
-                                        amountMapper.delete_order_price(order.getId());
-                                    }
-                                      //取消线程
-                                    timer.cancel();
-                                }
-                            },300000);
-                            //先存入redis
-                            redisUtil.hmset(number,map,300);
-                            redisUtil.sSetAndTime(openid,300,number);
-                            results=JSONObject.toJSONString(map);
-                        }else{
-                            results ="{\"return_code\":\"fail\"}";
-                            response.setContentType("application/json;charset=UTF-8");
-                            response.setHeader("catch-control", "no-catch");
-                            PrintWriter out = response.getWriter();
-                            out.write(results);
-                            out.flush();
-                            out.close();
-                        }
-                    return results;
-             } else return "失败";
-             } else return "失败";
+                    }, 300000);
+                    //先存入redis
+                    redisUtil.hmset(number, map, 300);
+                    redisUtil.sSetAndTime(order.getUnionId(), 300, number);
+                    results = JSONObject.toJSONString(map);
+                } else {
+                    results = "{\"return_code\":\"fail\"}";
+                    response.setContentType("application/json;charset=UTF-8");
+                    response.setHeader("catch-control", "no-catch");
+                    PrintWriter out = response.getWriter();
+                    out.write(results);
+                    out.flush();
+                    out.close();
+                }
+                return results;
+            } else return "失败";
+        } else return "失败";
     }
 
     //秒杀下单
@@ -226,12 +226,12 @@ public class wechatservice {
         System.out.println("openid = " + openid);
         String url = "https://api.mch.weixin.qq.com/pay/unifiedorder";
         //组装预下单的请求数据
-        String reqStr = getReqStr(openid, order,total);
+        String reqStr = getReqStr(openid, order, total);
         System.out.println("reqStr=" + reqStr);
         //发送post数据到微信预下单
-        results = sendPost(url,reqStr);
+        results = sendPost(url, reqStr);
         System.out.println("prepay from weixin: \n " + results);
-        Map<String,String> return_data = null;
+        Map<String, String> return_data = null;
         try {
             return_data = WXPayUtil.xmlToMap(results);//微信的一个工具类
         } catch (Exception e) {
@@ -241,21 +241,21 @@ public class wechatservice {
         }
         String return_code = return_data.get("return_code");
         System.out.println("return_code=" + return_code);
-        if("SUCCESS".equals(return_code)){
+        if ("SUCCESS".equals(return_code)) {
             String prepay_id = return_data.get("prepay_id");
-            Map map3= conPayParam(prepay_id); //组装返回数据
-            Map map =object2Map(order);
-            Map map1 =object2Map(order_details);
-            map.put("amount",total);
+            Map map3 = conPayParam(prepay_id); //组装返回数据
+            Map map = object2Map(order);
+            Map map1 = object2Map(order_details);
+            map.put("amount", total);
             map.putAll(map1);
             map.putAll(map3);
             //先存入redis
-            redisUtil.hmset(number,map,300);
+            redisUtil.hmset(number, map, 300);
             //存入redis的list
-            redisUtil.sSetAndTime(openid,300,number);
-            results=JSONObject.toJSONString(map);
-        }else{
-            results ="{\"return_code\":\"fail\"}";
+            redisUtil.sSetAndTime(order.getUnionId(), 300, number);
+            results = JSONObject.toJSONString(map);
+        } else {
+            results = "{\"return_code\":\"fail\"}";
             response.setContentType("application/json;charset=UTF-8");
             response.setHeader("catch-control", "no-catch");
             PrintWriter out = response.getWriter();
@@ -268,43 +268,38 @@ public class wechatservice {
     }
 
 
-    public static Map<String,Object> object2Map(Object object){
-        Map<String,Object> result=new HashMap<>();
+    public static Map<String, Object> object2Map(Object object) {
+        Map<String, Object> result = new HashMap<>();
         //获得类的的属性名 数组
-        Field[]fields=object.getClass().getDeclaredFields();
+        Field[] fields = object.getClass().getDeclaredFields();
         try {
             for (Field field : fields) {
                 field.setAccessible(true);
                 String name = new String(field.getName());
                 result.put(name, field.get(object));
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return result;
     }
 
     //组装预下单的请求数据,total为总金额
-    public static String getReqStr(String openid,order order,String total){
-        Map<String,String> data = new HashMap<String,String>();
+    public static String getReqStr(String openid, order order, String total) {
+        Map<String, String> data = new HashMap<String, String>();
 
         String appid = "wx8301d95291e6b82a";
 //        String expireTime= com.duogesi.Utils.getOrderExpireTime.getOrderExpireTime(5*60*1000L);
 //        System.out.println(expireTime);
         data.put("appid", appid);
-        data.put("mch_id",mer_id);
+        data.put("mch_id", mer_id);
         data.put("nonce_str", WXPayUtil.generateUUID());
         data.put("sign_type", "MD5");
         data.put("body", "prepaid");
         data.put("out_trade_no", order.getNumbers());
-//        data.put("time_start", expireTime);
-//        data.put("time_expire", expireTime);
         data.put("fee_type", "CNY");
-//        预付百分之10String.valueOf(Integer.valueOf(total)*10)
         data.put("total_fee", "1");
         data.put("spbill_create_ip", "129.211.21.50");
-//        data.put("spbill_create_ip", "192.168.1.111");
-//        data.put("notify_url", "http://192.168.1.111:8091/elogistic/order/update.do");
         data.put("notify_url", "https://www.yikuajing.cn/elogistic/order/update.do");
         data.put("trade_type", "JSAPI");
         data.put("product_id", String.valueOf(order.getItem_id()));
@@ -327,15 +322,15 @@ public class wechatservice {
     }
 
     //组装返回客户端的请求数据
-    public static Map conPayParam(String prepayid){
+    public static Map conPayParam(String prepayid) {
         String appid = "wx8301d95291e6b82a";
         System.out.println("根据当前的prepayid构造返回参数= " + prepayid);
         String results = "";
-        Map<String,String> map = new HashMap<String,String>();
+        Map<String, String> map = new HashMap<String, String>();
         map.put("appId", appid);
         LocalDateTime time = LocalDateTime.now();
-        map.put("timeStamp",  WXPayUtil.getCurrentTimestamp()+"");
-        map.put("nonceStr", WXPayUtil.generateUUID() );
+        map.put("timeStamp", WXPayUtil.getCurrentTimestamp() + "");
+        map.put("nonceStr", WXPayUtil.generateUUID());
         map.put("package", "prepay_id=" + prepayid);
         map.put("signType", "MD5");
         String sign;
@@ -349,18 +344,20 @@ public class wechatservice {
         }
         return map;
     }
-    public static String chinaToUnicode(String str){
-        String result="";
-        for (int i = 0; i < str.length(); i++){
+
+    public static String chinaToUnicode(String str) {
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
             int chr1 = (char) str.charAt(i);
-            if(chr1>=19968&&chr1<=171941){//汉字范围 \u4e00-\u9fa5 (中文)
-                result+="\\u" + Integer.toHexString(chr1);
-            }else{
-                result+=str.charAt(i);
+            if (chr1 >= 19968 && chr1 <= 171941) {//汉字范围 \u4e00-\u9fa5 (中文)
+                result += "\\u" + Integer.toHexString(chr1);
+            } else {
+                result += str.charAt(i);
             }
         }
         return result;
     }
+
     private String sendGetReq(String url) {
         String result = "";
         BufferedReader in = null;
@@ -404,6 +401,7 @@ public class wechatservice {
         }
         return result;
     }
+
     public static String sendPost(String url, String param) throws UnsupportedEncodingException, IOException {
         return sendPost(url, param, null);
     }
@@ -419,7 +417,7 @@ public class wechatservice {
         conn.setConnectTimeout(5000);
         conn.setReadTimeout(15000);
         // 设置通用的请求属性
-        if (header!=null) {
+        if (header != null) {
             for (Map.Entry<String, String> entry : header.entrySet()) {
                 conn.setRequestProperty(entry.getKey(), entry.getValue());
             }
@@ -446,76 +444,22 @@ public class wechatservice {
         while ((line = in.readLine()) != null) {
             result += line;
         }
-        if(out!=null){
+        if (out != null) {
             out.close();
         }
-        if(in!=null){
+        if (in != null) {
             in.close();
         }
         return result;
     }
 
-//    public Map getunionid(String encryptedData, String iv, String code) {
-//        Map map = new HashMap();
-//
-//        //登录凭证不能为空
-//        if (code == null || code.length() == 0) {
-//            map.put("status", 0);
-//            map.put("msg", "code 不能为空");
-//            return map;
-//        }
-//        //授权（必填）
-//        String grant_type = "authorization_code";
-//        //////////////// 1、向微信服务器 使用登录凭证 code 获取 session_key 和 unionId ////////////////
-//        //请求参数
-//        String params = "appid=" + appid + "&secret=" + secretKey + "&js_code=" + code + "&grant_type=" + grant_type;
-//        //发送请求
-////        String sr = HttpRequest.sendGet("https://api.weixin.qq.com/sns/jscode2session", params);
-//        String sr=sendGetReq("https://api.weixin.qq.com/sns/jscode2session?"+params);
-//
-//      //解析相应内容（转换成json对象）
-//       JSONObject json = JSONObject.parseObject(sr);
-//        //获取会话密钥（session_key）
-//        String session_key = json.get("session_key").toString();
-//        //用户的唯一标识（openid）
-//        String openid = (String) json.get("openid");
-//        //////////////// 2、对encryptedData加密数据进行AES解密 ////////////////
-//        AesUtil aesUtil=new AesUtil();
-//        try {
-//            String result = aesUtil.decrypt(encryptedData, session_key, iv, "UTF-8");
-//            System.out.println(result);
-//            if (null != result && result.length() > 0) {
-//                map.put("status", 1);
-//                map.put("msg", "解密成功");
-//
-//                JSONObject userInfoJSON = JSONObject.parseObject(result);
-//                Map userInfo = new HashMap();
-//                userInfo.put("openId", userInfoJSON.get("openId"));
-//                userInfo.put("nickName", userInfoJSON.get("nickName"));
-//                userInfo.put("gender", userInfoJSON.get("gender"));
-//                userInfo.put("city", userInfoJSON.get("city"));
-//                userInfo.put("province", userInfoJSON.get("province"));
-//                userInfo.put("country", userInfoJSON.get("country"));
-//                userInfo.put("avatarUrl", userInfoJSON.get("avatarUrl"));
-//                userInfo.put("unionId", userInfoJSON.get("unionId"));
-//                map.put("userInfo", userInfo);
-//                return map;
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        map.put("status", 0);
-//        map.put("msg", "解密失败");
-//        return map;
-//    }
 
 
-        /**
+    /**
      * 获取微信小程序 session_key 和 openid
      *
      * @param code 调用微信登陆返回的Code
      * @return
-     * @author YeFei
      */
     public Map getSessionKeyOrOpenId(String code, String iv, String encryptedData) {
         //微信端登录code值
@@ -562,9 +506,8 @@ public class wechatservice {
      * @param encryptedData 包括敏感数据在内的完整用户信息的加密数据
      * @param iv            加密算法的初始向量
      * @return
-     * @author YeFei
      */
-    public  JSONObject getUserInfo(String encryptedData, String sessionKey, String iv) {
+    public JSONObject getUserInfo(String encryptedData, String sessionKey, String iv) {
         // 被加密的数据
         byte[] dataByte = Base64.decode(encryptedData);
         // 加密秘钥

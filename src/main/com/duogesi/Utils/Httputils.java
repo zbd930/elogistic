@@ -1,4 +1,5 @@
 package com.duogesi.Utils;
+
 import javax.net.ssl.*;
 import javax.servlet.http.HttpUtils;
 import java.io.*;
@@ -93,7 +94,7 @@ public class Httputils {
         String param = "";
         if (params != null && !params.isEmpty()) {
             StringBuffer paramBuf = new StringBuffer();
-            for (Iterator<String> it = params.keySet().iterator(); it.hasNext();) {
+            for (Iterator<String> it = params.keySet().iterator(); it.hasNext(); ) {
                 String key = it.next();
                 String value = params.get(key);
                 paramBuf.append("&").append(key).append("=").append(value);
@@ -197,8 +198,8 @@ public class Httputils {
         }
     }
 
-    private static void close(HttpURLConnection httpConn){
-        if(httpConn != null){
+    private static void close(HttpURLConnection httpConn) {
+        if (httpConn != null) {
             httpConn.disconnect();
         }
     }
@@ -216,7 +217,7 @@ public class Httputils {
     private static void _ignoreSSL() {
         try {
             // Create a trust manager that does not validate certificate chains
-            TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
+            TrustManager[] trustAllCerts = new TrustManager[]{new X509TrustManager() {
                 @Override
                 public X509Certificate[] getAcceptedIssuers() {
                     return null;
@@ -229,7 +230,7 @@ public class Httputils {
                 @Override
                 public void checkServerTrusted(X509Certificate[] certs, String authType) {
                 }
-            } };
+            }};
 
             // Install the all-trusting trust manager
 
@@ -244,23 +245,24 @@ public class Httputils {
         }
     }
 
-    public String doPost(String actionURL, HashMap<String, String> parameters){
+    public String doPost(String actionURL, HashMap<String, String> parameters) {
         String response = "";
-        try{
+        try {
             URL url = new URL(actionURL);
-            HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             //发送post请求需要下面两行
             connection.setDoInput(true);
             connection.setDoOutput(true);
             connection.setUseCaches(false);
             connection.setRequestMethod("POST");
             connection.setRequestProperty("Connection", "Keep-Alive");
-            connection.setRequestProperty("Charset", "UTF-8");;
+            connection.setRequestProperty("Charset", "UTF-8");
+            ;
             connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
             //设置请求数据内容
             String requestContent = "";
             Set<String> keys = parameters.keySet();
-            for(String key : keys){
+            for (String key : keys) {
                 requestContent = requestContent + key + "=" + parameters.get(key) + "&";
             }
             requestContent = requestContent.substring(0, requestContent.lastIndexOf("&"));
@@ -268,22 +270,22 @@ public class Httputils {
             //使用write(requestContent.getBytes())是为了防止中文出现乱码
             ds.write(requestContent.getBytes());
             ds.flush();
-            try{
+            try {
                 //获取URL的响应
                 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), "utf-8"));
                 String s = "";
                 String temp = "";
-                while((temp = reader.readLine()) != null){
+                while ((temp = reader.readLine()) != null) {
                     s += temp;
                 }
                 response = s;
                 reader.close();
-            }catch(IOException e){
+            } catch (IOException e) {
                 e.printStackTrace();
                 System.out.println("No response get!!!");
             }
             ds.close();
-        }catch(IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Request failed!");
         }
@@ -298,7 +300,7 @@ public class Httputils {
      * @param fileType 文件类型(枚举类型)
      * @param uploadFile 上传文件的路径字符串
      * @param parameters 跟文件一起传输的参数(HashMap)
-     * @return String("" if no response get)
+     * @return String(" " if no response get)
      * @attention 上传文件name为file(服务器解析)
      * */
     /*public String singleFileUploadWithParameters(String actionURL, String uploadFile, MIME_FileType fileType, HashMap<String, String> parameters){

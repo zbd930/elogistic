@@ -4,27 +4,27 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- namespace命名空间，唯一标识。一般指定为自定义的接口文件，下面相当于这个接口的实现类 -->
 <mapper namespace="com.duogesi.mapper.xiaobaoMapper">
-    <resultMap id="xiaobao" type="com.duogesi.entities.xiaobao">
+    <resultMap id="xiaobao" type="com.duogesi.beans.xiaobao">
         <id column="xiaobao_id" property="xiaobao_id"/>
         <result column="country" property="country"/>
         <result column="desc" property="desc"/>
         <result column="timetable" property="timetable"/>
         <result column="detail" property="detail"/>
     </resultMap>
-    <resultMap id="price_xiaobao" type="com.duogesi.entities.price_xiaobao">
+    <resultMap id="price_xiaobao" type="com.duogesi.beans.price_xiaobao">
         <id column="price_id" property="price_id"/>
         <result column="weight" property="weight"/>
         <result column="amount" property="amount"/>
         <result column="xiaobao_id" property="xiaobao_id"/>
     </resultMap>
 
-<!--    获取渠道-->
+    <!--    获取渠道-->
     <select id="get_channel_xiaobao" resultMap="xiaobao">
         select timetable,detail,`desc`,xiaobao_id,user_id
         from mission_small
         where country=#{country}
     </select>
-<!--    获取小包价格-->
+    <!--    获取小包价格-->
     <select id="get_price_xiaobao" resultMap="price_xiaobao">
         select weight,amount
         from price_xiaobao

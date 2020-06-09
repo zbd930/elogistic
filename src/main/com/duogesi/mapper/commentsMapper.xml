@@ -4,13 +4,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- namespace命名空间，唯一标识。一般指定为自定义的接口文件，下面相当于这个接口的实现类 -->
 <mapper namespace="com.duogesi.mapper.commentsMapper">
-    <resultMap id="comments" type="com.duogesi.entities.comments">
+    <resultMap id="comments" type="com.duogesi.beans.comments">
         <id column="id" property="id"/>
         <result column="comments_text" property="comments_text"/>
         <result column="user_id" property="user_id"/>
         <result column="address_id" property="address_id"/>
         <result column="star" property="star"/>
-        <association property="address" javaType="com.duogesi.entities.address">
+        <association property="address" javaType="com.duogesi.beans.address">
             <id column="supplier_id" property="supplier_id"/>
             <result column="unionId" property="unionId"/>
             <result column="phone" property="phone"/>
@@ -21,8 +21,9 @@
     </resultMap>
 
     <!--提交评论-->
-    <insert id="insert_comment" parameterType="com.duogesi.entities.comments">
-            insert into comments (comments_text, address_id, user_id,star) values (#{comments_text},#{address_id},#{user_id},#{star})
+    <insert id="insert_comment" parameterType="com.duogesi.beans.comments">
+        insert into comments (comments_text, address_id, user_id,star) values
+        (#{comments_text},#{address_id},#{user_id},#{star})
     </insert>
 
     <!--获取评论-->

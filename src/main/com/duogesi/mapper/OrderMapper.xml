@@ -4,28 +4,30 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- namespace命名空间，唯一标识。一般指定为自定义的接口文件，下面相当于这个接口的实现类 -->
 <mapper namespace="com.duogesi.mapper.OrderMapper">
-     <!--引入自定义缓存类实现cache接口 -->
+    <!--引入自定义缓存类实现cache接口 -->
     <!--<cache type="com.duogesi.cache.RedisCache"/>-->
     <!-- 定义结果集，column表示sql查询列,property表示映射到实体的属性 -->
     <!--<resultMap type="com.duogesi.entities.order" id="my" >-->
-        <!--<id column="id" property="id"/>-->
-        <!--<result column="unionId" property="unionId"/>-->
-        <!--<result column="weight" property="weight"/>-->
-        <!--<result column="volume" property="volume"/>-->
-        <!--<result column="item_id" property="item_id"/>-->
-        <!--<result column="address_id" property="address_id"/>-->
-        <!--<result column="status" property="status"/>-->
-        <!--<result column="beizhu" property="beizhu"/>-->
-        <!--<result column="picking" property="picking"/>-->
+    <!--<id column="id" property="id"/>-->
+    <!--<result column="unionId" property="unionId"/>-->
+    <!--<result column="weight" property="weight"/>-->
+    <!--<result column="volume" property="volume"/>-->
+    <!--<result column="item_id" property="item_id"/>-->
+    <!--<result column="address_id" property="address_id"/>-->
+    <!--<result column="status" property="status"/>-->
+    <!--<result column="beizhu" property="beizhu"/>-->
+    <!--<result column="picking" property="picking"/>-->
     <!--</resultMap>-->
     <!-- resultMap指定使用上面定义的结果集,查询使用关联查询，查询列要和上面的column对应 -->
     <!--添加订单1-->
-     <insert id="addorder" parameterType="com.duogesi.entities.order" useGeneratedKeys="true" keyProperty="id">
-         insert into orders (numbers,item_id, address_id,status,picking,dest,songhuo)  value (#{numbers},#{item_id},#{address_id},#{status},#{picking},#{dest},#{songhuo})
-     </insert>
+    <insert id="addorder" parameterType="com.duogesi.beans.order" useGeneratedKeys="true" keyProperty="id">
+        insert into orders (numbers,item_id, address_id,status,picking,dest,songhuo) value
+        (#{numbers},#{item_id},#{address_id},#{status},#{picking},#{dest},#{songhuo})
+    </insert>
     <!--添加订单2-->
-    <insert id="addorder2" parameterType="com.duogesi.entities.order_details">
-        insert into orders_details (ctn, weight, volume, beizhu, ups, order_id, chaigui, category,user_id)  value (#{ctn},#{weight},#{volume},#{beizhu},#{ups},#{order_id},#{chaigui},#{category},#{user_id})
+    <insert id="addorder2" parameterType="com.duogesi.beans.order_details">
+        insert into orders_details (ctn, weight, volume, beizhu, ups, order_id, chaigui, category,user_id) value
+        (#{ctn},#{weight},#{volume},#{beizhu},#{ups},#{order_id},#{chaigui},#{category},#{user_id})
     </insert>
     <!--评价后-->
     <update id="pinjie">
@@ -33,13 +35,13 @@
         where id=#{id}
     </update>
 
-    <delete id="delete_order" >
+    <delete id="delete_order">
         delete
         from orders
         where id=#{id}
     </delete>
 
-    <delete id="delete_order_details" >
+    <delete id="delete_order_details">
         delete
         from orders_details
         where order_id=#{id}

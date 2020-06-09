@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--�ű�����ɷ���ҳ��ײ����ȵ�ҳ�����ִ�С�-->
+    <script type="text/javascript" src="//www.17track.net/externalcall.js"></script>
+    <script type="text/javascript">
+        function doTrack() {
+            var num = document.getElementById("YQNum").value;
+            if (num === "") {
+                alert("Enter your number.");
+                return;
+            }
+            YQV5.trackSingle({
+                //���룬ָ���������ݵ�����ID��
+                YQ_ContainerId: "YQContainer",
+                //��ѡ��ָ����ѯ����߶ȣ����Ϊ800px��Ĭ��Ϊ560px��
+                YQ_Height: 800,
+                //��ѡ��ָ�������̣�Ĭ��Ϊ�Զ�ʶ��
+                YQ_Fc: "0",
+                //��ѡ��ָ��UI���ԣ�Ĭ�ϸ���������Զ�ʶ��
+                YQ_Lang: "zh-CN",
+                //���룬ָ��Ҫ��ѯ�ĵ��š�
+                YQ_Num: num
+            });
+        }
+    </script>
+</head>
+<body>
+<!--���������-->
+<input type="text" id="YQNum" maxlength="50"/>
+<!--���ڵ��ýű������İ�ť��-->
+<input type="button" value="TRACK" onclick="doTrack()"/>
+<!--������ʾ��ѯ�����������-->
+<div id="YQContainer"></div>
+</body>
+</html>
+

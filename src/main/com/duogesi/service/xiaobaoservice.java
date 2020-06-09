@@ -1,19 +1,13 @@
 package com.duogesi.service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.duogesi.Mail.Mymail;
-import com.duogesi.Mail.RedisUtil;
+import com.duogesi.Utils.RedisUtil;
 import com.duogesi.Utils.Date;
 import com.duogesi.Utils.WXPayConstants;
 import com.duogesi.Utils.WXPayUtil;
-import com.duogesi.entities.amount;
-import com.duogesi.entities.items;
-import com.duogesi.entities.order;
-import com.duogesi.entities.order_details;
-import com.duogesi.mapper.ItemsMapper;
-import com.duogesi.mapper.OrderMapper;
-import com.duogesi.mapper.amountMapper;
-import com.duogesi.mapper.user_infoMapper;
+import com.duogesi.beans.amount;
+import com.duogesi.beans.order;
+import com.duogesi.beans.order_details;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +19,6 @@ import java.math.BigDecimal;
 import java.net.URL;
 import java.net.URLConnection;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,22 +29,12 @@ public class xiaobaoservice {
     private static String merKey = "zbd12345678912345678912345678912";//店铺支付密码
     private final static String requestUrl = "https://api.weixin.qq.com/sns/jscode2session";
 
-    @Autowired
-    private OrderMapper orderMapper;
-    @Autowired
-    private ItemsMapper itemsMapper;
-    @Autowired
-    private amountMapper amountMapper;
-    @Autowired
-    private Mymail mymail;
-    @Autowired
-    private user_infoMapper user_infoMapper;
+
     @Autowired
     private RedisUtil redisUtil;
 
-    //小包支付
     //普通下单
-    public String wechat_pay(HttpServletRequest request, HttpServletResponse response, order order, order_details order_details, String method, String country,int supplier_id) throws IOException {
+    public String wechat_pay(HttpServletRequest request, HttpServletResponse response, order order, order_details order_details, String method, String country, int supplier_id) throws IOException {
         //order设置number
         String frist = "880";
         LocalDateTime localDateTime = LocalDateTime.now();
@@ -96,62 +79,52 @@ public class xiaobaoservice {
         String return_code = return_data.get("return_code");
         System.out.println("return_code=" + return_code);
         if (return_code.equals("SUCCESS")) {
-           String prepay_id = return_data.get("prepay_id");
-           Map map3= conPayParam(prepay_id); //组装返回数据
-            results= JSONObject.toJSONString(map3);
+            String prepay_id = return_data.get("prepay_id");
+            Map map3 = conPayParam(prepay_id); //组装返回数据
+            results = JSONObject.toJSONString(map3);
             //存入购物车500秒
-            Map map =object2Map(order);
-            Map map1 =object2Map(order_details);
-            map.put("amount",total);
-            map.put("supplier_id",supplier_id);
+            Map map = object2Map(order);
+            Map map1 = object2Map(order_details);
+            map.put("amount", total);
+            map.put("supplier_id", supplier_id);
             map.putAll(map1);
             map.putAll(map3);
             //先存入redis，方便支付成功后添加订单
-            redisUtil.hmset(number,map,300);
-            redisUtil.sSetAndTime(openid,300,number);
-            } else {
-                results = "{\"return_code\":\"fail\"}";
-                response.setContentType("application/json;charset=UTF-8");
-                response.setHeader("catch-control", "no-catch");
-                PrintWriter out = response.getWriter();
-                out.write(results);
-                out.flush();
-                out.close();
-            }return results;
+            redisUtil.hmset(number, map, 300);
+            redisUtil.sSetAndTime(openid, 300, number);
+        } else {
+            results = "{\"return_code\":\"fail\"}";
+            response.setContentType("application/json;charset=UTF-8");
+            response.setHeader("catch-control", "no-catch");
+            PrintWriter out = response.getWriter();
+            out.write(results);
+            out.flush();
+            out.close();
+        }
+        return results;
 
     }
 
 
     //组装预下单的请求数据,total为总金额
-    public static String getReqStr(String openid,order order,String total){
-        Map<String,String> data = new HashMap<String,String>();
+    public static String getReqStr(String openid, order order, String total) {
+        Map<String, String> data = new HashMap<String, String>();
 
         String appid = "wx8301d95291e6b82a";
 //        String expireTime= com.duogesi.Utils.getOrderExpireTime.getOrderExpireTime(5*60*1000L);
 //        System.out.println(expireTime);
         data.put("appid", appid);
-        data.put("mch_id",mer_id);
+        data.put("mch_id", mer_id);
         data.put("nonce_str", WXPayUtil.generateUUID());
         data.put("sign_type", "MD5");
         data.put("body", "prepaid");
         data.put("out_trade_no", order.getNumbers());
-//        DateTimeFormatter day = DateTimeFormatter.ofPattern("yyyyMMdd");
-//        DateTimeFormatter hour = DateTimeFormatter.ofPattern("HH");
-//        DateTimeFormatter soucend = DateTimeFormatter.ofPattern("ss");
-//        LocalDateTime localDateTime=LocalDateTime.now();
-//        String time=day.format(localDateTime)+hour.format(localDateTime)+(localDateTime.getMinute()+6)+soucend.format(localDateTime);
-//        DateTimeFormatter now = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
-//        String start_time=now.format(localDateTime);
-//        data.put("time_start", start_time);
-//        data.put("time_expire", time);
-//        data.put("time_start", expireTime);
-//        data.put("time_expire", expireTime);
         data.put("fee_type", "CNY");
 //        预付百分之10String.valueOf(Integer.valueOf(total)*10)
         data.put("total_fee", "1");
 //        data.put("spbill_create_ip", "129.211.21.50");
 //        data.put("spbill_create_ip", "192.168.1.111");
-       data.put("spbill_create_ip", "192.168.3.20");
+        data.put("spbill_create_ip", "192.168.3.20");
         data.put("notify_url", "http://192.168.3.20:8091/elogistic/order/update_xiaobao.do");
 //        data.put("notify_url", "https://www.yikuajing.cn/elogistic/order/update_xiaobao.do");
         data.put("trade_type", "JSAPI");
@@ -173,31 +146,33 @@ public class xiaobaoservice {
         }
         return reqBody;
     }
-    public static Map<String,Object> object2Map(Object object){
-        Map<String,Object> result=new HashMap<>();
+
+    public static Map<String, Object> object2Map(Object object) {
+        Map<String, Object> result = new HashMap<>();
         //获得类的的属性名 数组
-        Field[]fields=object.getClass().getDeclaredFields();
+        Field[] fields = object.getClass().getDeclaredFields();
         try {
             for (Field field : fields) {
                 field.setAccessible(true);
                 String name = new String(field.getName());
                 result.put(name, field.get(object));
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return result;
     }
+
     //组装返回客户端的请求数据
-    public static Map conPayParam(String prepayid){
+    public static Map conPayParam(String prepayid) {
         String appid = "wx8301d95291e6b82a";
         System.out.println("根据当前的prepayid构造返回参数= " + prepayid);
         String results = "";
-        Map<String,String> map = new HashMap<String,String>();
+        Map<String, String> map = new HashMap<String, String>();
         map.put("appId", appid);
         LocalDateTime time = LocalDateTime.now();
-        map.put("timeStamp",  WXPayUtil.getCurrentTimestamp()+"");
-        map.put("nonceStr", WXPayUtil.generateUUID() );
+        map.put("timeStamp", WXPayUtil.getCurrentTimestamp() + "");
+        map.put("nonceStr", WXPayUtil.generateUUID());
         map.put("package", "prepay_id=" + prepayid);
         map.put("signType", "MD5");
         String sign;
@@ -211,9 +186,11 @@ public class xiaobaoservice {
         }
         return map;
     }
+
     public static String sendPost(String url, String param) throws UnsupportedEncodingException, IOException {
         return sendPost(url, param, null);
     }
+
     public static String sendPost(String url, String param, Map<String, String> header) throws UnsupportedEncodingException, IOException {
         PrintWriter out = null;
         BufferedReader in = null;
@@ -225,7 +202,7 @@ public class xiaobaoservice {
         conn.setConnectTimeout(5000);
         conn.setReadTimeout(15000);
         // 设置通用的请求属性
-        if (header!=null) {
+        if (header != null) {
             for (Map.Entry<String, String> entry : header.entrySet()) {
                 conn.setRequestProperty(entry.getKey(), entry.getValue());
             }
@@ -252,10 +229,10 @@ public class xiaobaoservice {
         while ((line = in.readLine()) != null) {
             result += line;
         }
-        if(out!=null){
+        if (out != null) {
             out.close();
         }
-        if(in!=null){
+        if (in != null) {
             in.close();
         }
         return result;

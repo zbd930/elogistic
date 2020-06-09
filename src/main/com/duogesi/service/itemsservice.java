@@ -1,10 +1,9 @@
 package com.duogesi.service;
 
-import com.duogesi.Mail.RedisUtil;
+import com.duogesi.Utils.RedisUtil;
 import com.duogesi.Utils.Date;
-import com.duogesi.Utils.SerializeUtil;
 import com.duogesi.Utils.Swtich;
-import com.duogesi.entities.*;
+import com.duogesi.beans.*;
 import com.duogesi.mapper.ItemsMapper;
 import com.duogesi.mapper.user_infoMapper;
 import com.duogesi.mapper.xiaobaoMapper;
@@ -12,10 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 @Service
@@ -39,14 +36,10 @@ public class itemsservice {
 
 
     public List<items> get_items(items _items, String category) {
-//        java.util.Date date= new java.util.Date();
-//        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-//        String date1=format.format(date.getTime());
-//        System.out.println(date1);
         //    获取符合方式所有订单
-        String mudigang =_items.getMudigang();
-        String country=_items.getCountry();
-        String method=_items.getMethod();
+        String mudigang = _items.getMudigang();
+        String country = _items.getCountry();
+        String method = _items.getMethod();
         if (!method.equals("海卡")) {
             if (country.equals("美国")) {
                 List<items> list = itemsMapper.get_items(_items);
@@ -351,22 +344,21 @@ public class itemsservice {
                     return list;
                 } else return list;
             }
-        }
-        else {
+        } else {
             if (country.equals("美国")) {
                 List<items> list = itemsMapper.get_items(_items);
                 Iterator<items> itemsIterator = list.iterator();
                 while (itemsIterator.hasNext()) {
                     items items = itemsIterator.next();
-                //去搜索价格表
-                price_haika price_haika = priceMapper.get_price_haika(items.getUser_id(), items.getEtd(), _items.getMudigang(), _items.getQiyungang());
-                synchronized (items) {
-                    try {
-                        items.setPrice(price_haika.getPrice());
-                    } catch (NullPointerException e) {
-                        itemsIterator.remove();
+                    //去搜索价格表
+                    price_haika price_haika = priceMapper.get_price_haika(items.getUser_id(), items.getEtd(), _items.getMudigang(), _items.getQiyungang());
+                    synchronized (items) {
+                        try {
+                            items.setPrice(price_haika.getPrice());
+                        } catch (NullPointerException e) {
+                            itemsIterator.remove();
+                        }
                     }
-                }
                     items.setMudigang(mudigang);
                     items.setLike(Math.toIntExact(dianzanservice.get_count(String.valueOf(items.getUser_id()))));
                 }
@@ -385,7 +377,7 @@ public class itemsservice {
                     });
                     return list;
                 } else return list;
-            }else if(country.equals("加拿大")){
+            } else if (country.equals("加拿大")) {
                 List<items> list = itemsMapper.get_items_Canada(_items);
                 Iterator<items> itemsIterator = list.iterator();
                 while (itemsIterator.hasNext()) {
@@ -417,7 +409,7 @@ public class itemsservice {
                     });
                     return list;
                 } else return list;
-            }else if(country.equals("欧洲")){
+            } else if (country.equals("欧洲")) {
                 List<items> list = itemsMapper.get_items_Europe(_items);
                 Iterator<items> itemsIterator = list.iterator();
                 while (itemsIterator.hasNext()) {
@@ -449,7 +441,7 @@ public class itemsservice {
                     });
                     return list;
                 } else return list;
-            }else {
+            } else {
                 List<items> list = itemsMapper.get_items_Japan(_items);
                 Iterator<items> itemsIterator = list.iterator();
                 while (itemsIterator.hasNext()) {
@@ -508,9 +500,10 @@ public class itemsservice {
         }
         return null;
     }
+
     //遍历地区
     private String area1(String mudigang) {
-        switch (mudigang){
+        switch (mudigang) {
             case ("温哥华"):
                 return "YVR";
             case ("多伦多"):
@@ -524,9 +517,10 @@ public class itemsservice {
         }
         return null;
     }
+
     //遍历地区
     private String area2(String mudigang) {
-        switch (mudigang){
+        switch (mudigang) {
             case ("英国"):
                 return "zone1";
             case ("德国"):
@@ -560,7 +554,7 @@ public class itemsservice {
     //    获取所有订单
     public List<items> get_orders(String unionId) {
         List<items> items = itemsMapper.get_orders(unionId);
-        for (com.duogesi.entities.items i : items
+        for (com.duogesi.beans.items i : items
         ) {
             order order = i.getOrders().get(0);
             amount amount = amountMapper.get_amount_byid(order.getId());
@@ -596,8 +590,8 @@ public class itemsservice {
         cale.set(Calendar.DAY_OF_MONTH, 0);
         end_data = format.format(cale.getTime());
         amount amount = amountMapper.get_amount(start_data, end_data, unionId);
-        if (amount==null) {
-            amount amount1=new amount();
+        if (amount == null) {
+            amount amount1 = new amount();
             amount1.setTotal(BigDecimal.valueOf(0));
             return amount1;
         } else {
@@ -609,8 +603,8 @@ public class itemsservice {
 
     //特价专区
     public List<items> redis_get() {
-        LocalDateTime localDateTime=LocalDateTime.now();
-        Date date=new Date();
+        LocalDateTime localDateTime = LocalDateTime.now();
+        Date date = new Date();
         List<items> list = itemsMapper.ger_miaosha(date.getdate_eng(localDateTime));
         Iterator<items> itemsIterator = list.iterator();
         while (itemsIterator.hasNext()) {
@@ -668,13 +662,13 @@ public class itemsservice {
                 } else items.setAddition(addition);
             } else if (items.getMethod().equals("海卡")) {
             }
-            items.setDiscount(items.getPrice()-items.getDetails().getDiscount());
-            details d =items.getDetails();
+            items.setDiscount(items.getPrice() - items.getDetails().getDiscount());
+            details d = items.getDetails();
             d.setCountDownHour("0");
             d.setCountDownMinute("0");
             d.setCountDownSecond("0");
         }
-        if (list.size()>1) {
+        if (list.size() > 1) {
             Collections.sort(list, new Comparator<items>() {
                 @Override
                 public int compare(items u1, items u2) {
@@ -688,58 +682,66 @@ public class itemsservice {
                 }
             });
             return list;
-        }else return list;
+        } else return list;
     }
 
     //用户搜索小包渠道
-    public List<xiaobao> get_xiaobao(String country,float weight){
-        switch (country){
+    public List<xiaobao> get_xiaobao(String country, float weight) {
+        switch (country) {
             case "美国":
-                country= "American";
+                country = "American";
                 break;
             case "韩国":
-                country= "Korea";
+                country = "Korea";
                 break;
             case "日本":
-                country= "Japan";
+                country = "Japan";
                 break;
             case "荷兰":
-                country= "Netherlands";
+                country = "Netherlands";
                 break;
             case "俄罗斯":
-                country= "Russia";
+                country = "Russia";
                 break;
             case "意大利":
-                country= "Italy";
+                country = "Italy";
                 break;
             case "英国":
-                country= "England";
+                country = "England";
                 break;
         }
-        List<xiaobao> list=xiaobaoMapper.get_channel_xiaobao(country);
-        int index=0;
+        List<xiaobao> list = xiaobaoMapper.get_channel_xiaobao(country);
+        int index = 0;
         //先遍历小包的渠道
-        for (int i = 0; i <list.size() ; i++) {
-            xiaobao xiaobao=list.get(i);
-           int xiaobao_id=xiaobao.getXiaobao_id();
-           List<price_xiaobao> price_xiaobaos=xiaobaoMapper.get_price_xiaobao(xiaobao_id);
-           //获取等级重
-           float[] weights=new float[price_xiaobaos.size()];
-            for (int j = 0; j <weights.length ; j++) {
-                weights[j]=price_xiaobaos.get(j).getWeight();
+        Iterator iterator = list.iterator();
+        while (iterator.hasNext()) {
+//        for (int i = 0; i <list.size() ; i++) {
+            xiaobao xiaobao = (com.duogesi.beans.xiaobao) iterator.next();
+//            xiaobao xiaobao=list.get(i);
+            int xiaobao_id = xiaobao.getXiaobao_id();
+            List<price_xiaobao> price_xiaobaos = xiaobaoMapper.get_price_xiaobao(xiaobao_id);
+            //获取等级重
+            float[] weights = new float[price_xiaobaos.size()];
+            for (int j = 0; j < weights.length; j++) {
+                weights[j] = price_xiaobaos.get(j).getWeight();
             }
             //获取重量所对应的区间
-            for (int k = 0; k <weights.length ; k++) {
-                if(weights[k]<=weight&&weight<weights[k+1]&&k!=weights.length){
-                    index=k;
+            for (int k = 0; k < weights.length; k++) {
+                if (weights[k] <= weight && weight < weights[k + 1] && k != weights.length) {
+                    index = k;
                     break;
                 }
             }
-            //获取小包价格对象
-            price_xiaobao price_xiaobao= price_xiaobaos.get(index);
-            xiaobao.setPrice_xiaobao(price_xiaobao);
+            try {
+                //获取小包价格对象
+                price_xiaobao price_xiaobao = price_xiaobaos.get(index);
+                xiaobao.setPrice_xiaobao(price_xiaobao);
+            } catch (Exception e) {
+                e.printStackTrace();
+                iterator.remove();
+            }
             //获取公司的名字
-            supplier_company supplier_company=user_infoMapper.get_company_name(xiaobao.getUser_id()).get(0);
+            supplier_company supplier_company = user_infoMapper.get_company_name(xiaobao.getUser_id()).get(0);
             xiaobao.setSupplier_company(supplier_company);
             //缺少判断快递还是小包xiaobao.setMethod("快递");
             xiaobao.setMethod("小包");

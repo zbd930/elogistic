@@ -1,7 +1,7 @@
 package com.duogesi.mapper;
 
-import com.duogesi.entities.price_xiaobao;
-import com.duogesi.entities.xiaobao;
+import com.duogesi.beans.price_xiaobao;
+import com.duogesi.beans.xiaobao;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
